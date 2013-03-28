@@ -10,20 +10,26 @@
 
 @interface Frame : NSObject
 
-- (id) initWithxPos: (double) setXPos yPos: (double) setYPos angle: (double) setAngle;
-
-- (id) initWithxPos: (double) setXPos yPos: (double) setYPos;
+- (id) initWithxPos: (double) setXPos yPos: (double) setYPos setWidth: (double) setWidth setHeight: (double) setHeight;
 
 - (void) setXPos: (double) setXPos;
 
 - (void) setYPos: (double) setYPos;
 
-- (void) setAngle: (double) setAngle;
+- (void) setWidth: (double) setWidth;
+
+- (void) setHeight: (double) setHeight;
 
 - (double) xPos;
 
 - (double) yPos;
 
-- (double) angle;
+- (double) width;
+
+- (double) height;
+
+- (Boolean) collidesWith: (Frame *) otherFrame;
+
+- (Boolean) containedWithin: (Frame *) otherFrame;
 
 @end
