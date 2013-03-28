@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Position : NSObject
+@interface Frame : NSObject
 
 - (id) initWithxPos: (double) setXPos yPos: (double) setYPos angle: (double) setAngle;
 

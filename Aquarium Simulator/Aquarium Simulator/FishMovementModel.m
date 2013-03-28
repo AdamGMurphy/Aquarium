@@ -7,7 +7,45 @@
 //
 
 #import "FishMovementModel.h"
+#import "Frame.h"
 
-@implementation FishMovementModel
+@implementation FishMovementModel {
+    Frame *currentPosition;
+    id delegate;
+}
+
+- (id) initWithPosition: (Frame *) setPosition {
+    self = [super init];
+    
+    currentPosition = setPosition;
+    
+    return self;
+}
+
+- (id) initWithPosition: (Frame *) setPosition delegate: setDelegate {
+    self = [super init];
+    
+    currentPosition = setPosition;
+    delegate = setDelegate;
+    
+    return self;
+}
+
+- (void) setDelegate: (id) setDelegate {
+    delegate = setDelegate;
+}
+
+- (id) delegate {
+    return delegate;
+}
+
+
+
+
+
+
+
+
+
 
 @end
