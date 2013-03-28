@@ -29,6 +29,16 @@
     return self;
 }
 
+- (id) initWithxPos: (double) setXPos yPos: (double) setYPos {
+    self = [super init];
+    
+    xPos = setXPos;
+    yPos = setYPos;
+    angle = 0.0;
+    
+    return self;
+}
+
 - (void) setXPos: (double) setXPos {
     xPos = setXPos;
 }

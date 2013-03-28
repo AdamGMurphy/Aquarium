@@ -12,6 +12,8 @@
 
 - (id) initWithxPos: (double) setXPos yPos: (double) setYPos angle: (double) setAngle;
 
+- (id) initWithxPos: (double) setXPos yPos: (double) setYPos;
+
 - (void) setXPos: (double) setXPos;
 
 - (void) setYPos: (double) setYPos;
