@@ -6,6 +6,12 @@
 //  Copyright (c) 2013 Adam G Murphy. All rights reserved.
 //
 
+/*
+ This class acts like a container holding the colors of the fish.
+ */
+
+
+
 #import "FishColorModel.h"
 
 @implementation FishColorModel {
