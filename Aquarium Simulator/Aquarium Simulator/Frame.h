@@ -10,7 +10,7 @@
 
 @interface Frame : NSObject
 
-- (id) initWithxPos: (double) setXPos yPos: (double) setYPos setWidth: (double) setWidth setHeight: (double) setHeight;
+- (id) initWithxPos: (double) setXPos yPos: (double) setYPos width: (double) setWidth height: (double) setHeight;
 
 - (void) setXPos: (double) setXPos;
 

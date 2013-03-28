@@ -10,22 +10,34 @@
 #import "Frame.h"
 
 @implementation FishMovementModel {
-    Frame *currentPosition;
+    double angle;
+    Frame *currentFrame;
     id delegate;
 }
 
-- (id) initWithPosition: (Frame *) setPosition {
+- (id) initWithFrame: (Frame *) setFrame {
     self = [super init];
     
-    currentPosition = setPosition;
+    currentFrame = setFrame;
+    angle = 0.0;
     
     return self;
 }
 
-- (id) initWithPosition: (Frame *) setPosition delegate: setDelegate {
+- (id) initWithFrame: (Frame *) setFrame angle: (double) setAngle{
     self = [super init];
     
-    currentPosition = setPosition;
+    currentFrame = setFrame;
+    angle = setAngle;
+    
+    return self;
+}
+
+- (id) initWithPosition: (Frame *) setFrame angle: (double) setAngle delegate: setDelegate {
+    self = [super init];
+    
+    currentFrame = setFrame;
+    angle = setAngle;
     delegate = setDelegate;
     
     return self;

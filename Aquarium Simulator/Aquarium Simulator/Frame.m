@@ -20,7 +20,7 @@
     double height;
 }
 
-- (id) initWithxPos: (double) setXPos yPos: (double) setYPos setWidth: (double) setWidth setHeight: (double) setHeight {
+- (id) initWithxPos: (double) setXPos yPos: (double) setYPos width: (double) setWidth height: (double) setHeight {
     self = [super init];
     
     xPos = setXPos;
@@ -63,8 +63,13 @@
     return height;
 }
 
+/*
+ Checks to see if this frame overlaps another frame.
+ @param otherFrame - the frame to compare this frame with.
+ Return - true if the given frame overlaps this frame, false otherwise.
+ */
 - (Boolean) collidesWith: (Frame *) otherFrame {
-    if (yPos + height > [otherFrame yPos] && yPos + height < [otherFrame yPos] + [otherFrame height] || yPos > [otherFrame yPos] && yPos < [otherFrame yPos] + [otherFrame height]){
+    if ((yPos + height > [otherFrame yPos] && yPos + height < [otherFrame yPos] + [otherFrame height]) || (yPos > [otherFrame yPos] && yPos < [otherFrame yPos] + [otherFrame height])){
         if (xPos + width > [otherFrame xPos] && xPos < [otherFrame xPos]){
 			return true;
 		}
@@ -72,7 +77,7 @@
             return true;
         }
     }
-	if (xPos + width > [otherFrame xPos] && xPos + width < [otherFrame xPos] + [otherFrame width] || xPos > [otherFrame xPos] && xPos < [otherFrame xPos] + [otherFrame width]) {
+	if ((xPos + width > [otherFrame xPos] && xPos + width < [otherFrame xPos] + [otherFrame width]) || (xPos > [otherFrame xPos] && xPos < [otherFrame xPos] + [otherFrame width])) {
 		if (yPos + height > [otherFrame yPos] && yPos < [otherFrame yPos]){
 			return true;
 		}
@@ -83,6 +88,11 @@
 	return false;
 }
 
+/*
+ Checks to see if this frame is contained within another frame.
+ @param otherFrame - the frame to compare this frame with
+ Return - true if the given frame encapsulates this frame, false otherwise.
+ */
 - (Boolean) containedWithin: (Frame *) otherFrame {
 	if (![self collidesWith: otherFrame]) {
 		if ([otherFrame xPos] < xPos && [otherFrame yPos] < yPos){
