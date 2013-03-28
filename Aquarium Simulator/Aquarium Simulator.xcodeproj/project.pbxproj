@@ -24,6 +24,9 @@
 		730113B01704DEBB0004F4B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 730113881704DEBB0004F4B0 /* Foundation.framework */; };
 		730113B81704DEBB0004F4B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 730113B61704DEBB0004F4B0 /* InfoPlist.strings */; };
 		730113BB1704DEBB0004F4B0 /* Aquarium_SimulatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113BA1704DEBB0004F4B0 /* Aquarium_SimulatorTests.m */; };
+		730113C71704DFF50004F4B0 /* FishDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113C61704DFF50004F4B0 /* FishDataModel.m */; };
+		730113CA1704E01E0004F4B0 /* FishColorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113C91704E01E0004F4B0 /* FishColorModel.m */; };
+		730113CD1704E0330004F4B0 /* FishMovementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113CC1704E0330004F4B0 /* FishMovementModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,12 @@
 		730113B71704DEBB0004F4B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		730113B91704DEBB0004F4B0 /* Aquarium_SimulatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aquarium_SimulatorTests.h; sourceTree = "<group>"; };
 		730113BA1704DEBB0004F4B0 /* Aquarium_SimulatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Aquarium_SimulatorTests.m; sourceTree = "<group>"; };
+		730113C51704DFF50004F4B0 /* FishDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FishDataModel.h; sourceTree = "<group>"; };
+		730113C61704DFF50004F4B0 /* FishDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishDataModel.m; sourceTree = "<group>"; };
+		730113C81704E01E0004F4B0 /* FishColorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FishColorModel.h; sourceTree = "<group>"; };
+		730113C91704E01E0004F4B0 /* FishColorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishColorModel.m; sourceTree = "<group>"; usesTabs = 1; };
+		730113CB1704E0330004F4B0 /* FishMovementModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FishMovementModel.h; sourceTree = "<group>"; };
+		730113CC1704E0330004F4B0 /* FishMovementModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishMovementModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +128,7 @@
 		7301138C1704DEBB0004F4B0 /* Aquarium Simulator */ = {
 			isa = PBXGroup;
 			children = (
+				730113C41704DFBF0004F4B0 /* Models */,
 				730113951704DEBB0004F4B0 /* AppDelegate.h */,
 				730113961704DEBB0004F4B0 /* AppDelegate.m */,
 				7301139E1704DEBB0004F4B0 /* ViewController.h */,
@@ -161,6 +171,19 @@
 				730113B61704DEBB0004F4B0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		730113C41704DFBF0004F4B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				730113C51704DFF50004F4B0 /* FishDataModel.h */,
+				730113C61704DFF50004F4B0 /* FishDataModel.m */,
+				730113C81704E01E0004F4B0 /* FishColorModel.h */,
+				730113C91704E01E0004F4B0 /* FishColorModel.m */,
+				730113CB1704E0330004F4B0 /* FishMovementModel.h */,
+				730113CC1704E0330004F4B0 /* FishMovementModel.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +300,9 @@
 				730113931704DEBB0004F4B0 /* main.m in Sources */,
 				730113971704DEBB0004F4B0 /* AppDelegate.m in Sources */,
 				730113A01704DEBB0004F4B0 /* ViewController.m in Sources */,
+				730113C71704DFF50004F4B0 /* FishDataModel.m in Sources */,
+				730113CA1704E01E0004F4B0 /* FishColorModel.m in Sources */,
+				730113CD1704E0330004F4B0 /* FishMovementModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
