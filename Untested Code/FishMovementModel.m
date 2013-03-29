@@ -7,6 +7,7 @@
 //
 
 #import "FishMovementModel.h"
+#import "FishDataModel.h"
 #import "Frame.h"
 #import "Position.h"
 
@@ -24,31 +25,31 @@
     id delegate;
 }
 
-- (id) initWithFrame: (Frame *) setFrame boundary: (Frame *) setBoundary{
+- (id) initWithFrame: (Frame *) setFrame boundary: (Frame *) setBoundary refreshRate: (double) setRefreshRate {
     self = [super init];
     
     currentFrame = setFrame;
     boundary = setBoundary;
     angle = 0.0;
     moving = false;
-    refreshRate = 0.1;
+    refreshRate = setRefreshRate;
     
     return self;
 }
 
-- (id) initWithFrame: (Frame *) setFrame angle: (double) setAngle boundary: (Frame *) setBoundary {
+- (id) initWithFrame: (Frame *) setFrame angle: (double) setAngle boundary: (Frame *) setBoundary refreshRate: (double) setRefreshRate {
     self = [super init];
     
     currentFrame = setFrame;
     boundary = setBoundary;
     angle = setAngle;
     moving = false;
-    refreshRate = 0.1;
+    refreshRate = setRefreshRate;
     
     return self;
 }
 
-- (id) initWithPosition: (Frame *) setFrame angle: (double) setAngle boundary: (Frame *) setBoundary delegate: setDelegate {
+- (id) initWithPosition: (Frame *) setFrame angle: (double) setAngle boundary: (Frame *) setBoundary refreshRate: (double) setRefreshRate delegate: setDelegate {
     self = [super init];
     
     currentFrame = setFrame;
@@ -56,7 +57,7 @@
     angle = setAngle;
     delegate = setDelegate;
     moving = false;
-    refreshRate = 0.1;
+    refreshRate = setRefreshRate;
     
     return self;
 }
@@ -82,7 +83,7 @@
     
 }
 
-- (void) turnAround: withSpeed: (double) setSpeed {
+- (void) turnAroundWithSpeed: (double) setSpeed {
 	[self stopMovement];
 	
 	moveTimer = [[NSTimer aloc] init];
