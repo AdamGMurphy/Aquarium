@@ -8,37 +8,53 @@
 
 #import "FishMovementModel.h"
 #import "Frame.h"
+#import "Position.h"
 
 @implementation FishMovementModel {
     double angle;
+    double refreshRate;
     Frame *currentFrame;
+    Frame *boundary;
+    Position *goalPosition;
+    NSTimer *moveTimer;
+    Boolean moving;
+    double speed;
     id delegate;
 }
 
-- (id) initWithFrame: (Frame *) setFrame {
+- (id) initWithFrame: (Frame *) setFrame boundary: (Frame *) setBoundary{
     self = [super init];
     
     currentFrame = setFrame;
+    boundary = setBoundary;
     angle = 0.0;
+    moving = false;
+    refreshRate = 0.1;
     
     return self;
 }
 
-- (id) initWithFrame: (Frame *) setFrame angle: (double) setAngle{
+- (id) initWithFrame: (Frame *) setFrame angle: (double) setAngle boundary: (Frame *) setBoundary {
     self = [super init];
     
     currentFrame = setFrame;
+    boundary = setBoundary;
     angle = setAngle;
+    moving = false;
+    refreshRate = 0.1;
     
     return self;
 }
 
-- (id) initWithPosition: (Frame *) setFrame angle: (double) setAngle delegate: setDelegate {
+- (id) initWithPosition: (Frame *) setFrame angle: (double) setAngle boundary: (Frame *) setBoundary delegate: setDelegate {
     self = [super init];
     
     currentFrame = setFrame;
+    boundary = setBoundary;
     angle = setAngle;
     delegate = setDelegate;
+    moving = false;
+    refreshRate = 0.1;
     
     return self;
 }
@@ -51,9 +67,40 @@
     return delegate;
 }
 
+- (void) moveToPosition: (Position *) position withSpeed: (double) setSpeed{
+    [self stopMovement];
+    
+    moveTimer = [[NSTimer alloc] init];
+    moveTimer = [NSTimer scheduledTimerWithTimeInterval: refreshRate target:self selector:@selector (moveToGoal) userInfo:nil repeats:YES];
+    moving = true;
+    
+    goalPosition = position;
+    speed = setSpeed;
+    moving = true;
+    
+}
 
+- (void) stopMovement {
+    if (moving) {
+        [moveTimer invalidate];
+        moveTimer = nil;
+    }
+    moving = false;
+    goalPosition = nil;
+    speed = 0.0;
+//    [delegate movementStopped];
+}
 
-
+- (void) moveToGoal {
+    if ([goalPosition x] < [currentFrame xPos] && angle < 1.0)
+        [self stopMovement];
+    if ([goalPosition x] > [currentFrame xPos] && angle > 1.0)
+        [self stopMovement];
+    
+    double distanceToMove = speed * refreshRate;
+//    double moveAngle = tan([currentFrame ]
+    
+}
 
 
 
