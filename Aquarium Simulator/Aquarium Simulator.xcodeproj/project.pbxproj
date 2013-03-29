@@ -28,6 +28,7 @@
 		730113CA1704E01E0004F4B0 /* FishColorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113C91704E01E0004F4B0 /* FishColorModel.m */; };
 		730113CD1704E0330004F4B0 /* FishMovementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113CC1704E0330004F4B0 /* FishMovementModel.m */; };
 		730113D01704E3C80004F4B0 /* Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113CF1704E3C80004F4B0 /* Frame.m */; };
+		730113D6170518440004F4B0 /* Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113D5170518440004F4B0 /* Position.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		730113CC1704E0330004F4B0 /* FishMovementModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishMovementModel.m; sourceTree = "<group>"; };
 		730113CE1704E3C80004F4B0 /* Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Frame.h; sourceTree = "<group>"; };
 		730113CF1704E3C80004F4B0 /* Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Frame.m; sourceTree = "<group>"; usesTabs = 1; };
+		730113D4170518440004F4B0 /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
+		730113D5170518440004F4B0 /* Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Position.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,8 @@
 				730113CC1704E0330004F4B0 /* FishMovementModel.m */,
 				730113CE1704E3C80004F4B0 /* Frame.h */,
 				730113CF1704E3C80004F4B0 /* Frame.m */,
+				730113D4170518440004F4B0 /* Position.h */,
+				730113D5170518440004F4B0 /* Position.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				730113CA1704E01E0004F4B0 /* FishColorModel.m in Sources */,
 				730113CD1704E0330004F4B0 /* FishMovementModel.m in Sources */,
 				730113D01704E3C80004F4B0 /* Frame.m in Sources */,
+				730113D6170518440004F4B0 /* Position.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
