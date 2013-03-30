@@ -12,8 +12,6 @@
 #define TRUNK_HEIGHT 0.15
 #define PECTORAL_BASE_X -0.5
 #define JAW_SPEED_MODIFIER 0.05
-//#define PECTORAL_MOVE_SPEED 1.0
-//#define CAUDAL_ROTATION_SPEED 1.0
 
 GLfloat ww;
 GLfloat wh;
