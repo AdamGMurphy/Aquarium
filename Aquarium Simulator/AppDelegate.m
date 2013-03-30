@@ -1,28 +1,38 @@
 //
 //  AppDelegate.m
-//  Aquarium Simulator
+//  Aquarium
 //
-//  Created by Adam G Murphy on 2013-03-28.
-//  Copyright (c) 2013 Adam G Murphy. All rights reserved.
+//  Created by Dazza on 2013-03-27.
+//  Copyright (c) 2013 Darren Perry. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
-#import "ViewController.h"
+#import "MainViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil];
-    } else {
-        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
-    }
-    self.window.rootViewController = self.viewController;
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    //the start screen
+    MainViewController *mainView = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    
+    //initialize the nav controller with the main view
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mainView];
+    
+    //make the nav controller the root
+    self.window.rootViewController = navController;
+    
+    navController.navigationBarHidden = YES;
     [self.window makeKeyAndVisible];
+    
+    //Add shake support to the app
+    [application setApplicationSupportsShakeToEdit:YES];
+    
     return YES;
 }
 

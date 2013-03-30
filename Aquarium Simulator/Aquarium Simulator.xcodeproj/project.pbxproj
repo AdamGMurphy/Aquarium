@@ -12,13 +12,9 @@
 		7301138B1704DEBB0004F4B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7301138A1704DEBB0004F4B0 /* CoreGraphics.framework */; };
 		730113911704DEBB0004F4B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7301138F1704DEBB0004F4B0 /* InfoPlist.strings */; };
 		730113931704DEBB0004F4B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113921704DEBB0004F4B0 /* main.m */; };
-		730113971704DEBB0004F4B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113961704DEBB0004F4B0 /* AppDelegate.m */; };
 		730113991704DEBB0004F4B0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 730113981704DEBB0004F4B0 /* Default.png */; };
 		7301139B1704DEBB0004F4B0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7301139A1704DEBB0004F4B0 /* Default@2x.png */; };
 		7301139D1704DEBB0004F4B0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7301139C1704DEBB0004F4B0 /* Default-568h@2x.png */; };
-		730113A01704DEBB0004F4B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7301139F1704DEBB0004F4B0 /* ViewController.m */; };
-		730113A31704DEBB0004F4B0 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 730113A11704DEBB0004F4B0 /* ViewController_iPhone.xib */; };
-		730113A61704DEBB0004F4B0 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 730113A41704DEBB0004F4B0 /* ViewController_iPad.xib */; };
 		730113AE1704DEBB0004F4B0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 730113AD1704DEBB0004F4B0 /* SenTestingKit.framework */; };
 		730113AF1704DEBB0004F4B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 730113861704DEBB0004F4B0 /* UIKit.framework */; };
 		730113B01704DEBB0004F4B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 730113881704DEBB0004F4B0 /* Foundation.framework */; };
@@ -29,6 +25,30 @@
 		730113CD1704E0330004F4B0 /* FishMovementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113CC1704E0330004F4B0 /* FishMovementModel.m */; };
 		730113D01704E3C80004F4B0 /* Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113CF1704E3C80004F4B0 /* Frame.m */; };
 		730113D6170518440004F4B0 /* Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113D5170518440004F4B0 /* Position.m */; };
+		EB670B8C1706B5D800D01CB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB670B721706B5D800D01CB6 /* AppDelegate.m */; };
+		EB670B8D1706B5D800D01CB6 /* AquariumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB670B741706B5D800D01CB6 /* AquariumViewController.m */; };
+		EB670B8E1706B5D800D01CB6 /* AquariumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB670B751706B5D800D01CB6 /* AquariumViewController.xib */; };
+		EB670B8F1706B5D800D01CB6 /* back1smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B761706B5D800D01CB6 /* back1smallr.png */; };
+		EB670B901706B5D800D01CB6 /* back2smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B771706B5D800D01CB6 /* back2smallr.png */; };
+		EB670B911706B5D800D01CB6 /* back3smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B781706B5D800D01CB6 /* back3smallr.png */; };
+		EB670B921706B5D800D01CB6 /* back4smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B791706B5D800D01CB6 /* back4smallr.png */; };
+		EB670B931706B5D800D01CB6 /* back5smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B7A1706B5D800D01CB6 /* back5smallr.png */; };
+		EB670B941706B5D800D01CB6 /* BluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB670B7C1706B5D800D01CB6 /* BluetoothViewController.m */; };
+		EB670B951706B5D800D01CB6 /* BluetoothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB670B7D1706B5D800D01CB6 /* BluetoothViewController.xib */; };
+		EB670B961706B5D800D01CB6 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B7E1706B5D800D01CB6 /* button.png */; };
+		EB670B971706B5D800D01CB6 /* connect.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B7F1706B5D800D01CB6 /* connect.png */; };
+		EB670B981706B5D800D01CB6 /* create.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B801706B5D800D01CB6 /* create.png */; };
+		EB670B991706B5D800D01CB6 /* disconnect.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B811706B5D800D01CB6 /* disconnect.png */; };
+		EB670B9A1706B5D800D01CB6 /* link.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B821706B5D800D01CB6 /* link.png */; };
+		EB670B9B1706B5D800D01CB6 /* load.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B831706B5D800D01CB6 /* load.png */; };
+		EB670B9C1706B5D800D01CB6 /* loadgame.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B841706B5D800D01CB6 /* loadgame.png */; };
+		EB670B9D1706B5D800D01CB6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB670B861706B5D800D01CB6 /* MainViewController.m */; };
+		EB670B9E1706B5D800D01CB6 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB670B871706B5D800D01CB6 /* MainViewController.xib */; };
+		EB670B9F1706B5D800D01CB6 /* newfish.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B881706B5D800D01CB6 /* newfish.png */; };
+		EB670BA01706B5D800D01CB6 /* newgame.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B891706B5D800D01CB6 /* newgame.png */; };
+		EB670BA11706B5D800D01CB6 /* stats.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B8A1706B5D800D01CB6 /* stats.png */; };
+		EB670BA21706B5D800D01CB6 /* trade.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B8B1706B5D800D01CB6 /* trade.png */; };
+		EB670BAF1706B9F800D01CB6 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB670BAE1706B9F800D01CB6 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,15 +70,9 @@
 		730113901704DEBB0004F4B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		730113921704DEBB0004F4B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		730113941704DEBB0004F4B0 /* Aquarium Simulator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aquarium Simulator-Prefix.pch"; sourceTree = "<group>"; };
-		730113951704DEBB0004F4B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		730113961704DEBB0004F4B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		730113981704DEBB0004F4B0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7301139A1704DEBB0004F4B0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7301139C1704DEBB0004F4B0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		7301139E1704DEBB0004F4B0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7301139F1704DEBB0004F4B0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		730113A21704DEBB0004F4B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		730113A51704DEBB0004F4B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		730113AC1704DEBB0004F4B0 /* Aquarium SimulatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aquarium SimulatorTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		730113AD1704DEBB0004F4B0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		730113B51704DEBB0004F4B0 /* Aquarium SimulatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Aquarium SimulatorTests-Info.plist"; sourceTree = "<group>"; };
@@ -75,6 +89,34 @@
 		730113CF1704E3C80004F4B0 /* Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Frame.m; sourceTree = "<group>"; usesTabs = 1; };
 		730113D4170518440004F4B0 /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
 		730113D5170518440004F4B0 /* Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Position.m; sourceTree = "<group>"; };
+		EB670B711706B5D800D01CB6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		EB670B721706B5D800D01CB6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
+		EB670B731706B5D800D01CB6 /* AquariumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AquariumViewController.h; path = ../AquariumViewController.h; sourceTree = "<group>"; };
+		EB670B741706B5D800D01CB6 /* AquariumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AquariumViewController.m; path = ../AquariumViewController.m; sourceTree = "<group>"; };
+		EB670B751706B5D800D01CB6 /* AquariumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AquariumViewController.xib; path = ../AquariumViewController.xib; sourceTree = "<group>"; };
+		EB670B761706B5D800D01CB6 /* back1smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back1smallr.png; path = ../back1smallr.png; sourceTree = "<group>"; };
+		EB670B771706B5D800D01CB6 /* back2smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back2smallr.png; path = ../back2smallr.png; sourceTree = "<group>"; };
+		EB670B781706B5D800D01CB6 /* back3smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back3smallr.png; path = ../back3smallr.png; sourceTree = "<group>"; };
+		EB670B791706B5D800D01CB6 /* back4smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back4smallr.png; path = ../back4smallr.png; sourceTree = "<group>"; };
+		EB670B7A1706B5D800D01CB6 /* back5smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back5smallr.png; path = ../back5smallr.png; sourceTree = "<group>"; };
+		EB670B7B1706B5D800D01CB6 /* BluetoothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BluetoothViewController.h; path = ../BluetoothViewController.h; sourceTree = "<group>"; };
+		EB670B7C1706B5D800D01CB6 /* BluetoothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BluetoothViewController.m; path = ../BluetoothViewController.m; sourceTree = "<group>"; };
+		EB670B7D1706B5D800D01CB6 /* BluetoothViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BluetoothViewController.xib; path = ../BluetoothViewController.xib; sourceTree = "<group>"; };
+		EB670B7E1706B5D800D01CB6 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = ../button.png; sourceTree = "<group>"; };
+		EB670B7F1706B5D800D01CB6 /* connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = connect.png; path = ../connect.png; sourceTree = "<group>"; };
+		EB670B801706B5D800D01CB6 /* create.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = create.png; path = ../create.png; sourceTree = "<group>"; };
+		EB670B811706B5D800D01CB6 /* disconnect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = disconnect.png; path = ../disconnect.png; sourceTree = "<group>"; };
+		EB670B821706B5D800D01CB6 /* link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = link.png; path = ../link.png; sourceTree = "<group>"; };
+		EB670B831706B5D800D01CB6 /* load.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = load.png; path = ../load.png; sourceTree = "<group>"; };
+		EB670B841706B5D800D01CB6 /* loadgame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loadgame.png; path = ../loadgame.png; sourceTree = "<group>"; };
+		EB670B851706B5D800D01CB6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ../MainViewController.h; sourceTree = "<group>"; };
+		EB670B861706B5D800D01CB6 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ../MainViewController.m; sourceTree = "<group>"; };
+		EB670B871706B5D800D01CB6 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = ../MainViewController.xib; sourceTree = "<group>"; };
+		EB670B881706B5D800D01CB6 /* newfish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newfish.png; path = ../newfish.png; sourceTree = "<group>"; };
+		EB670B891706B5D800D01CB6 /* newgame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newgame.png; path = ../newgame.png; sourceTree = "<group>"; };
+		EB670B8A1706B5D800D01CB6 /* stats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stats.png; path = ../stats.png; sourceTree = "<group>"; };
+		EB670B8B1706B5D800D01CB6 /* trade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trade.png; path = ../trade.png; sourceTree = "<group>"; };
+		EB670BAE1706B9F800D01CB6 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB670BAF1706B9F800D01CB6 /* GameKit.framework in Frameworks */,
 				730113871704DEBB0004F4B0 /* UIKit.framework in Frameworks */,
 				730113891704DEBB0004F4B0 /* Foundation.framework in Frameworks */,
 				7301138B1704DEBB0004F4B0 /* CoreGraphics.framework in Frameworks */,
@@ -123,6 +166,7 @@
 		730113851704DEBB0004F4B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB670BAE1706B9F800D01CB6 /* GameKit.framework */,
 				730113861704DEBB0004F4B0 /* UIKit.framework */,
 				730113881704DEBB0004F4B0 /* Foundation.framework */,
 				7301138A1704DEBB0004F4B0 /* CoreGraphics.framework */,
@@ -135,12 +179,33 @@
 			isa = PBXGroup;
 			children = (
 				730113C41704DFBF0004F4B0 /* Models */,
-				730113951704DEBB0004F4B0 /* AppDelegate.h */,
-				730113961704DEBB0004F4B0 /* AppDelegate.m */,
-				7301139E1704DEBB0004F4B0 /* ViewController.h */,
-				7301139F1704DEBB0004F4B0 /* ViewController.m */,
-				730113A11704DEBB0004F4B0 /* ViewController_iPhone.xib */,
-				730113A41704DEBB0004F4B0 /* ViewController_iPad.xib */,
+				EB670B711706B5D800D01CB6 /* AppDelegate.h */,
+				EB670B721706B5D800D01CB6 /* AppDelegate.m */,
+				EB670B731706B5D800D01CB6 /* AquariumViewController.h */,
+				EB670B741706B5D800D01CB6 /* AquariumViewController.m */,
+				EB670B751706B5D800D01CB6 /* AquariumViewController.xib */,
+				EB670B761706B5D800D01CB6 /* back1smallr.png */,
+				EB670B771706B5D800D01CB6 /* back2smallr.png */,
+				EB670B781706B5D800D01CB6 /* back3smallr.png */,
+				EB670B791706B5D800D01CB6 /* back4smallr.png */,
+				EB670B7A1706B5D800D01CB6 /* back5smallr.png */,
+				EB670B7B1706B5D800D01CB6 /* BluetoothViewController.h */,
+				EB670B7C1706B5D800D01CB6 /* BluetoothViewController.m */,
+				EB670B7D1706B5D800D01CB6 /* BluetoothViewController.xib */,
+				EB670B7E1706B5D800D01CB6 /* button.png */,
+				EB670B7F1706B5D800D01CB6 /* connect.png */,
+				EB670B801706B5D800D01CB6 /* create.png */,
+				EB670B811706B5D800D01CB6 /* disconnect.png */,
+				EB670B821706B5D800D01CB6 /* link.png */,
+				EB670B831706B5D800D01CB6 /* load.png */,
+				EB670B841706B5D800D01CB6 /* loadgame.png */,
+				EB670B851706B5D800D01CB6 /* MainViewController.h */,
+				EB670B861706B5D800D01CB6 /* MainViewController.m */,
+				EB670B871706B5D800D01CB6 /* MainViewController.xib */,
+				EB670B881706B5D800D01CB6 /* newfish.png */,
+				EB670B891706B5D800D01CB6 /* newgame.png */,
+				EB670B8A1706B5D800D01CB6 /* stats.png */,
+				EB670B8B1706B5D800D01CB6 /* trade.png */,
 				7301138D1704DEBB0004F4B0 /* Supporting Files */,
 			);
 			path = "Aquarium Simulator";
@@ -271,8 +336,25 @@
 				730113991704DEBB0004F4B0 /* Default.png in Resources */,
 				7301139B1704DEBB0004F4B0 /* Default@2x.png in Resources */,
 				7301139D1704DEBB0004F4B0 /* Default-568h@2x.png in Resources */,
-				730113A31704DEBB0004F4B0 /* ViewController_iPhone.xib in Resources */,
-				730113A61704DEBB0004F4B0 /* ViewController_iPad.xib in Resources */,
+				EB670B8E1706B5D800D01CB6 /* AquariumViewController.xib in Resources */,
+				EB670B8F1706B5D800D01CB6 /* back1smallr.png in Resources */,
+				EB670B901706B5D800D01CB6 /* back2smallr.png in Resources */,
+				EB670B911706B5D800D01CB6 /* back3smallr.png in Resources */,
+				EB670B921706B5D800D01CB6 /* back4smallr.png in Resources */,
+				EB670B931706B5D800D01CB6 /* back5smallr.png in Resources */,
+				EB670B951706B5D800D01CB6 /* BluetoothViewController.xib in Resources */,
+				EB670B961706B5D800D01CB6 /* button.png in Resources */,
+				EB670B971706B5D800D01CB6 /* connect.png in Resources */,
+				EB670B981706B5D800D01CB6 /* create.png in Resources */,
+				EB670B991706B5D800D01CB6 /* disconnect.png in Resources */,
+				EB670B9A1706B5D800D01CB6 /* link.png in Resources */,
+				EB670B9B1706B5D800D01CB6 /* load.png in Resources */,
+				EB670B9C1706B5D800D01CB6 /* loadgame.png in Resources */,
+				EB670B9E1706B5D800D01CB6 /* MainViewController.xib in Resources */,
+				EB670B9F1706B5D800D01CB6 /* newfish.png in Resources */,
+				EB670BA01706B5D800D01CB6 /* newgame.png in Resources */,
+				EB670BA11706B5D800D01CB6 /* stats.png in Resources */,
+				EB670BA21706B5D800D01CB6 /* trade.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,13 +390,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				730113931704DEBB0004F4B0 /* main.m in Sources */,
-				730113971704DEBB0004F4B0 /* AppDelegate.m in Sources */,
-				730113A01704DEBB0004F4B0 /* ViewController.m in Sources */,
 				730113C71704DFF50004F4B0 /* FishDataModel.m in Sources */,
 				730113CA1704E01E0004F4B0 /* FishColorModel.m in Sources */,
 				730113CD1704E0330004F4B0 /* FishMovementModel.m in Sources */,
 				730113D01704E3C80004F4B0 /* Frame.m in Sources */,
 				730113D6170518440004F4B0 /* Position.m in Sources */,
+				EB670B8C1706B5D800D01CB6 /* AppDelegate.m in Sources */,
+				EB670B8D1706B5D800D01CB6 /* AquariumViewController.m in Sources */,
+				EB670B941706B5D800D01CB6 /* BluetoothViewController.m in Sources */,
+				EB670B9D1706B5D800D01CB6 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,22 +427,6 @@
 				730113901704DEBB0004F4B0 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		730113A11704DEBB0004F4B0 /* ViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				730113A21704DEBB0004F4B0 /* en */,
-			);
-			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		730113A41704DEBB0004F4B0 /* ViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				730113A51704DEBB0004F4B0 /* en */,
-			);
-			name = ViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 		730113B61704DEBB0004F4B0 /* InfoPlist.strings */ = {
@@ -436,7 +504,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Aquarium Simulator/Aquarium Simulator-Prefix.pch";
 				INFOPLIST_FILE = "Aquarium Simulator/Aquarium Simulator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -447,7 +517,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Aquarium Simulator/Aquarium Simulator-Prefix.pch";
 				INFOPLIST_FILE = "Aquarium Simulator/Aquarium Simulator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -505,6 +577,7 @@
 				730113C01704DEBB0004F4B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		730113C11704DEBB0004F4B0 /* Build configuration list for PBXNativeTarget "Aquarium SimulatorTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +586,7 @@
 				730113C31704DEBB0004F4B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
