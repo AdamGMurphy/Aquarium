@@ -70,8 +70,11 @@
     return delegate;
 }
 
-- (void) moveToPosition: (Position *) position withSpeed: (double) setSpeed{
+- (Boolean) moveToPosition: (Position *) position withSpeed: (double) setSpeed{
     [self stopMovement];
+    
+    if (([goalPosition x] < [currentFrame xPos] && angle < 1.0) || ([goalPosition x] > [currentFrame xPos] && angle > 1.0))
+        return false;
     
     moveTimer = [[NSTimer alloc] init];
     moveTimer = [NSTimer scheduledTimerWithTimeInterval: refreshRate target:self selector:@selector (moveToGoal) userInfo:nil repeats:YES];
@@ -80,7 +83,7 @@
     goalPosition = position;
     speed = setSpeed;
     moving = true;
-    
+    return true;
 }
 
 - (void) turnAroundWithSpeed: (double) setSpeed {

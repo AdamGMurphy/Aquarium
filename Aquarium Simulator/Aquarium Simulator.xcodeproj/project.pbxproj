@@ -25,6 +25,9 @@
 		730113CD1704E0330004F4B0 /* FishMovementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113CC1704E0330004F4B0 /* FishMovementModel.m */; };
 		730113D01704E3C80004F4B0 /* Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113CF1704E3C80004F4B0 /* Frame.m */; };
 		730113D6170518440004F4B0 /* Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113D5170518440004F4B0 /* Position.m */; };
+		732A6DEC1707525300E0D451 /* FishBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 732A6DEB1707525300E0D451 /* FishBehaviorController.m */; };
+		732A6DEF17075C1600E0D451 /* AquariumController.m in Sources */ = {isa = PBXBuildFile; fileRef = 732A6DEE17075C1600E0D451 /* AquariumController.m */; };
+		732A6DF217075FD200E0D451 /* FishGraphicsModel.c in Sources */ = {isa = PBXBuildFile; fileRef = 732A6DF117075FD200E0D451 /* FishGraphicsModel.c */; };
 		739A2E3417074BA100A3EC82 /* HungerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3317074BA100A3EC82 /* HungerLayer.m */; };
 		739A2E3717074C0300A3EC82 /* MovingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3617074C0300A3EC82 /* MovingLayer.m */; };
 		739A2E3A17074CE700A3EC82 /* RestingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3917074CE700A3EC82 /* RestingLayer.m */; };
@@ -93,6 +96,11 @@
 		730113CF1704E3C80004F4B0 /* Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Frame.m; sourceTree = "<group>"; usesTabs = 1; };
 		730113D4170518440004F4B0 /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
 		730113D5170518440004F4B0 /* Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Position.m; sourceTree = "<group>"; };
+		732A6DEA1707525300E0D451 /* FishBehaviorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FishBehaviorController.h; sourceTree = "<group>"; };
+		732A6DEB1707525300E0D451 /* FishBehaviorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishBehaviorController.m; sourceTree = "<group>"; usesTabs = 1; };
+		732A6DED17075C1600E0D451 /* AquariumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AquariumController.h; sourceTree = "<group>"; };
+		732A6DEE17075C1600E0D451 /* AquariumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AquariumController.m; sourceTree = "<group>"; usesTabs = 1; };
+		732A6DF117075FD200E0D451 /* FishGraphicsModel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FishGraphicsModel.c; sourceTree = "<group>"; };
 		739A2E3217074BA100A3EC82 /* HungerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HungerLayer.h; sourceTree = "<group>"; };
 		739A2E3317074BA100A3EC82 /* HungerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HungerLayer.m; sourceTree = "<group>"; };
 		739A2E3517074C0300A3EC82 /* MovingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingLayer.h; sourceTree = "<group>"; };
@@ -190,7 +198,10 @@
 		7301138C1704DEBB0004F4B0 /* Aquarium Simulator */ = {
 			isa = PBXGroup;
 			children = (
+				732A6DF017075F9900E0D451 /* Graphics */,
+				732A6DE91707523C00E0D451 /* Aquarium Controllers */,
 				730113C41704DFBF0004F4B0 /* Models */,
+				739A2E3117074B8300A3EC82 /* ActivationLayers */,
 				EB670B711706B5D800D01CB6 /* AppDelegate.h */,
 				EB670B721706B5D800D01CB6 /* AppDelegate.m */,
 				EB670B731706B5D800D01CB6 /* AquariumViewController.h */,
@@ -269,9 +280,27 @@
 				730113CF1704E3C80004F4B0 /* Frame.m */,
 				730113D4170518440004F4B0 /* Position.h */,
 				730113D5170518440004F4B0 /* Position.m */,
-				739A2E3117074B8300A3EC82 /* ActivationLayers */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		732A6DE91707523C00E0D451 /* Aquarium Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				732A6DEA1707525300E0D451 /* FishBehaviorController.h */,
+				732A6DEB1707525300E0D451 /* FishBehaviorController.m */,
+				732A6DED17075C1600E0D451 /* AquariumController.h */,
+				732A6DEE17075C1600E0D451 /* AquariumController.m */,
+			);
+			name = "Aquarium Controllers";
+			sourceTree = "<group>";
+		};
+		732A6DF017075F9900E0D451 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				732A6DF117075FD200E0D451 /* FishGraphicsModel.c */,
+			);
+			name = Graphics;
 			sourceTree = "<group>";
 		};
 		739A2E3117074B8300A3EC82 /* ActivationLayers */ = {
@@ -431,6 +460,9 @@
 				739A2E3717074C0300A3EC82 /* MovingLayer.m in Sources */,
 				739A2E3A17074CE700A3EC82 /* RestingLayer.m in Sources */,
 				739A2E3D17074D7600A3EC82 /* TurningLayer.m in Sources */,
+				732A6DEC1707525300E0D451 /* FishBehaviorController.m in Sources */,
+				732A6DEF17075C1600E0D451 /* AquariumController.m in Sources */,
+				732A6DF217075FD200E0D451 /* FishGraphicsModel.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

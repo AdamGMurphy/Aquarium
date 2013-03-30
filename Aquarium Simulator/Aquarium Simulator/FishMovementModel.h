@@ -24,7 +24,7 @@
 
 - (id) delegate;
 
-- (void) moveToPosition: (Position *) position withSpeed: (double) setSpeed;
+- (Boolean) moveToPosition: (Position *) position withSpeed: (double) setSpeed;
 
 - (void) turnAroundWithSpeed: (double) setSpeed;
 

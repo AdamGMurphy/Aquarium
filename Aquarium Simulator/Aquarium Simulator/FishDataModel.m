@@ -1,4 +1,13 @@
+//
+//  FishBehaviorController.m
+//  Aquarium Simulator
+//
+//  Created by Adam G Murphy on 2013-03-30.
+//  Copyright (c) 2013 Adam G Murphy. All rights reserved.
+//
+
 #import "FishDataModel.h"
+#import "FishBehaviorController.h"
 #import "FishMovementModel.h"
 #import "FishColorModel.h"
 #import "Frame.h"
@@ -7,19 +16,21 @@
 @implementation FishDataModel {
 	FishMovementModel *movementModel;
 	FishColorModel *colorModel;
+    double maxHunger;
 	double hunger;
 	double size;
 	int currentAction;
 	id delegate;
 }
 
-- (id) initWithSize: (double) setSize movementModel: (FishMovementModel *) setMovementModel setColorModel: (FishColorModel *) setColorModel hunger: (double) setHunger {
+- (id) initWithSize: (double) setSize movementModel: (FishMovementModel *) setMovementModel setColorModel: (FishColorModel *) setColorModel maxHunger: (double) setMaxHunger currentHunger: (double) setHunger {
 	self = [super init];
     
 	size = setSize;
 	movementModel = setMovementModel;
 	[movementModel setDelegate: self];
 	colorModel = setColorModel;
+    maxHunger = setMaxHunger;
 	hunger = setHunger;
 	currentAction = 0;
 	/*
@@ -53,8 +64,16 @@
 	size = log(pow(10, size) + increment);
 }
 
+- (void) setAction: (int) setAction {
+    currentAction = setAction;
+}
+
 - (int) action {
 	return currentAction;
+}
+
+- (double) maxHunger {
+    return maxHunger;
 }
 
 - (double) hunger {
@@ -70,15 +89,15 @@
 }
 
 - (void) movementStopped {
-	[delegate movementStopped];
+	[delegate actionFinished];
 }
 
 - (void) turningStopped {
-	[delegate turningStopped];
+	[delegate actionFinished];
 }
 
-- (void) moveToPosition: (Position *) position withSpeed: (double) speed {
-	[movementModel moveToPosition: position withSpeed: speed];
+- (Boolean) moveToPosition: (Position *) position withSpeed: (double) speed {
+	return [movementModel moveToPosition: position withSpeed: speed];
 }
 
 - (void) turnAroundWithSpeed: (double) speed {
