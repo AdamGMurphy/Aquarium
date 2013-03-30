@@ -8,16 +8,18 @@
 	FishMovementModel *movementModel;
 	FishColorModel *colorModel;
 	double hunger;
+	double size;
 	int currentAction;
 	id delegate;
 }
 
-- (id) initWithMovementModel: (FishMovementModel *) setMovementModel colorModel: (FishColorModel *) setColorModel hunger: (double) setHunger {
+- (id) initWithSize: (double) setSize movementModel: (FishMovementModel *) setMovementModel setColorModel: (FishColorModel *) setColorModel hunger: (double) setHunger {
 	self = [super init];
 
+	size = setSize;
 	movementModel = setMovementModel;
 	[movementModel setDelegate: self];
-	colorModel = colorModel;
+	colorModel = setColorModel;
 	hunger = setHunger;
 	currentAction = 0;
 	/*
@@ -37,6 +39,18 @@
 
 - (id) delegate{
 	return delegate;
+}
+
+- (double) size {
+	return size;
+}
+
+- (void) setSize: (double) setSize {
+	size = setSize;
+}
+
+- (void) incrementSize: (double) increment {
+	size = log(pow(10, size) + incrememnt)
 }
 
 - (int) action {
