@@ -70,3 +70,5 @@
 - (void) turnAroundWithSpeed: (double) speed {
 	[movementModel turnAroundWithSpeed: speed];
 }
+
+@end
