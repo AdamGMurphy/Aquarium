@@ -25,6 +25,10 @@
 		730113CD1704E0330004F4B0 /* FishMovementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113CC1704E0330004F4B0 /* FishMovementModel.m */; };
 		730113D01704E3C80004F4B0 /* Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113CF1704E3C80004F4B0 /* Frame.m */; };
 		730113D6170518440004F4B0 /* Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113D5170518440004F4B0 /* Position.m */; };
+		739A2E3417074BA100A3EC82 /* HungerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3317074BA100A3EC82 /* HungerLayer.m */; };
+		739A2E3717074C0300A3EC82 /* MovingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3617074C0300A3EC82 /* MovingLayer.m */; };
+		739A2E3A17074CE700A3EC82 /* RestingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3917074CE700A3EC82 /* RestingLayer.m */; };
+		739A2E3D17074D7600A3EC82 /* TurningLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3C17074D7600A3EC82 /* TurningLayer.m */; };
 		EB670B8C1706B5D800D01CB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB670B721706B5D800D01CB6 /* AppDelegate.m */; };
 		EB670B8D1706B5D800D01CB6 /* AquariumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB670B741706B5D800D01CB6 /* AquariumViewController.m */; };
 		EB670B8E1706B5D800D01CB6 /* AquariumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB670B751706B5D800D01CB6 /* AquariumViewController.xib */; };
@@ -89,6 +93,14 @@
 		730113CF1704E3C80004F4B0 /* Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Frame.m; sourceTree = "<group>"; usesTabs = 1; };
 		730113D4170518440004F4B0 /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
 		730113D5170518440004F4B0 /* Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Position.m; sourceTree = "<group>"; };
+		739A2E3217074BA100A3EC82 /* HungerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HungerLayer.h; sourceTree = "<group>"; };
+		739A2E3317074BA100A3EC82 /* HungerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HungerLayer.m; sourceTree = "<group>"; };
+		739A2E3517074C0300A3EC82 /* MovingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingLayer.h; sourceTree = "<group>"; };
+		739A2E3617074C0300A3EC82 /* MovingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingLayer.m; sourceTree = "<group>"; };
+		739A2E3817074CE700A3EC82 /* RestingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestingLayer.h; sourceTree = "<group>"; };
+		739A2E3917074CE700A3EC82 /* RestingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestingLayer.m; sourceTree = "<group>"; };
+		739A2E3B17074D7600A3EC82 /* TurningLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurningLayer.h; sourceTree = "<group>"; };
+		739A2E3C17074D7600A3EC82 /* TurningLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurningLayer.m; sourceTree = "<group>"; };
 		EB670B711706B5D800D01CB6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
 		EB670B721706B5D800D01CB6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
 		EB670B731706B5D800D01CB6 /* AquariumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AquariumViewController.h; path = ../AquariumViewController.h; sourceTree = "<group>"; };
@@ -257,8 +269,24 @@
 				730113CF1704E3C80004F4B0 /* Frame.m */,
 				730113D4170518440004F4B0 /* Position.h */,
 				730113D5170518440004F4B0 /* Position.m */,
+				739A2E3117074B8300A3EC82 /* ActivationLayers */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		739A2E3117074B8300A3EC82 /* ActivationLayers */ = {
+			isa = PBXGroup;
+			children = (
+				739A2E3217074BA100A3EC82 /* HungerLayer.h */,
+				739A2E3317074BA100A3EC82 /* HungerLayer.m */,
+				739A2E3517074C0300A3EC82 /* MovingLayer.h */,
+				739A2E3617074C0300A3EC82 /* MovingLayer.m */,
+				739A2E3817074CE700A3EC82 /* RestingLayer.h */,
+				739A2E3917074CE700A3EC82 /* RestingLayer.m */,
+				739A2E3B17074D7600A3EC82 /* TurningLayer.h */,
+				739A2E3C17074D7600A3EC82 /* TurningLayer.m */,
+			);
+			name = ActivationLayers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,6 +427,10 @@
 				EB670B8D1706B5D800D01CB6 /* AquariumViewController.m in Sources */,
 				EB670B941706B5D800D01CB6 /* BluetoothViewController.m in Sources */,
 				EB670B9D1706B5D800D01CB6 /* MainViewController.m in Sources */,
+				739A2E3417074BA100A3EC82 /* HungerLayer.m in Sources */,
+				739A2E3717074C0300A3EC82 /* MovingLayer.m in Sources */,
+				739A2E3A17074CE700A3EC82 /* RestingLayer.m in Sources */,
+				739A2E3D17074D7600A3EC82 /* TurningLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

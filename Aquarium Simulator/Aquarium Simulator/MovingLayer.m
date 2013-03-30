@@ -1,3 +1,11 @@
+//
+//  MovingLayer.m
+//  Aquarium Simulator
+//
+//  Created by Adam G Murphy on 2013-03-30.
+//  Copyright (c) 2013 Adam G Murphy. All rights reserved.
+//
+
 #import "MovingLayer.h"
 #import <stdlib.h>
 
@@ -7,24 +15,28 @@
 }
 
 - (id) initWithMaxHunger: (double) setMaxHunger movementModifier: (double) setMovementModifier {
-	maxHunger = setMaxHunger;
+	self = [super init];
+    
+    maxHunger = setMaxHunger;
 	movementModifier = setMovementModifier;
+    
+    return self;
 }
 
-- (double) resetMovementModifier {
+- (void) resetMovementModifier {
 	movementModifier = 0.0;
 }
 
-- (double) decrementMovementModifier: (double) decrement {
+- (void) decrementMovementModifier: (double) decrement {
 	movementModifier -= decrement;
 }
 
 - (double) activationWithHunger: (double) hunger {
 	double desire = abs(hunger - maxHunger) / maxHunger;
-	double randomDesire = (double) (arc4Random() % 60) - 30.0;
+	double randomDesire = ((arc4random() % 60) - 30.0) / 100.0;
 	double finalDesire = desire + randomDesire * ((0.5 - abs(desire - 0.5)) / 0.5) + movementModifier;
-
-	return min(max(finalDesire, 100.0), 0.0);
+    
+	return MIN(MAX(finalDesire, 0.0), 100.0);
 }
 
 @end

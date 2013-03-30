@@ -7,46 +7,49 @@
 //
 
 #import "FishMovementModel.h"
+#import "FishDataModel.h"
 #import "Frame.h"
 #import "Position.h"
 
 @implementation FishMovementModel {
     double angle;
+	Frame *currentFrame;
+    
     double refreshRate;
-    Frame *currentFrame;
     Frame *boundary;
     Position *goalPosition;
     NSTimer *moveTimer;
     Boolean moving;
+	Boolean turning;
     double speed;
     id delegate;
 }
 
-- (id) initWithFrame: (Frame *) setFrame boundary: (Frame *) setBoundary{
+- (id) initWithFrame: (Frame *) setFrame boundary: (Frame *) setBoundary refreshRate: (double) setRefreshRate {
     self = [super init];
     
     currentFrame = setFrame;
     boundary = setBoundary;
     angle = 0.0;
     moving = false;
-    refreshRate = 0.1;
+    refreshRate = setRefreshRate;
     
     return self;
 }
 
-- (id) initWithFrame: (Frame *) setFrame angle: (double) setAngle boundary: (Frame *) setBoundary {
+- (id) initWithFrame: (Frame *) setFrame angle: (double) setAngle boundary: (Frame *) setBoundary refreshRate: (double) setRefreshRate {
     self = [super init];
     
     currentFrame = setFrame;
     boundary = setBoundary;
     angle = setAngle;
     moving = false;
-    refreshRate = 0.1;
+    refreshRate = setRefreshRate;
     
     return self;
 }
 
-- (id) initWithPosition: (Frame *) setFrame angle: (double) setAngle boundary: (Frame *) setBoundary delegate: setDelegate {
+- (id) initWithPosition: (Frame *) setFrame angle: (double) setAngle boundary: (Frame *) setBoundary refreshRate: (double) setRefreshRate delegate: setDelegate {
     self = [super init];
     
     currentFrame = setFrame;
@@ -54,7 +57,7 @@
     angle = setAngle;
     delegate = setDelegate;
     moving = false;
-    refreshRate = 0.1;
+    refreshRate = setRefreshRate;
     
     return self;
 }
@@ -80,15 +83,33 @@
     
 }
 
+- (void) turnAroundWithSpeed: (double) setSpeed {
+	[self stopMovement];
+	
+	moveTimer = [[NSTimer alloc] init];
+	moveTimer = [NSTimer scheduledTimerWithTimeInterval: refreshRate target:self selector:@selector(turnAround) userInfo:nil repeats:YES];
+	turning = true;
+}
+
 - (void) stopMovement {
     if (moving) {
         [moveTimer invalidate];
         moveTimer = nil;
-    }
-    moving = false;
-    goalPosition = nil;
-    speed = 0.0;
-//    [delegate movementStopped];
+		moving = false;
+		goalPosition = nil;
+		speed = 0.0;
+        //    [delegate movementStopped];
+	}
+}
+
+- (void) stopTurning {
+	if (turning) {
+		[moveTimer invalidate];
+		moveTimer = nil;
+		turning = false;
+		speed = 0.0;
+        //		[delegate turningStopped];
+	}
 }
 
 - (void) moveToGoal {
@@ -98,13 +119,35 @@
         [self stopMovement];
     
     double distanceToMove = speed * refreshRate;
-//    double moveAngle = tan([currentFrame ]
+    double moveAngle = tan(abs(([goalPosition y] - [currentFrame yPos]) / ([goalPosition x] - [currentFrame xPos])));
+	double xMove = distanceToMove * cos(moveAngle) * ([goalPosition x] - [currentFrame xPos]) / abs([goalPosition x] - [currentFrame xPos]);
+	double yMove = distanceToMove * sin(moveAngle) * ([goalPosition y] - [currentFrame yPos]) / abs([goalPosition y] - [currentFrame yPos]);
+	
+	[currentFrame setXPos: [currentFrame xPos] + xMove];
+	[currentFrame setYPos: [currentFrame yPos] + yMove];
     
+	if ([currentFrame collidesWith: boundary]) {
+		[currentFrame setXPos: [currentFrame xPos] - xMove];
+		[currentFrame setYPos: [currentFrame yPos] - yMove];
+		[self stopMovement];
+	}
 }
 
+- (void) turnAround {
+	angle += speed * refreshRate;
+	
+	if ((angle < 360.5 && angle > 359.5) || (angle < 180.5 && angle > 179.5)) {
+		[self stopTurning];
+	}
+}
 
+- (double) angle {
+	return angle;
+}
 
-
+- (Frame *) frame {
+	return currentFrame;
+}
 
 
 @end
