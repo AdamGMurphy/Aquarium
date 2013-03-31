@@ -35,7 +35,6 @@
 		733EDF3F1708BE9E00E99649 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 733EDF3E1708BE9E00E99649 /* StatsViewController.m */; };
 		733EDF401708BEEE00E99649 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 733EDF3E1708BE9E00E99649 /* StatsViewController.m */; };
 		733EDF421708BF3700E99649 /* CreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF411708BF3700E99649 /* CreateViewController.xib */; };
-		733EDF441708BF3E00E99649 /* StatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF431708BF3E00E99649 /* StatsViewController.xib */; };
 		733EDF631708BFD300E99649 /* back2smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF471708BFD300E99649 /* back2smallr.png */; };
 		733EDF651708BFD300E99649 /* back4smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF491708BFD300E99649 /* back4smallr.png */; };
 		733EDF671708BFD300E99649 /* bluedot.png in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF4B1708BFD300E99649 /* bluedot.png */; };
@@ -143,7 +142,6 @@
 		733EDF3D1708BE9E00E99649 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
 		733EDF3E1708BE9E00E99649 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		733EDF411708BF3700E99649 /* CreateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateViewController.xib; sourceTree = "<group>"; };
-		733EDF431708BF3E00E99649 /* StatsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatsViewController.xib; sourceTree = "<group>"; };
 		733EDF471708BFD300E99649 /* back2smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back2smallr.png; sourceTree = SOURCE_ROOT; };
 		733EDF491708BFD300E99649 /* back4smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back4smallr.png; sourceTree = SOURCE_ROOT; };
 		733EDF4B1708BFD300E99649 /* bluedot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluedot.png; sourceTree = SOURCE_ROOT; };
@@ -286,7 +284,6 @@
 				733EDF411708BF3700E99649 /* CreateViewController.xib */,
 				733EDF3D1708BE9E00E99649 /* StatsViewController.h */,
 				733EDF3E1708BE9E00E99649 /* StatsViewController.m */,
-				733EDF431708BF3E00E99649 /* StatsViewController.xib */,
 				EB670B7B1706B5D800D01CB6 /* BluetoothViewController.h */,
 				EB670B7C1706B5D800D01CB6 /* BluetoothViewController.m */,
 				EB670B7D1706B5D800D01CB6 /* BluetoothViewController.xib */,
@@ -522,7 +519,6 @@
 				EB670BA11706B5D800D01CB6 /* stats.png in Resources */,
 				EB670BA21706B5D800D01CB6 /* trade.png in Resources */,
 				733EDF421708BF3700E99649 /* CreateViewController.xib in Resources */,
-				733EDF441708BF3E00E99649 /* StatsViewController.xib in Resources */,
 				733EDF631708BFD300E99649 /* back2smallr.png in Resources */,
 				733EDF651708BFD300E99649 /* back4smallr.png in Resources */,
 				733EDF671708BFD300E99649 /* bluedot.png in Resources */,
