@@ -43,7 +43,6 @@
 		EB670B931706B5D800D01CB6 /* back5smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B7A1706B5D800D01CB6 /* back5smallr.png */; };
 		EB670B941706B5D800D01CB6 /* BluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB670B7C1706B5D800D01CB6 /* BluetoothViewController.m */; };
 		EB670B951706B5D800D01CB6 /* BluetoothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB670B7D1706B5D800D01CB6 /* BluetoothViewController.xib */; };
-		EB670B961706B5D800D01CB6 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B7E1706B5D800D01CB6 /* button.png */; };
 		EB670B971706B5D800D01CB6 /* connect.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B7F1706B5D800D01CB6 /* connect.png */; };
 		EB670B981706B5D800D01CB6 /* create.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B801706B5D800D01CB6 /* create.png */; };
 		EB670B991706B5D800D01CB6 /* disconnect.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B811706B5D800D01CB6 /* disconnect.png */; };
@@ -124,7 +123,6 @@
 		EB670B7B1706B5D800D01CB6 /* BluetoothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BluetoothViewController.h; path = ../BluetoothViewController.h; sourceTree = "<group>"; };
 		EB670B7C1706B5D800D01CB6 /* BluetoothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BluetoothViewController.m; path = ../BluetoothViewController.m; sourceTree = "<group>"; };
 		EB670B7D1706B5D800D01CB6 /* BluetoothViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BluetoothViewController.xib; path = ../BluetoothViewController.xib; sourceTree = "<group>"; };
-		EB670B7E1706B5D800D01CB6 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = ../button.png; sourceTree = "<group>"; };
 		EB670B7F1706B5D800D01CB6 /* connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = connect.png; path = ../connect.png; sourceTree = "<group>"; };
 		EB670B801706B5D800D01CB6 /* create.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = create.png; path = ../create.png; sourceTree = "<group>"; };
 		EB670B811706B5D800D01CB6 /* disconnect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = disconnect.png; path = ../disconnect.png; sourceTree = "<group>"; };
@@ -221,7 +219,6 @@
 				EB670B7B1706B5D800D01CB6 /* BluetoothViewController.h */,
 				EB670B7C1706B5D800D01CB6 /* BluetoothViewController.m */,
 				EB670B7D1706B5D800D01CB6 /* BluetoothViewController.xib */,
-				EB670B7E1706B5D800D01CB6 /* button.png */,
 				EB670B7F1706B5D800D01CB6 /* connect.png */,
 				EB670B801706B5D800D01CB6 /* create.png */,
 				EB670B811706B5D800D01CB6 /* disconnect.png */,
@@ -405,7 +402,6 @@
 				EB670B921706B5D800D01CB6 /* back4smallr.png in Resources */,
 				EB670B931706B5D800D01CB6 /* back5smallr.png in Resources */,
 				EB670B951706B5D800D01CB6 /* BluetoothViewController.xib in Resources */,
-				EB670B961706B5D800D01CB6 /* button.png in Resources */,
 				EB670B971706B5D800D01CB6 /* connect.png in Resources */,
 				EB670B981706B5D800D01CB6 /* create.png in Resources */,
 				EB670B991706B5D800D01CB6 /* disconnect.png in Resources */,
