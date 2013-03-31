@@ -7,23 +7,44 @@
 //
 
 #import "AquariumView.h"
+#import "AquariumController.h"
+#import "Frame.h"
 
 @interface UIView()
 
 @end
 
 
-@implementation AquariumView
+@implementation AquariumView {
+    AquariumController *delegate;
+    
+}
+
+- (void) setDelegate: (id) newDelegate {
+    delegate = newDelegate;
+}
 
 - (void) drawRect: (CGRect) rect {
     self.opaque = NO;
-//    [self setBackgroundColor: [UIColor redColor]];
     CGContextRef context = UIGraphicsGetCurrentContext();
     
+    NSMutableArray *colorArray = [delegate colorArray];
+    Frame *frame = [delegate frame];
+    double size = [delegate size];
+    double facing = [delegate facing];
+    
+    [self drawFish: context colorArray: colorArray frame: frame size:size facing:facing];
+}
+
+- (void) drawFish: (CGContextRef) context colorArray: (NSMutableArray*) colorArray frame: (Frame *) frame size: (double) size facing: (double) facing {
+
+    //    [self setBackgroundColor: [UIColor redColor]];
+
+    
 	
-	CGColorRef finColor = [[UIColor greenColor] CGColor];
-	CGColorRef bodyColor = [[UIColor blueColor] CGColor];
-	CGColorRef outerEyeColor = [[UIColor whiteColor] CGColor];
+	CGColorRef finColor = (__bridge CGColorRef)([colorArray objectAtIndex:0]);//[[UIColor greenColor] CGColor];
+	CGColorRef bodyColor = (__bridge CGColorRef)([colorArray objectAtIndex:1]);;
+	CGColorRef outerEyeColor = [[UIColor whiteColor] CGColor]a;
 	CGColorRef innerEyeColor = [[UIColor blackColor] CGColor];
 	
 	double size = 1.0;
@@ -83,6 +104,7 @@
 	CGContextSetFillColorWithColor(context, innerEyeColor);
     CGContextFillPath(context);
 }
+
 
 
 @end
