@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Frame.h"
 
 @interface AquariumController : NSObject
+
+- (id) init;
+
+- (NSMutableArray *) colorArray;
+
+- (Frame *) frame;
+
+- (double) size;
+
+- (double) facing;
 
 @end

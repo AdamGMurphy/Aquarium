@@ -7,6 +7,9 @@
 //
 
 #import "AquariumViewController.h"
+#import "AquariumController.h"
+#import "AquariumView.h"
+
 
 @interface AquariumViewController ()
 
@@ -17,7 +20,10 @@
 
 
 
-@implementation AquariumViewController
+@implementation AquariumViewController{
+    AquariumController *aquaController;
+    AquariumView *aquaView;
+}
 
 
 
@@ -29,11 +35,16 @@
         // Custom initialization
 
     }
+    
+    aquaController = [[AquariumController alloc] init];
+    
     return self;
 }
 
 - (void)viewDidLoad
 {
+    
+    
     
     NSArray *imageArray2 = [NSArray arrayWithObjects:@"back1smallr.png",@"back1smallr.png",@"back2smallr.png",@"back3smallr.png",@"back4smallr.png",@"back4smallr.png", nil];
     
@@ -49,8 +60,18 @@
     [self.navigationController setNavigationBarHidden:NO];
     self.title = @"Aquarium";
 
+    CGRect mainScreen = [[UIScreen mainScreen] bounds];
+    CGRect rotatedScreen = CGRectMake(CGRectGetMinX(mainScreen), CGRectGetMinY(mainScreen), CGRectGetHeight(mainScreen), CGRectGetWidth(mainScreen));
+    aquaView = [[AquariumView alloc] initWithFrame: rotatedScreen];
+    [self.view addSubview: aquaView];
+    
+    [NSTimer scheduledTimerWithTimeInterval: 0.1 target:self selector:@selector(refresh) userInfo: nil repeats: YES];
 
     
+}
+
+- (void) refresh {
+    [aquaView setNeedsDisplay];
 }
 
 -(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {

@@ -34,6 +34,8 @@
 
 - (double) hunger;
 
+- (double) facing;
+
 - (Frame *) frame;
 
 - (FishColorModel *) colorModel;

@@ -25,6 +25,7 @@
 		730113CD1704E0330004F4B0 /* FishMovementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113CC1704E0330004F4B0 /* FishMovementModel.m */; };
 		730113D01704E3C80004F4B0 /* Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113CF1704E3C80004F4B0 /* Frame.m */; };
 		730113D6170518440004F4B0 /* Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 730113D5170518440004F4B0 /* Position.m */; };
+		73174F451708E144001717A4 /* AquariumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73174F441708E144001717A4 /* AquariumView.m */; };
 		732A6DEC1707525300E0D451 /* FishBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 732A6DEB1707525300E0D451 /* FishBehaviorController.m */; };
 		732A6DEF17075C1600E0D451 /* AquariumController.m in Sources */ = {isa = PBXBuildFile; fileRef = 732A6DEE17075C1600E0D451 /* AquariumController.m */; };
 		732A6DF7170766D100E0D451 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732A6DF6170766D100E0D451 /* QuartzCore.framework */; };
@@ -129,6 +130,8 @@
 		730113CF1704E3C80004F4B0 /* Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Frame.m; sourceTree = "<group>"; usesTabs = 1; };
 		730113D4170518440004F4B0 /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
 		730113D5170518440004F4B0 /* Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Position.m; sourceTree = "<group>"; };
+		73174F431708E144001717A4 /* AquariumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AquariumView.h; sourceTree = "<group>"; };
+		73174F441708E144001717A4 /* AquariumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AquariumView.m; sourceTree = "<group>"; };
 		732A6DEA1707525300E0D451 /* FishBehaviorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FishBehaviorController.h; sourceTree = "<group>"; };
 		732A6DEB1707525300E0D451 /* FishBehaviorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishBehaviorController.m; sourceTree = "<group>"; usesTabs = 1; };
 		732A6DED17075C1600E0D451 /* AquariumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AquariumController.h; sourceTree = "<group>"; };
@@ -268,10 +271,11 @@
 		7301138C1704DEBB0004F4B0 /* Aquarium Simulator */ = {
 			isa = PBXGroup;
 			children = (
-				732A6DF017075F9900E0D451 /* Graphics */,
+				732A6DF017075F9900E0D451 /* Views */,
 				732A6DE91707523C00E0D451 /* Aquarium Controllers */,
 				730113C41704DFBF0004F4B0 /* Models */,
 				739A2E3117074B8300A3EC82 /* ActivationLayers */,
+				733EDF451708BF9400E99649 /* Images */,
 				EB670B711706B5D800D01CB6 /* AppDelegate.h */,
 				EB670B721706B5D800D01CB6 /* AppDelegate.m */,
 				EB670B731706B5D800D01CB6 /* AquariumViewController.h */,
@@ -285,7 +289,6 @@
 				733EDF431708BF3E00E99649 /* StatsViewController.xib */,
 				EB670B7B1706B5D800D01CB6 /* BluetoothViewController.h */,
 				EB670B7C1706B5D800D01CB6 /* BluetoothViewController.m */,
-				733EDF451708BF9400E99649 /* Images */,
 				EB670B7D1706B5D800D01CB6 /* BluetoothViewController.xib */,
 				EB670B851706B5D800D01CB6 /* MainViewController.h */,
 				EB670B861706B5D800D01CB6 /* MainViewController.m */,
@@ -356,11 +359,13 @@
 			name = "Aquarium Controllers";
 			sourceTree = "<group>";
 		};
-		732A6DF017075F9900E0D451 /* Graphics */ = {
+		732A6DF017075F9900E0D451 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				73174F431708E144001717A4 /* AquariumView.h */,
+				73174F441708E144001717A4 /* AquariumView.m */,
 			);
-			name = Graphics;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		733EDF451708BF9400E99649 /* Images */ = {
@@ -599,6 +604,7 @@
 				739A2E3D17074D7600A3EC82 /* TurningLayer.m in Sources */,
 				732A6DEC1707525300E0D451 /* FishBehaviorController.m in Sources */,
 				732A6DEF17075C1600E0D451 /* AquariumController.m in Sources */,
+				73174F451708E144001717A4 /* AquariumView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

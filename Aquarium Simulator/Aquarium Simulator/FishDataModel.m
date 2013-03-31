@@ -80,6 +80,10 @@
 	return hunger;
 }
 
+- (double) facing {
+    return [movementModel facing];
+}
+
 - (Frame *) frame {
 	return [movementModel frame];
 }

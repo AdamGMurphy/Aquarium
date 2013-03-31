@@ -12,7 +12,8 @@
 #import "Position.h"
 
 @implementation FishMovementModel {
-    double angle;
+//    double angle;
+    double facing;
 	Frame *currentFrame;
     
     double refreshRate;
@@ -30,31 +31,34 @@
     
     currentFrame = setFrame;
     boundary = setBoundary;
-    angle = 0.0;
+    facing = 1.0;
+//    angle = 0.0;
     moving = false;
     refreshRate = setRefreshRate;
     
     return self;
 }
 
-- (id) initWithFrame: (Frame *) setFrame angle: (double) setAngle boundary: (Frame *) setBoundary refreshRate: (double) setRefreshRate {
+- (id) initWithFrame: (Frame *) setFrame facing: (double) setFacing boundary: (Frame *) setBoundary refreshRate: (double) setRefreshRate {
     self = [super init];
     
     currentFrame = setFrame;
     boundary = setBoundary;
-    angle = setAngle;
+    facing = setFacing;
+//    angle = setAngle;
     moving = false;
     refreshRate = setRefreshRate;
     
     return self;
 }
 
-- (id) initWithPosition: (Frame *) setFrame angle: (double) setAngle boundary: (Frame *) setBoundary refreshRate: (double) setRefreshRate delegate: setDelegate {
+- (id) initWithPosition: (Frame *) setFrame facing: (double) setFacing boundary: (Frame *) setBoundary refreshRate: (double) setRefreshRate delegate: setDelegate {
     self = [super init];
     
     currentFrame = setFrame;
     boundary = setBoundary;
-    angle = setAngle;
+//    angle = setAngle;
+    facing = setFacing;
     delegate = setDelegate;
     moving = false;
     refreshRate = setRefreshRate;
@@ -73,7 +77,7 @@
 - (Boolean) moveToPosition: (Position *) position withSpeed: (double) setSpeed{
     [self stopMovement];
     
-    if (([goalPosition x] < [currentFrame xPos] && angle < 1.0) || ([goalPosition x] > [currentFrame xPos] && angle > 1.0))
+    if (([goalPosition x] < [currentFrame xPos] && facing == -1.0) || ([goalPosition x] > [currentFrame xPos] && facing == 1.0))
         return false;
     
     moveTimer = [[NSTimer alloc] init];
@@ -116,9 +120,9 @@
 }
 
 - (void) moveToGoal {
-    if ([goalPosition x] < [currentFrame xPos] && angle < 1.0)
+    if ([goalPosition x] < [currentFrame xPos] && facing == -1.0)
         [self stopMovement];
-    if ([goalPosition x] > [currentFrame xPos] && angle > 1.0)
+    if ([goalPosition x] > [currentFrame xPos] && facing == 1.0)
         [self stopMovement];
     
     double distanceToMove = speed * refreshRate;
@@ -137,15 +141,11 @@
 }
 
 - (void) turnAround {
-	angle += speed * refreshRate;
-	
-	if ((angle < 360.5 && angle > 359.5) || (angle < 180.5 && angle > 179.5)) {
-		[self stopTurning];
-	}
+	facing *= -1.0;
 }
 
-- (double) angle {
-	return angle;
+- (double) facing {
+	return facing;
 }
 
 - (Frame *) frame {
