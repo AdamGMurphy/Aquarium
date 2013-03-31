@@ -29,6 +29,10 @@
 		732A6DEF17075C1600E0D451 /* AquariumController.m in Sources */ = {isa = PBXBuildFile; fileRef = 732A6DEE17075C1600E0D451 /* AquariumController.m */; };
 		732A6DF7170766D100E0D451 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732A6DF6170766D100E0D451 /* QuartzCore.framework */; };
 		732A6DFC17076AB100E0D451 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732A6DFB17076AB100E0D451 /* OpenGLES.framework */; };
+		733EDF3B1708BE2800E99649 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 733EDF3A1708BE2800E99649 /* CreateViewController.m */; };
+		733EDF3C1708BE4D00E99649 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 733EDF3A1708BE2800E99649 /* CreateViewController.m */; };
+		733EDF3F1708BE9E00E99649 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 733EDF3E1708BE9E00E99649 /* StatsViewController.m */; };
+		733EDF401708BEEE00E99649 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 733EDF3E1708BE9E00E99649 /* StatsViewController.m */; };
 		739A2E3417074BA100A3EC82 /* HungerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3317074BA100A3EC82 /* HungerLayer.m */; };
 		739A2E3717074C0300A3EC82 /* MovingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3617074C0300A3EC82 /* MovingLayer.m */; };
 		739A2E3A17074CE700A3EC82 /* RestingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3917074CE700A3EC82 /* RestingLayer.m */; };
@@ -102,6 +106,10 @@
 		732A6DEE17075C1600E0D451 /* AquariumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AquariumController.m; sourceTree = "<group>"; usesTabs = 1; };
 		732A6DF6170766D100E0D451 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		732A6DFB17076AB100E0D451 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		733EDF391708BE2800E99649 /* CreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateViewController.h; sourceTree = "<group>"; };
+		733EDF3A1708BE2800E99649 /* CreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateViewController.m; sourceTree = "<group>"; };
+		733EDF3D1708BE9E00E99649 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		733EDF3E1708BE9E00E99649 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		739A2E3217074BA100A3EC82 /* HungerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HungerLayer.h; sourceTree = "<group>"; };
 		739A2E3317074BA100A3EC82 /* HungerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HungerLayer.m; sourceTree = "<group>"; };
 		739A2E3517074C0300A3EC82 /* MovingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingLayer.h; sourceTree = "<group>"; };
@@ -210,6 +218,10 @@
 				EB670B721706B5D800D01CB6 /* AppDelegate.m */,
 				EB670B731706B5D800D01CB6 /* AquariumViewController.h */,
 				EB670B741706B5D800D01CB6 /* AquariumViewController.m */,
+				733EDF391708BE2800E99649 /* CreateViewController.h */,
+				733EDF3A1708BE2800E99649 /* CreateViewController.m */,
+				733EDF3D1708BE9E00E99649 /* StatsViewController.h */,
+				733EDF3E1708BE9E00E99649 /* StatsViewController.m */,
 				EB670B751706B5D800D01CB6 /* AquariumViewController.xib */,
 				EB670B761706B5D800D01CB6 /* back1smallr.png */,
 				EB670B771706B5D800D01CB6 /* back2smallr.png */,
@@ -447,6 +459,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				733EDF401708BEEE00E99649 /* StatsViewController.m in Sources */,
+				733EDF3C1708BE4D00E99649 /* CreateViewController.m in Sources */,
 				730113931704DEBB0004F4B0 /* main.m in Sources */,
 				730113C71704DFF50004F4B0 /* FishDataModel.m in Sources */,
 				730113CA1704E01E0004F4B0 /* FishColorModel.m in Sources */,
@@ -471,6 +485,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				730113BB1704DEBB0004F4B0 /* Aquarium_SimulatorTests.m in Sources */,
+				733EDF3B1708BE2800E99649 /* CreateViewController.m in Sources */,
+				733EDF3F1708BE9E00E99649 /* StatsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
