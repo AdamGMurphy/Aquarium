@@ -33,6 +33,8 @@
 
 -(IBAction)newGamePressed:(id)sender{
     
+    CreateViewController *createView = [[CreateViewController alloc] initWithNibName:@"CreateViewController" bundle:nil];
+    [self.navigationController pushViewController:createView animated:YES];
     
 }
 
