@@ -35,8 +35,11 @@
 		733EDF401708BEEE00E99649 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 733EDF3E1708BE9E00E99649 /* StatsViewController.m */; };
 		733EDF421708BF3700E99649 /* CreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF411708BF3700E99649 /* CreateViewController.xib */; };
 		733EDF441708BF3E00E99649 /* StatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF431708BF3E00E99649 /* StatsViewController.xib */; };
+		733EDF621708BFD300E99649 /* back1smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF461708BFD300E99649 /* back1smallr.png */; };
 		733EDF631708BFD300E99649 /* back2smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF471708BFD300E99649 /* back2smallr.png */; };
+		733EDF641708BFD300E99649 /* back3smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF481708BFD300E99649 /* back3smallr.png */; };
 		733EDF651708BFD300E99649 /* back4smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF491708BFD300E99649 /* back4smallr.png */; };
+		733EDF661708BFD300E99649 /* back5smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF4A1708BFD300E99649 /* back5smallr.png */; };
 		733EDF671708BFD300E99649 /* bluedot.png in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF4B1708BFD300E99649 /* bluedot.png */; };
 		733EDF681708BFD300E99649 /* body.png in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF4C1708BFD300E99649 /* body.png */; };
 		733EDF691708BFD300E99649 /* connect.png in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF4D1708BFD300E99649 /* connect.png */; };
@@ -64,16 +67,12 @@
 		739A2E3717074C0300A3EC82 /* MovingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3617074C0300A3EC82 /* MovingLayer.m */; };
 		739A2E3A17074CE700A3EC82 /* RestingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3917074CE700A3EC82 /* RestingLayer.m */; };
 		739A2E3D17074D7600A3EC82 /* TurningLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3C17074D7600A3EC82 /* TurningLayer.m */; };
-		73E2150D1708C09100FF97A5 /* back2smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = 73E2150B1708C09100FF97A5 /* back2smallr.png */; };
-		73E2150E1708C09100FF97A5 /* back4smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = 73E2150C1708C09100FF97A5 /* back4smallr.png */; };
-		73E215101708C0FA00FF97A5 /* table.png in Resources */ = {isa = PBXBuildFile; fileRef = 73E2150F1708C0FA00FF97A5 /* table.png */; };
-		73E215121708C10400FF97A5 /* statstitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 73E215111708C10400FF97A5 /* statstitle.png */; };
 		EB670B8C1706B5D800D01CB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB670B721706B5D800D01CB6 /* AppDelegate.m */; };
 		EB670B8D1706B5D800D01CB6 /* AquariumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB670B741706B5D800D01CB6 /* AquariumViewController.m */; };
 		EB670B8E1706B5D800D01CB6 /* AquariumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB670B751706B5D800D01CB6 /* AquariumViewController.xib */; };
 		EB670B8F1706B5D800D01CB6 /* back1smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B761706B5D800D01CB6 /* back1smallr.png */; };
+		EB670B901706B5D800D01CB6 /* back2smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B771706B5D800D01CB6 /* back2smallr.png */; };
 		EB670B911706B5D800D01CB6 /* back3smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B781706B5D800D01CB6 /* back3smallr.png */; };
-		EB670B931706B5D800D01CB6 /* back5smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B7A1706B5D800D01CB6 /* back5smallr.png */; };
 		EB670B941706B5D800D01CB6 /* BluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB670B7C1706B5D800D01CB6 /* BluetoothViewController.m */; };
 		EB670B951706B5D800D01CB6 /* BluetoothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB670B7D1706B5D800D01CB6 /* BluetoothViewController.xib */; };
 		EB670B971706B5D800D01CB6 /* connect.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B7F1706B5D800D01CB6 /* connect.png */; };
@@ -141,8 +140,11 @@
 		733EDF3E1708BE9E00E99649 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		733EDF411708BF3700E99649 /* CreateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateViewController.xib; sourceTree = "<group>"; };
 		733EDF431708BF3E00E99649 /* StatsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatsViewController.xib; sourceTree = "<group>"; };
+		733EDF461708BFD300E99649 /* back1smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back1smallr.png; sourceTree = SOURCE_ROOT; };
 		733EDF471708BFD300E99649 /* back2smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back2smallr.png; sourceTree = SOURCE_ROOT; };
+		733EDF481708BFD300E99649 /* back3smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back3smallr.png; sourceTree = SOURCE_ROOT; };
 		733EDF491708BFD300E99649 /* back4smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back4smallr.png; sourceTree = SOURCE_ROOT; };
+		733EDF4A1708BFD300E99649 /* back5smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back5smallr.png; sourceTree = SOURCE_ROOT; };
 		733EDF4B1708BFD300E99649 /* bluedot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluedot.png; sourceTree = SOURCE_ROOT; };
 		733EDF4C1708BFD300E99649 /* body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body.png; sourceTree = SOURCE_ROOT; };
 		733EDF4D1708BFD300E99649 /* connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = connect.png; sourceTree = SOURCE_ROOT; };
@@ -174,18 +176,14 @@
 		739A2E3917074CE700A3EC82 /* RestingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestingLayer.m; sourceTree = "<group>"; };
 		739A2E3B17074D7600A3EC82 /* TurningLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurningLayer.h; sourceTree = "<group>"; };
 		739A2E3C17074D7600A3EC82 /* TurningLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurningLayer.m; sourceTree = "<group>"; };
-		73E2150B1708C09100FF97A5 /* back2smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back2smallr.png; sourceTree = SOURCE_ROOT; };
-		73E2150C1708C09100FF97A5 /* back4smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back4smallr.png; sourceTree = SOURCE_ROOT; };
-		73E2150F1708C0FA00FF97A5 /* table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = table.png; sourceTree = "<group>"; };
-		73E215111708C10400FF97A5 /* statstitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statstitle.png; sourceTree = "<group>"; };
 		EB670B711706B5D800D01CB6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
 		EB670B721706B5D800D01CB6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
 		EB670B731706B5D800D01CB6 /* AquariumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AquariumViewController.h; path = ../AquariumViewController.h; sourceTree = "<group>"; };
 		EB670B741706B5D800D01CB6 /* AquariumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AquariumViewController.m; path = ../AquariumViewController.m; sourceTree = "<group>"; };
 		EB670B751706B5D800D01CB6 /* AquariumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AquariumViewController.xib; path = ../AquariumViewController.xib; sourceTree = "<group>"; };
 		EB670B761706B5D800D01CB6 /* back1smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back1smallr.png; path = ../back1smallr.png; sourceTree = "<group>"; };
+		EB670B771706B5D800D01CB6 /* back2smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back2smallr.png; path = ../back2smallr.png; sourceTree = "<group>"; };
 		EB670B781706B5D800D01CB6 /* back3smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back3smallr.png; path = ../back3smallr.png; sourceTree = "<group>"; };
-		EB670B7A1706B5D800D01CB6 /* back5smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back5smallr.png; path = ../back5smallr.png; sourceTree = "<group>"; };
 		EB670B7B1706B5D800D01CB6 /* BluetoothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BluetoothViewController.h; path = ../BluetoothViewController.h; sourceTree = "<group>"; };
 		EB670B7C1706B5D800D01CB6 /* BluetoothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BluetoothViewController.m; path = ../BluetoothViewController.m; sourceTree = "<group>"; };
 		EB670B7D1706B5D800D01CB6 /* BluetoothViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BluetoothViewController.xib; path = ../BluetoothViewController.xib; sourceTree = "<group>"; };
@@ -366,8 +364,10 @@
 		733EDF451708BF9400E99649 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				73E215111708C10400FF97A5 /* statstitle.png */,
-				73E2150F1708C0FA00FF97A5 /* table.png */,
+				733EDF461708BFD300E99649 /* back1smallr.png */,
+				EB670B771706B5D800D01CB6 /* back2smallr.png */,
+				733EDF481708BFD300E99649 /* back3smallr.png */,
+				733EDF4A1708BFD300E99649 /* back5smallr.png */,
 				733EDF4B1708BFD300E99649 /* bluedot.png */,
 				733EDF4C1708BFD300E99649 /* body.png */,
 				EB670B7F1706B5D800D01CB6 /* connect.png */,
@@ -402,10 +402,8 @@
 				EB670B841706B5D800D01CB6 /* loadgame.png */,
 				EB670B801706B5D800D01CB6 /* create.png */,
 				EB670B761706B5D800D01CB6 /* back1smallr.png */,
-				73E2150B1708C09100FF97A5 /* back2smallr.png */,
-				73E2150C1708C09100FF97A5 /* back4smallr.png */,
+				EB670B771706B5D800D01CB6 /* back2smallr.png */,
 				EB670B781706B5D800D01CB6 /* back3smallr.png */,
-				EB670B7A1706B5D800D01CB6 /* back5smallr.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -502,8 +500,8 @@
 				7301139D1704DEBB0004F4B0 /* Default-568h@2x.png in Resources */,
 				EB670B8E1706B5D800D01CB6 /* AquariumViewController.xib in Resources */,
 				EB670B8F1706B5D800D01CB6 /* back1smallr.png in Resources */,
+				EB670B901706B5D800D01CB6 /* back2smallr.png in Resources */,
 				EB670B911706B5D800D01CB6 /* back3smallr.png in Resources */,
-				EB670B931706B5D800D01CB6 /* back5smallr.png in Resources */,
 				EB670B951706B5D800D01CB6 /* BluetoothViewController.xib in Resources */,
 				EB670B971706B5D800D01CB6 /* connect.png in Resources */,
 				EB670B981706B5D800D01CB6 /* create.png in Resources */,
@@ -518,8 +516,11 @@
 				EB670BA21706B5D800D01CB6 /* trade.png in Resources */,
 				733EDF421708BF3700E99649 /* CreateViewController.xib in Resources */,
 				733EDF441708BF3E00E99649 /* StatsViewController.xib in Resources */,
+				733EDF621708BFD300E99649 /* back1smallr.png in Resources */,
 				733EDF631708BFD300E99649 /* back2smallr.png in Resources */,
+				733EDF641708BFD300E99649 /* back3smallr.png in Resources */,
 				733EDF651708BFD300E99649 /* back4smallr.png in Resources */,
+				733EDF661708BFD300E99649 /* back5smallr.png in Resources */,
 				733EDF671708BFD300E99649 /* bluedot.png in Resources */,
 				733EDF681708BFD300E99649 /* body.png in Resources */,
 				733EDF691708BFD300E99649 /* connect.png in Resources */,
@@ -543,10 +544,6 @@
 				733EDF7B1708BFD300E99649 /* statstitle.png in Resources */,
 				733EDF7C1708BFD300E99649 /* tail.png in Resources */,
 				733EDF7D1708BFD300E99649 /* trade.png in Resources */,
-				73E2150D1708C09100FF97A5 /* back2smallr.png in Resources */,
-				73E2150E1708C09100FF97A5 /* back4smallr.png in Resources */,
-				73E215101708C0FA00FF97A5 /* table.png in Resources */,
-				73E215121708C10400FF97A5 /* statstitle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
