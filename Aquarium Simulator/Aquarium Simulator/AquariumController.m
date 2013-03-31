@@ -33,7 +33,7 @@
     movementModel = [[FishMovementModel alloc] initWithFrame:fishFrame angle:0.0 boundary:boundary refreshRate:0.1];
     colorModel = [[FishColorModel alloc] initWithFinColor:finColor bodyColor:bodyColor eyeColor:eyeColor];
     
-    fishModel = [[FishDataModel alloc] initWithSize:1.0 movementModel: movementModel setColorModel: colorModel maxHunger:100.0 currentHunger:50.0];
+    fishModel = [[FishDataModel alloc] initWithSize:1.0 movementModel: movementModel colorModel: colorModel maxHunger:100.0 currentHunger:50.0];
     
     
     return self;

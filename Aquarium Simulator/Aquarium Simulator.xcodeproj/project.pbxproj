@@ -28,10 +28,7 @@
 		732A6DEC1707525300E0D451 /* FishBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 732A6DEB1707525300E0D451 /* FishBehaviorController.m */; };
 		732A6DEF17075C1600E0D451 /* AquariumController.m in Sources */ = {isa = PBXBuildFile; fileRef = 732A6DEE17075C1600E0D451 /* AquariumController.m */; };
 		732A6DF7170766D100E0D451 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732A6DF6170766D100E0D451 /* QuartzCore.framework */; };
-		732A6DFA1707698700E0D451 /* FishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 732A6DF91707698700E0D451 /* FishView.m */; };
 		732A6DFC17076AB100E0D451 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732A6DFB17076AB100E0D451 /* OpenGLES.framework */; };
-		732A6DFE170771D800E0D451 /* SimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 732A6DFD170771D800E0D451 /* SimpleVertex.glsl */; };
-		732A6E00170772A200E0D451 /* SimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 732A6DFF170772A200E0D451 /* SimpleFragment.glsl */; };
 		739A2E3417074BA100A3EC82 /* HungerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3317074BA100A3EC82 /* HungerLayer.m */; };
 		739A2E3717074C0300A3EC82 /* MovingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3617074C0300A3EC82 /* MovingLayer.m */; };
 		739A2E3A17074CE700A3EC82 /* RestingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3917074CE700A3EC82 /* RestingLayer.m */; };
@@ -105,11 +102,7 @@
 		732A6DED17075C1600E0D451 /* AquariumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AquariumController.h; sourceTree = "<group>"; };
 		732A6DEE17075C1600E0D451 /* AquariumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AquariumController.m; sourceTree = "<group>"; usesTabs = 1; };
 		732A6DF6170766D100E0D451 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		732A6DF81707698700E0D451 /* FishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FishView.h; sourceTree = "<group>"; };
-		732A6DF91707698700E0D451 /* FishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishView.m; sourceTree = "<group>"; };
 		732A6DFB17076AB100E0D451 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		732A6DFD170771D800E0D451 /* SimpleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleVertex.glsl; sourceTree = "<group>"; };
-		732A6DFF170772A200E0D451 /* SimpleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleFragment.glsl; sourceTree = "<group>"; };
 		739A2E3217074BA100A3EC82 /* HungerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HungerLayer.h; sourceTree = "<group>"; };
 		739A2E3317074BA100A3EC82 /* HungerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HungerLayer.m; sourceTree = "<group>"; };
 		739A2E3517074C0300A3EC82 /* MovingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingLayer.h; sourceTree = "<group>"; };
@@ -311,10 +304,6 @@
 		732A6DF017075F9900E0D451 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				732A6DF81707698700E0D451 /* FishView.h */,
-				732A6DF91707698700E0D451 /* FishView.m */,
-				732A6DFD170771D800E0D451 /* SimpleVertex.glsl */,
-				732A6DFF170772A200E0D451 /* SimpleFragment.glsl */,
 			);
 			name = Graphics;
 			sourceTree = "<group>";
@@ -428,8 +417,6 @@
 				EB670BA01706B5D800D01CB6 /* newgame.png in Resources */,
 				EB670BA11706B5D800D01CB6 /* stats.png in Resources */,
 				EB670BA21706B5D800D01CB6 /* trade.png in Resources */,
-				732A6DFE170771D800E0D451 /* SimpleVertex.glsl in Resources */,
-				732A6E00170772A200E0D451 /* SimpleFragment.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +467,6 @@
 				739A2E3D17074D7600A3EC82 /* TurningLayer.m in Sources */,
 				732A6DEC1707525300E0D451 /* FishBehaviorController.m in Sources */,
 				732A6DEF17075C1600E0D451 /* AquariumController.m in Sources */,
-				732A6DFA1707698700E0D451 /* FishView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
