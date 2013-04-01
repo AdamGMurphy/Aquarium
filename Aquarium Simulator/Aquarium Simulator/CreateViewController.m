@@ -130,7 +130,7 @@
 
     self.saveButton.enabled = NO;
     
-    [NSThread sleepForTimeInterval:0.5];
+    [NSThread sleepForTimeInterval:0.3];
 
     self.saveButton.enabled = YES;
 
