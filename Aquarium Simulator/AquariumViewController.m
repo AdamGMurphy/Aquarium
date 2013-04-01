@@ -9,6 +9,7 @@
 #import "AquariumViewController.h"
 #import "AquariumController.h"
 #import "AquariumView.h"
+#import "FishDataModel.h"
 
 
 @interface AquariumViewController ()
@@ -23,15 +24,17 @@
 @implementation AquariumViewController{
     AquariumController *aquaController;
     AquariumView *aquaView;
+    FishDataModel *fishModel;
 }
 
 
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithFish: (FishDataModel *) setFishModel NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        fishModel = setFishModel;
         // Custom initialization
 
     }
@@ -61,7 +64,7 @@
     CGRect mainScreen = [[UIScreen mainScreen] bounds];
     CGRect rotatedScreen = CGRectMake(CGRectGetMinX(mainScreen), CGRectGetMinY(mainScreen), CGRectGetHeight(mainScreen), CGRectGetWidth(mainScreen));
     
-    aquaController = [[AquariumController alloc] initWithBoundary: rotatedScreen];
+    aquaController = [[AquariumController alloc] initWithFish: fishModel Boundary: rotatedScreen];
     aquaView = [[AquariumView alloc] initWithFrame: rotatedScreen];
     [aquaView setDelegate: aquaController];
     [self.view addSubview: aquaView];

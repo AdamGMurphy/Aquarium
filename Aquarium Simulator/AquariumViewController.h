@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FishDataModel.h"
 
 @interface AquariumViewController : UIViewController
+
+- (id)initWithFish: (FishDataModel *) setFishModel NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
 
 @end

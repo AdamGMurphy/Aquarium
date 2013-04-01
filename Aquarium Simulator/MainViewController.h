@@ -11,8 +11,11 @@
 #import "AquariumViewController.h"
 #import "CreateViewController.h"
 #import "StatsViewController.h"
+#import "FishDataModel.h"
 
 @interface MainViewController : UIViewController
+
+
 
 -(IBAction)newGamePressed:(id)sender;
 -(IBAction)loadGamePressed:(id)sender;

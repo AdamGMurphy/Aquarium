@@ -8,17 +8,22 @@
 
 #import "MainViewController.h"
 #import "FishLoader.h"
+#import "FishDataModel.h"
 
-@interface MainViewController ()
+@interface MainViewController () {
+    FishDataModel *fishModel;
+}
 
 @end
 
 @implementation MainViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithFish: (FishDataModel *) setFishModel NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
+        fishModel = setFishModel;
         // Custom initialization
         
         //if(
@@ -42,9 +47,13 @@
 }
 
 
+- (void) setFish: (FishDataModel *) setFishModel {
+    fishModel = setFishModel;
+}
+
 -(IBAction)loadGamePressed:(id)sender{
     
-    AquariumViewController *aquariumView = [[AquariumViewController alloc] initWithNibName:@"AquariumViewController" bundle:nil];
+    AquariumViewController *aquariumView = [[AquariumViewController alloc] initWithFish: fishModel NibName:@"AquariumViewController" bundle:nil];
     [self.navigationController pushViewController:aquariumView animated:YES];
     
 }

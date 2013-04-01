@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "Frame.h"
+#import "FishDataModel.h"
 
 @interface AquariumController : NSObject
 
-- (id) initWithBoundary: (CGRect) rectBoundary;
+- (id) initWithFish: (FishDataModel *) setFishModel Boundary: (CGRect) rectBoundary;
 
 - (NSMutableArray *) colorArray;
 

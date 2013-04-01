@@ -20,11 +20,11 @@
     FishBehaviorController *behaviorController;
 }
 
-- (id) initWithBoundary: (CGRect) rectBoundary {
+- (id) initWithFish: (FishDataModel *) setFishModel Boundary: (CGRect) rectBoundary {
     self = [super init];
     
 	Frame *screen = [[Frame alloc] initWithxPos:CGRectGetMinX(rectBoundary) yPos:CGRectGetMinY(rectBoundary) width:CGRectGetWidth(rectBoundary) height:CGRectGetHeight(rectBoundary)];
-	
+/*
     Frame *fishFrame = [[Frame alloc] initWithxPos:50.0 yPos:50.0 width:50.0 height:50.0];
     Frame *boundary = screen;
     
@@ -36,6 +36,8 @@
     colorModel = [[FishColorModel alloc] initWithFinColor:finColor bodyColor:bodyColor eyeColor:eyeColor];
     
     fishModel = [[FishDataModel alloc] initWithSize:1.0 movementModel: movementModel colorModel: colorModel maxHunger:100.0 currentHunger:50.0];
+*/
+	fishModel = setFishModel;
 	
 	behaviorController = [[FishBehaviorController alloc] initWithFishModel: fishModel boundary: screen];
 	[behaviorController beginAction];
