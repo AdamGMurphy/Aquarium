@@ -14,7 +14,9 @@
 
 @interface FishDataModel : NSObject
 
-- (id) initWithSize: (double) setSize movementModel: (FishMovementModel *) setMovementModel colorModel: (FishColorModel *) setColorModel maxHunger: (double) setMaxHunger currentHunger: (double) setHunger;
+- (id) initWithName: (NSString *) setName Size: (double) setSize movementModel: (FishMovementModel *) setMovementModel colorModel: (FishColorModel *) setColorModel maxHunger: (double) setMaxHunger currentHunger: (double) setHunger;
+
+- (NSString *) name;
 
 - (void) setDelegate: setDelegate;
 

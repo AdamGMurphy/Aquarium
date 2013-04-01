@@ -16,6 +16,7 @@
 @implementation FishDataModel {
 	FishMovementModel *movementModel;
 	FishColorModel *colorModel;
+    NSString *name;
     double maxHunger;
 	double hunger;
 	double size;
@@ -23,9 +24,10 @@
 	id delegate;
 }
 
-- (id) initWithSize: (double) setSize movementModel: (FishMovementModel *) setMovementModel colorModel: (FishColorModel *) setColorModel maxHunger: (double) setMaxHunger currentHunger: (double) setHunger {
+- (id) initWithName: (NSString *) setName Size: (double) setSize movementModel: (FishMovementModel *) setMovementModel colorModel: (FishColorModel *) setColorModel maxHunger: (double) setMaxHunger currentHunger: (double) setHunger {
 	self = [super init];
     
+    name = setName;
 	size = setSize;
 	movementModel = setMovementModel;
 	[movementModel setDelegate: self];
@@ -42,6 +44,10 @@
      */
     
 	return self;
+}
+
+- (NSString *) name {
+    return name;
 }
 
 - (void) setDelegate: setDelegate {

@@ -58,6 +58,8 @@
 		733EDF7B1708BFD300E99649 /* statstitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF5F1708BFD300E99649 /* statstitle.png */; };
 		733EDF7C1708BFD300E99649 /* tail.png in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF601708BFD300E99649 /* tail.png */; };
 		733EDF7D1708BFD300E99649 /* trade.png in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF611708BFD300E99649 /* trade.png */; };
+		734C7FA717091EE8006A57E3 /* FishSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = 734C7FA617091EE8006A57E3 /* FishSaver.m */; };
+		734C7FAA17092262006A57E3 /* FishLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 734C7FA917092262006A57E3 /* FishLoader.m */; };
 		739A2E3417074BA100A3EC82 /* HungerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3317074BA100A3EC82 /* HungerLayer.m */; };
 		739A2E3717074C0300A3EC82 /* MovingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3617074C0300A3EC82 /* MovingLayer.m */; };
 		739A2E3A17074CE700A3EC82 /* RestingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3917074CE700A3EC82 /* RestingLayer.m */; };
@@ -169,6 +171,10 @@
 		733EDF5F1708BFD300E99649 /* statstitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statstitle.png; sourceTree = SOURCE_ROOT; };
 		733EDF601708BFD300E99649 /* tail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tail.png; sourceTree = SOURCE_ROOT; };
 		733EDF611708BFD300E99649 /* trade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trade.png; sourceTree = SOURCE_ROOT; };
+		734C7FA517091EE8006A57E3 /* FishSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FishSaver.h; sourceTree = "<group>"; };
+		734C7FA617091EE8006A57E3 /* FishSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishSaver.m; sourceTree = "<group>"; usesTabs = 1; };
+		734C7FA817092262006A57E3 /* FishLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FishLoader.h; sourceTree = "<group>"; };
+		734C7FA917092262006A57E3 /* FishLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishLoader.m; sourceTree = "<group>"; };
 		739A2E3217074BA100A3EC82 /* HungerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HungerLayer.h; sourceTree = "<group>"; };
 		739A2E3317074BA100A3EC82 /* HungerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HungerLayer.m; sourceTree = "<group>"; };
 		739A2E3517074C0300A3EC82 /* MovingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingLayer.h; sourceTree = "<group>"; };
@@ -278,6 +284,7 @@
 		7301138C1704DEBB0004F4B0 /* Aquarium Simulator */ = {
 			isa = PBXGroup;
 			children = (
+				734C7FA317091ECF006A57E3 /* Persistence */,
 				732A6DF017075F9900E0D451 /* Views */,
 				732A6DE91707523C00E0D451 /* Aquarium Controllers */,
 				730113C41704DFBF0004F4B0 /* Models */,
@@ -424,6 +431,17 @@
 				EB670B7A1706B5D800D01CB6 /* back5smallr.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		734C7FA317091ECF006A57E3 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				734C7FA517091EE8006A57E3 /* FishSaver.h */,
+				734C7FA617091EE8006A57E3 /* FishSaver.m */,
+				734C7FA817092262006A57E3 /* FishLoader.h */,
+				734C7FA917092262006A57E3 /* FishLoader.m */,
+			);
+			name = Persistence;
 			sourceTree = "<group>";
 		};
 		739A2E3117074B8300A3EC82 /* ActivationLayers */ = {
@@ -620,6 +638,8 @@
 				732A6DEF17075C1600E0D451 /* AquariumController.m in Sources */,
 				73174F451708E144001717A4 /* AquariumView.m in Sources */,
 				EBB374DE17091D1A005808B1 /* StatsViewController.m in Sources */,
+				734C7FA717091EE8006A57E3 /* FishSaver.m in Sources */,
+				734C7FAA17092262006A57E3 /* FishLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
