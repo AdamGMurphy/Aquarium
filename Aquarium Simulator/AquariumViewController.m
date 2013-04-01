@@ -72,11 +72,11 @@
     
     [NSTimer scheduledTimerWithTimeInterval: 0.1 target:self selector:@selector(refresh) userInfo: nil repeats: YES];
 
-    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addFood)];
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addFood:)];
     [self.view addGestureRecognizer:tapRecognizer];
 }
 
-- (void) addFood:(UILongPressGestureRecognizer *)press {
+- (void) addFood:(UITapGestureRecognizer *)press {
 
     [aquaController addFoodAtX: [press locationInView:self.view].x y: [press locationInView:self.view].y];
 }

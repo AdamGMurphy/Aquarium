@@ -44,8 +44,8 @@
 }
 
 - (void) timerFunction {
-    [frame setYPos: [frame yPos] - 0.5];
-    if ([frame collidesWith:boundary]) {
+    [frame setYPos: [frame yPos] + 2.0];
+    if ([boundary height] < [frame yPos]) {
         [self destroyFood];
     }
 }

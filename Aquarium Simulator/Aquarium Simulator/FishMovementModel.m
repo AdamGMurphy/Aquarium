@@ -76,10 +76,12 @@
 }
 
 - (void) moveToFoodWithSpeed:(double) setSpeed {
-    moveTimer = [[NSTimer alloc] init];
-    moveTimer = [NSTimer scheduledTimerWithTimeInterval: refreshRate target:self selector:@selector (moveToFood) userInfo:nil repeats:YES];
     moving = true;
     movingToFood = true;
+    speed = setSpeed;
+    
+    moveTimer = [[NSTimer alloc] init];
+    moveTimer = [NSTimer scheduledTimerWithTimeInterval: refreshRate target:self selector:@selector (moveToFood) userInfo:nil repeats:YES];
 }
 
 - (void) moveToFood {
@@ -99,7 +101,7 @@
     }
 
 
-    goalPosition = [[Position alloc] initWithX:[foodFrame xPos] - [currentFrame width] y:[foodFrame yPos] - [currentFrame height]];
+    goalPosition = [[Position alloc] initWithX:[foodFrame xPos] - [currentFrame width] / 2 y:[foodFrame yPos] - [currentFrame height] / 2];
 
     [self moveToGoal];
 }
@@ -109,12 +111,7 @@
     [self stopMovement];
     
     goalPosition = position;
-/*
-    NSLog(@"THIS");
-    NSLog([NSString stringWithFormat:@"%f", [goalPosition x]]);
-    NSLog([NSString stringWithFormat:@"%f", [goalPosition y]]);
-   NSLog([NSString stringWithFormat:@"%f", facing]);
-*/    
+
     if ([goalPosition x] < 0.0 || [goalPosition y] < 0.0 || [goalPosition x] + [currentFrame width] > [boundary width] || [goalPosition y] + [currentFrame height] > [boundary height]) {
         return false;
     }
@@ -185,9 +182,29 @@
     if (fabs([goalPosition y] - [currentFrame yPos]) != 0.0) {
         yMove = MIN(distanceToMove * sin(moveAngle) * ([goalPosition y] - [currentFrame yPos]) / fabs([goalPosition y] - [currentFrame yPos]), fabs([goalPosition y] - [currentFrame yPos]));
     }
+
+    NSLog(@"---");
+    NSLog([NSString stringWithFormat:@"%f", [currentFrame xPos]]);
+    NSLog([NSString stringWithFormat:@"%f", [currentFrame yPos]]);
+    
+    NSLog([NSString stringWithFormat:@"%f", [goalPosition x]]);
+    NSLog([NSString stringWithFormat:@"%f", [goalPosition y]]);
+    
+    NSLog(@"+++");
     
     NSLog([NSString stringWithFormat:@"%f", xMove]);
-    NSLog([NSString stringWithFormat:@"%f", [currentFrame xPos]]);
+    NSLog([NSString stringWithFormat:@"%f", yMove]);
+    
+    double first = fabs([goalPosition y] - [currentFrame yPos]);
+    double second = ([goalPosition y] - [currentFrame yPos]) / fabs([goalPosition y] - [currentFrame yPos]);
+    double third = sin(moveAngle) * ([goalPosition y] - [currentFrame yPos]) / fabs([goalPosition y] - [currentFrame yPos]);
+    double fourth =  distanceToMove * sin(moveAngle) * ([goalPosition y] - [currentFrame yPos]) / fabs([goalPosition y] - [currentFrame yPos]);
+    
+    NSLog(@"number tests");
+    NSLog([NSString stringWithFormat:@"%f", first]);
+    NSLog([NSString stringWithFormat:@"%f", second]);
+    NSLog([NSString stringWithFormat:@"%f", third]);
+    NSLog([NSString stringWithFormat:@"%f", fourth]);
     
 	[currentFrame setXPos: [currentFrame xPos] + xMove];
 	[currentFrame setYPos: [currentFrame yPos] + yMove];

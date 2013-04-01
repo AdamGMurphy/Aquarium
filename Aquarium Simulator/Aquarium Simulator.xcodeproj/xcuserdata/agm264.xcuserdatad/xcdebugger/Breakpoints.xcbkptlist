@@ -8,24 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/Frame.m"
-         timestampString = "386488597.548374"
+         timestampString = "386492450.839459"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "75"
-         endingLineNumber = "75"
-         landmarkName = "-collidesWith:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Aquarium Simulator/Frame.m"
-         timestampString = "386488597.548374"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "85"
-         endingLineNumber = "85"
+         startingLineNumber = "72"
+         endingLineNumber = "72"
          landmarkName = "-collidesWith:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,25 +21,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386467926.456335"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "86"
-         endingLineNumber = "86"
-         landmarkName = "-moveToPosition:withSpeed:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386467926.456335"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "88"
          endingLineNumber = "88"
-         landmarkName = "-moveToPosition:withSpeed:"
+         landmarkName = "-moveToFood"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -60,12 +34,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386467926.456335"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "91"
-         endingLineNumber = "91"
-         landmarkName = "-moveToPosition:withSpeed:"
+         startingLineNumber = "90"
+         endingLineNumber = "90"
+         landmarkName = "-moveToFood"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -73,12 +47,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386467926.456335"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "92"
-         endingLineNumber = "92"
-         landmarkName = "-moveToPosition:withSpeed:"
+         startingLineNumber = "93"
+         endingLineNumber = "93"
+         landmarkName = "-moveToFood"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Aquarium Simulator/FishMovementModel.m"
+         timestampString = "386494364.84072"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "94"
+         endingLineNumber = "94"
+         landmarkName = "-moveToFood"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -138,11 +125,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386488466.241567"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "195"
-         endingLineNumber = "195"
+         startingLineNumber = "212"
+         endingLineNumber = "212"
          landmarkName = "-moveToGoal"
          landmarkType = "5">
       </FileBreakpoint>
@@ -151,11 +138,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386488466.241567"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "197"
-         endingLineNumber = "197"
+         startingLineNumber = "214"
+         endingLineNumber = "214"
          landmarkName = "-moveToGoal"
          landmarkType = "5">
       </FileBreakpoint>
@@ -164,11 +151,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386488038.325881"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "155"
-         endingLineNumber = "155"
+         startingLineNumber = "152"
+         endingLineNumber = "152"
          landmarkName = "-moveToGoal"
          landmarkType = "5">
       </FileBreakpoint>
@@ -177,11 +164,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386488042.684154"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "156"
-         endingLineNumber = "156"
+         startingLineNumber = "153"
+         endingLineNumber = "153"
          landmarkName = "-moveToGoal"
          landmarkType = "5">
       </FileBreakpoint>
@@ -190,11 +177,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386488045.696318"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "170"
-         endingLineNumber = "170"
+         startingLineNumber = "167"
+         endingLineNumber = "167"
          landmarkName = "-moveToGoal"
          landmarkType = "5">
       </FileBreakpoint>
@@ -203,11 +190,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386488047.536723"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "176"
-         endingLineNumber = "176"
+         startingLineNumber = "173"
+         endingLineNumber = "173"
          landmarkName = "-moveToGoal"
          landmarkType = "5">
       </FileBreakpoint>
@@ -216,7 +203,20 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386488049.257222"
+         timestampString = "386494364.84072"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "174"
+         endingLineNumber = "174"
+         landmarkName = "-moveToGoal"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Aquarium Simulator/FishMovementModel.m"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "177"
@@ -229,7 +229,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386488050.208276"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "180"
@@ -242,7 +242,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386488051.408761"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "183"
@@ -255,11 +255,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386488052.515438"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "186"
-         endingLineNumber = "186"
+         startingLineNumber = "209"
+         endingLineNumber = "209"
          landmarkName = "-moveToGoal"
          landmarkType = "5">
       </FileBreakpoint>
@@ -268,11 +268,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386488466.241567"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "192"
-         endingLineNumber = "192"
+         startingLineNumber = "154"
+         endingLineNumber = "154"
          landmarkName = "-moveToGoal"
          landmarkType = "5">
       </FileBreakpoint>
@@ -281,11 +281,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386488073.81681"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "157"
-         endingLineNumber = "157"
+         startingLineNumber = "158"
+         endingLineNumber = "158"
          landmarkName = "-moveToGoal"
          landmarkType = "5">
       </FileBreakpoint>
@@ -294,11 +294,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386488074.975767"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "161"
-         endingLineNumber = "161"
+         startingLineNumber = "162"
+         endingLineNumber = "162"
          landmarkName = "-moveToGoal"
          landmarkType = "5">
       </FileBreakpoint>
@@ -307,11 +307,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386488076.271933"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "165"
-         endingLineNumber = "165"
+         startingLineNumber = "215"
+         endingLineNumber = "215"
          landmarkName = "-moveToGoal"
          landmarkType = "5">
       </FileBreakpoint>
@@ -320,11 +320,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386488466.241567"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "198"
-         endingLineNumber = "198"
+         startingLineNumber = "216"
+         endingLineNumber = "216"
          landmarkName = "-moveToGoal"
          landmarkType = "5">
       </FileBreakpoint>
@@ -333,11 +333,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386488466.241567"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "199"
-         endingLineNumber = "199"
+         startingLineNumber = "217"
+         endingLineNumber = "217"
          landmarkName = "-moveToGoal"
          landmarkType = "5">
       </FileBreakpoint>
@@ -346,24 +346,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386488466.241567"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "200"
-         endingLineNumber = "200"
-         landmarkName = "-moveToGoal"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Aquarium Simulator/FishMovementModel.m"
-         timestampString = "386488131.678211"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "171"
-         endingLineNumber = "171"
+         startingLineNumber = "168"
+         endingLineNumber = "168"
          landmarkName = "-moveToGoal"
          landmarkType = "5">
       </FileBreakpoint>
@@ -397,13 +384,130 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Aquarium Simulator/Frame.m"
-         timestampString = "386488610.090008"
+         filePath = "Aquarium Simulator/FishMovementModel.m"
+         timestampString = "386494364.84072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "36"
-         endingLineNumber = "36"
-         landmarkName = "-setXPos:"
+         startingLineNumber = "87"
+         endingLineNumber = "87"
+         landmarkName = "-moveToFood"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Aquarium Simulator/FishMovementModel.m"
+         timestampString = "386494364.84072"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "89"
+         endingLineNumber = "89"
+         landmarkName = "-moveToFood"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Aquarium Simulator/FishMovementModel.m"
+         timestampString = "386494364.84072"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "95"
+         endingLineNumber = "95"
+         landmarkName = "-moveToFood"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Aquarium Simulator/FishMovementModel.m"
+         timestampString = "386494364.84072"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "104"
+         endingLineNumber = "104"
+         landmarkName = "-moveToFood"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Aquarium Simulator/FishBehaviorController.m"
+         timestampString = "386493174.080224"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "71"
+         endingLineNumber = "71"
+         landmarkName = "-beginAction"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Aquarium Simulator/FishBehaviorController.m"
+         timestampString = "386493174.080224"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "72"
+         endingLineNumber = "72"
+         landmarkName = "-beginAction"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Aquarium Simulator/FishMovementModel.m"
+         timestampString = "386494364.84072"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "106"
+         endingLineNumber = "106"
+         landmarkName = "-moveToFood"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Aquarium Simulator/FishMovementModel.m"
+         timestampString = "386494364.84072"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "150"
+         endingLineNumber = "150"
+         landmarkName = "-moveToGoal"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Aquarium Simulator/FishMovementModel.m"
+         timestampString = "386494364.84072"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "210"
+         endingLineNumber = "210"
+         landmarkName = "-moveToGoal"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Aquarium Simulator/FishMovementModel.m"
+         timestampString = "386494374.919582"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "96"
+         endingLineNumber = "96"
+         landmarkName = "-moveToFood"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

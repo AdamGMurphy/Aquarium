@@ -53,10 +53,6 @@
 	double xPos = [frame xPos];
 	double yPos = [frame yPos];
 
-    NSLog(@"---");
-    NSLog([NSString stringWithFormat:@"%f", xPos]);
-    NSLog([NSString stringWithFormat: @"%f", yPos]);
-    
 	if (facing == -1.0) {
 		offset = 60.0 * size;
 	}

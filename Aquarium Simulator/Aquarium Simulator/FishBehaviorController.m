@@ -50,7 +50,7 @@
 
 - (void) beginAction {
 	double action = [self nextAction];
-	
+
 	if (action == 1) {
 		float xPos = arc4random() % (int) ([boundary width] - [[fishModel frame] width]);
 		float yPos = arc4random() % (int) ([boundary height] - [[fishModel frame] height]);
@@ -78,7 +78,7 @@
 		[movingLayer resetMovementModifier];
 		[turningLayer resetMovementModifier];
 		[fishModel setAction: 3];
-		[fishModel moveToFoodWithSpeed: 1.0];
+		[fishModel moveToFoodWithSpeed: 50.0];
 	}
 }
 
@@ -107,7 +107,13 @@
 	return action;
 }
 
+- (Boolean) isFood {
+    return [delegate isFood];
+}
 
+- (Frame*) foodFrame {
+    return [delegate foodFrame];
+}
 
 
 

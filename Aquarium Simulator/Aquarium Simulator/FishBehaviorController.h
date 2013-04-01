@@ -27,4 +27,8 @@
 
 - (int) nextAction;
 
+- (Boolean) isFood;
+
+- (Frame*) foodFrame;
+
 @end
