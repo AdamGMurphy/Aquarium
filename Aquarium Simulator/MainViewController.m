@@ -41,14 +41,7 @@
     // Do any additional setup after loading the view from its nib.
     //[self.navigationController setNavigationBarHidden:YES];
 
-    FishLoader *newFishLoader = [[FishLoader alloc] init];
-    if(![newFishLoader savedFish]){
-        self.viewButton.enabled = NO;
-    }
-    else{
-        self.viewButton.enabled = YES;
-        [self setFish:[newFishLoader loadFishWithBoundary:<#(Frame *)#>] ]
-    }
+
     
     fishTimer = nil;
 }
@@ -61,9 +54,7 @@
     }
     else{
         self.viewButton.enabled = YES;
-        
-        
-        [self setFish:<#(FishDataModel *)#>]
+        [self setFish:[newFishLoader loadFish]];
     }
     
 }
