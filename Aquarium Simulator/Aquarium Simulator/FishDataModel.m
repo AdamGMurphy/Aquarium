@@ -82,6 +82,10 @@
     return maxHunger;
 }
 
+- (void) setHunger: (double) setHunger {
+    hunger = setHunger;
+}
+
 - (double) hunger {
 	return hunger;
 }

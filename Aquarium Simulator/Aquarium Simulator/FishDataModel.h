@@ -34,6 +34,8 @@
 
 - (double) maxHunger;
 
+- (void) setHunger: (double) setHunger;
+
 - (double) hunger;
 
 - (double) facing;
