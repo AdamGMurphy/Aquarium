@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "StatsViewController.h"
 #import "FishLoader.h"
 #import "FishDataModel.h"
 #import "FishTimer.h"
@@ -22,18 +23,16 @@
 
 @synthesize viewButton;
 
-- (id)initWithFish: (FishDataModel *) setFishModel NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
-        fishModel = setFishModel;
-        // Custom initialization
-        
           
     }
     return self;
 }
+
+
 
 - (void)viewDidLoad
 {
@@ -74,6 +73,12 @@
     fishTimer = [[FishTimer alloc] initWithFishModel:fishModel];
 }
 
+- (FishDataModel *) getFish{
+    
+    return fishModel;
+}
+
+
 -(IBAction)loadGamePressed:(id)sender{
     AquariumViewController *aquariumView = [[AquariumViewController alloc] initWithFish: fishModel NibName:@"AquariumViewController" bundle:nil];
     [self.navigationController pushViewController:aquariumView animated:YES];
@@ -92,6 +97,7 @@
 -(IBAction)statsPressed:(id)sender{
     
     StatsViewController *statsView = [[StatsViewController alloc] initWithNibName:@"StatsViewController" bundle:nil];
+    [statsView setDelegate:self];
     [self.navigationController pushViewController:statsView animated:YES];
     
 }

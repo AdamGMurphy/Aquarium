@@ -7,8 +7,15 @@
 //
 
 #import "StatsViewController.h"
+#import "FishDataModel.h"
+#import "FishLoader.h"
+#import "MainViewController.h"  
 
-@interface StatsViewController ()
+@interface StatsViewController (){
+    
+    id delegate;
+
+}
 
 @end
 
@@ -17,6 +24,7 @@
 @synthesize nameText;
 @synthesize hungerText;
 @synthesize sizeText;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +35,14 @@
     return self;
 }
 
+- (void) setDelegate: (id) newDelegate {
+	delegate = newDelegate;
+}
+
+- (id) delegate{
+	return delegate;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -35,6 +51,13 @@
     //turn on the nav bar and set the title
     [self.navigationController setNavigationBarHidden:NO];
     self.title = @"Statistics";
+    
+    FishDataModel *statsFish = [delegate getFish];
+    
+    nameText.text = statsFish.name;
+    hungerText.text = [NSString stringWithFormat:@"%.f",statsFish.hunger];
+    sizeText.text = [NSString stringWithFormat:@"%.f",statsFish.size];
+    
 }
 
 -(void)viewWillDisappear:(BOOL)animated

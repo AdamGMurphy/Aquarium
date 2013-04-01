@@ -25,5 +25,9 @@
 -(IBAction)linkPressed:(id)sender;
 -(IBAction)statsPressed:(id)sender;
 
+- (void) setFish: (FishDataModel *) setFishModel;
+
+- (FishDataModel *) getFish;
+
 
 @end

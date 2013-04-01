@@ -19,4 +19,9 @@
 @property(atomic, readwrite) IBOutlet UILabel *hungerText;
 @property(atomic, readwrite) IBOutlet UILabel *sizeText;
 
+
+- (void) setDelegate: (id) newDelegate;
+
+- (id) delegate;
+
 @end
