@@ -90,37 +90,12 @@
     NSArray *imageArray2 = [NSArray arrayWithObjects:@"back1smallr.png",@"back1smallr.png",@"back2smallr.png",@"back3smallr.png",@"back4smallr.png",@"back4smallr.png", nil];
     int i = random()%5;
     
-    NSLog(@"this is %d", i);    
-    
     if(event.subtype == UIEventSubtypeMotionShake){
     
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:imageArray2[i]]];
         [self.view setNeedsDisplay];        
     }
 }
-
-/*
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-    // Do your thing after shaking device
-    //NSArray *imageArray = [NSArray arrayWithObjects:                           [UIImage imageNamed:@"back1smallr.png"],                           [UIImage imageNamed:@"back2smallr.png"],                           [UIImage imageNamed:@"back3smallr.png"],                           [UIImage imageNamed:@"back4smallr.png"],                           [UIImage imageNamed:@"back5smallr.png"],                           nil];
-    NSArray *imageArray2 = [NSArray arrayWithObjects:@"back1smallr.png",@"back1smallr.png",@"back2smallr.png",@"back3smallr.png",@"back4smallr.png",@"back4smallr.png", nil];
-    int i = random()%5;
-
-    NSLog(@"this is %d", i);
-    //NSString *myImage = imageArray[i] image;
-    //NSLog(@"this is %@", imageArray[i]);
-    NSLog(@"this is %@", imageArray2[i]);
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:imageArray2[i]]];
-    //self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"back2smallr.png"]];
-
-     //[[self view] setBackgroundColor: [UIColor colorWithPatternImage: [UIImage imageNamed:@"back2smallr.png"]]];
-
-    //[[self view] setBackgroundColor: [UIColor colorWithPatternImage:imageArray[i]]];
-    //self->_view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"back2smallr.png"]];
-    [self.view setNeedsDisplay];
-    
-}
-*/
 
 
 
