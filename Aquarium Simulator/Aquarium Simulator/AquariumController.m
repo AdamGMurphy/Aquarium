@@ -22,7 +22,8 @@
 
 - (id) initWithFish: (FishDataModel *) setFishModel Boundary: (CGRect) rectBoundary {
     self = [super init];
-    
+
+
 	Frame *screen = [[Frame alloc] initWithxPos:CGRectGetMinX(rectBoundary) yPos:CGRectGetMinY(rectBoundary) width:CGRectGetWidth(rectBoundary) height:CGRectGetHeight(rectBoundary)];
 /*
     Frame *fishFrame = [[Frame alloc] initWithxPos:50.0 yPos:50.0 width:50.0 height:50.0];

@@ -19,7 +19,7 @@
     return numFishSaved == 1;
 }
 
-- (FishDataModel *) loadFishWithBoundary: (Frame *) fishBoundary {
+- (FishDataModel *) loadFish {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *name = [defaults objectForKey:@"fishName"];
     double size = [defaults doubleForKey:@"fishSize"];
@@ -47,6 +47,10 @@
     UIColor *eyeColor = [[UIColor alloc] initWithRed:eyeRed green:eyeGreen blue:eyeBlue alpha:eyeAlpha];
     
     FishColorModel *colorModel = [[FishColorModel alloc] initWithFinColor:finColor bodyColor:bodyColor eyeColor:eyeColor];
+    
+    CGRect mainScreen = [[UIScreen mainScreen] bounds];
+    CGRect rotatedScreen = CGRectMake(CGRectGetMinX(mainScreen), CGRectGetMinY(mainScreen), CGRectGetHeight(mainScreen), CGRectGetWidth(mainScreen));
+    Frame *fishBoundary = [[Frame alloc] initWithxPos:CGRectGetMinX(rotatedScreen) yPos:CGRectGetMinY(rotatedScreen) width:CGRectGetWidth(rotatedScreen) height:CGRectGetHeight(rotatedScreen)];
     
     Frame *fishFrame = [[Frame alloc] initWithxPos:0.0 yPos:0.0 width:60.0 * size height:50.0 * size];
     FishMovementModel *movementModel = [[FishMovementModel alloc] initWithFrame:fishFrame boundary:fishBoundary refreshRate:0.1];

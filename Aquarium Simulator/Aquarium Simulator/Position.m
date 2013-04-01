@@ -22,7 +22,6 @@
     return self;
 }
 
-
 - (void) setX: (double) setX {
     x = setX;
 }
