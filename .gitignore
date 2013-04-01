@@ -21,6 +21,10 @@ Aquarium Simulator/Aquarium Simulator.xcodeproj/project.xcworkspace/xcuserdata/d
 
 *.xcuserstate
 
+<<<<<<< HEAD
 .DS_Store
 
 Aquarium Simulator/Aquarium Simulator.xcodeproj/project.xcworkspace/xcuserdata/agm264.xcuserdatad/UserInterfaceState.xcuserstate
+=======
+Aquarium Simulator/BluetoothViewController.xib
+>>>>>>> nothing
