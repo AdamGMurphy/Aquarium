@@ -49,7 +49,7 @@
 }
 
 - (void) beginAction {
-	double action = [self nextAction];
+	int action = [self nextAction];
 
 	if (action == 1) {
 		float xPos = arc4random() % (int) ([boundary width] - [[fishModel frame] width]);
@@ -80,6 +80,12 @@
 		[fishModel setAction: 3];
 		[fishModel moveToFoodWithSpeed: 50.0];
 	}
+	else {
+		[self beginAction];
+		return;
+	}
+	
+	NSLog([NSString stringWithFormat:@"%d", action]);
 }
 
 - (int) nextAction {
