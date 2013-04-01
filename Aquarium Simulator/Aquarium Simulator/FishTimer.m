@@ -24,16 +24,17 @@
     fishSaver = [[FishSaver alloc] init];
     
     hungerTimer = [[NSTimer alloc] init];
-    hungerTimer = [NSTimer scheduledTimerWithTimeInterval: 120 target:self selector:@selector (timerFunction) userInfo:nil repeats:YES];
+    hungerTimer = [NSTimer scheduledTimerWithTimeInterval: 60 target:self selector:@selector (hungerFunction) userInfo:nil repeats:YES];
     
     saveTimer = [[NSTimer alloc] init];
-    saveTimer = [NSTimer scheduledTimerWithTimeInterval: 30 target:self selector:@selector (saveFunction) userInfo:nil repeats:YES];
+    saveTimer = [NSTimer scheduledTimerWithTimeInterval: 0.5 target:self selector:@selector (saveFunction) userInfo:nil repeats:YES];
     
     return self;
 }
 
 - (void) hungerFunction {
-    [fishModel setHunger: [fishModel hunger] - 1];
+    if (fishModel != nil)
+    [fishModel setHunger: [fishModel hunger] - 1.0];
 }
 
 - (void) saveFunction {
