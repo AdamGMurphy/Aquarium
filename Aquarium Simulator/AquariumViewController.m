@@ -36,8 +36,6 @@
 
     }
     
-    aquaController = [[AquariumController alloc] init];
-    
     return self;
 }
 
@@ -62,7 +60,10 @@
 
     CGRect mainScreen = [[UIScreen mainScreen] bounds];
     CGRect rotatedScreen = CGRectMake(CGRectGetMinX(mainScreen), CGRectGetMinY(mainScreen), CGRectGetHeight(mainScreen), CGRectGetWidth(mainScreen));
+    
+    aquaController = [[AquariumController alloc] initWithBoundary: rotatedScreen];
     aquaView = [[AquariumView alloc] initWithFrame: rotatedScreen];
+    [aquaView setDelegate: aquaController];
     [self.view addSubview: aquaView];
     
     [NSTimer scheduledTimerWithTimeInterval: 0.1 target:self selector:@selector(refresh) userInfo: nil repeats: YES];

@@ -10,4 +10,6 @@
 
 @interface AquariumView : UIView
 
+- (void) setDelegate: (id) newDelegate;
+
 @end

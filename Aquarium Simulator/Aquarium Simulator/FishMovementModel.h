@@ -30,8 +30,6 @@
 
 - (void) stopMovement;
 
-- (void) stopTurning;
-
 - (void) moveToGoal;
 
 - (void) turnAround;

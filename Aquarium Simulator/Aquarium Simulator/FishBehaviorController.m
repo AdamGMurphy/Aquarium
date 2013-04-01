@@ -46,20 +46,25 @@
 	double action = [self nextAction];
 	
 	if (action == 1) {
-		int xPos = arc4random() % (int) ([boundary width] - [[fishModel frame] width]);
-		int yPos = arc4random() % (int) ([boundary height] - [[fishModel frame] height]);
+		float xPos = arc4random() % (int) ([boundary width] - [[fishModel frame] width]);
+		float yPos = arc4random() % (int) ([boundary height] - [[fishModel frame] height]);
 		
 		Position *position = [[Position alloc] initWithX:xPos y:yPos];
 		
 		[fishModel setAction:1];
-		Boolean moved = [fishModel moveToPosition:position withSpeed:1.0];
+		Boolean moved = [fishModel moveToPosition:position withSpeed:50.0];
+
 		if (!moved) {
+			[movingLayer decrementMovementModifier:1.0];
+			[turningLayer incrememntMovementModifier:1.0];
 			[fishModel setAction: 0];
 			[self beginAction];
 			return;
 		}
 	}
 	else if (action == 2) {
+		[movingLayer resetMovementModifier];
+		[turningLayer resetMovementModifier];
 		[fishModel setAction: 2];
 		[fishModel turnAroundWithSpeed: 1.0];
 	}

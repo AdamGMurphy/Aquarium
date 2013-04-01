@@ -11,7 +11,7 @@
 
 @interface AquariumController : NSObject
 
-- (id) init;
+- (id) initWithBoundary: (CGRect) rectBoundary;
 
 - (NSMutableArray *) colorArray;
 

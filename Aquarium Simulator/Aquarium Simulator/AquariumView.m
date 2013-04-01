@@ -37,24 +37,18 @@
 }
 
 - (void) drawFish: (CGContextRef) context colorArray: (NSMutableArray*) colorArray frame: (Frame *) frame size: (double) size facing: (double) facing {
-
-    //    [self setBackgroundColor: [UIColor redColor]];
-
-    
 	
-	CGColorRef finColor = (__bridge CGColorRef)([colorArray objectAtIndex:0]);//[[UIColor greenColor] CGColor];
-	CGColorRef bodyColor = (__bridge CGColorRef)([colorArray objectAtIndex:1]);;
-	CGColorRef outerEyeColor = [[UIColor whiteColor] CGColor]a;
+	CGColorRef finColor = [([colorArray objectAtIndex:0]) CGColor];//[[UIColor greenColor] CGColor];
+	CGColorRef bodyColor = [([colorArray objectAtIndex:1]) CGColor];
+	CGColorRef outerEyeColor = [([colorArray objectAtIndex:2]) CGColor];
 	CGColorRef innerEyeColor = [[UIColor blackColor] CGColor];
 	
-	double size = 1.0;
-	double facing = -1.0;
 	double offset = 0.0;
 	double eyeOffset = 0.0;
 	
-	double xPos = 50.0;
-	double yPos = 50.0;
-	
+	double xPos = [frame xPos];
+	double yPos = [frame yPos];
+
 	if (facing == -1.0) {
 		offset = 60.0 * size;
 	}

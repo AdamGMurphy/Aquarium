@@ -77,6 +77,17 @@
 - (Boolean) moveToPosition: (Position *) position withSpeed: (double) setSpeed{
     [self stopMovement];
     
+    goalPosition = position;
+/*
+    NSLog(@"THIS");
+    NSLog([NSString stringWithFormat:@"%f", [goalPosition x]]);
+    NSLog([NSString stringWithFormat:@"%f", [goalPosition y]]);
+   NSLog([NSString stringWithFormat:@"%f", facing]);
+*/    
+    if ([goalPosition x] < 0.0 || [goalPosition y] < 0.0 || [goalPosition x] + [currentFrame width] > [boundary width] || [goalPosition y] + [currentFrame height] > [boundary height]) {
+        return false;
+    }
+    
     if (([goalPosition x] < [currentFrame xPos] && facing == -1.0) || ([goalPosition x] > [currentFrame xPos] && facing == 1.0))
         return false;
     
@@ -84,7 +95,7 @@
     moveTimer = [NSTimer scheduledTimerWithTimeInterval: refreshRate target:self selector:@selector (moveToGoal) userInfo:nil repeats:YES];
     moving = true;
     
-    goalPosition = position;
+
     speed = setSpeed;
     moving = true;
     return true;
@@ -92,10 +103,8 @@
 
 - (void) turnAroundWithSpeed: (double) setSpeed {
 	[self stopMovement];
-	
-	moveTimer = [[NSTimer alloc] init];
-	moveTimer = [NSTimer scheduledTimerWithTimeInterval: refreshRate target:self selector:@selector(turnAround) userInfo:nil repeats:YES];
-	turning = true;
+		facing *= -1.0;
+    [delegate turningStopped];
 }
 
 - (void) stopMovement {
@@ -105,43 +114,54 @@
 		moving = false;
 		goalPosition = nil;
 		speed = 0.0;
-        //    [delegate movementStopped];
-	}
-}
-
-- (void) stopTurning {
-	if (turning) {
-		[moveTimer invalidate];
-		moveTimer = nil;
-		turning = false;
-		speed = 0.0;
-        //		[delegate turningStopped];
+        [delegate movementStopped];
 	}
 }
 
 - (void) moveToGoal {
-    if ([goalPosition x] < [currentFrame xPos] && facing == -1.0)
+
+    if ([goalPosition x] < [currentFrame xPos] && facing == -1.0){
         [self stopMovement];
-    if ([goalPosition x] > [currentFrame xPos] && facing == 1.0)
+        return;
+    }
+    if ([goalPosition x] > [currentFrame xPos] && facing == 1.0){
         [self stopMovement];
+        return;
+    }
+    if ([goalPosition x] - [currentFrame xPos] == 0.0 && [goalPosition y] - [currentFrame yPos] == 0) {
+        [self stopMovement];
+        return;
+    }
     
     double distanceToMove = speed * refreshRate;
-    double moveAngle = tan(abs(([goalPosition y] - [currentFrame yPos]) / ([goalPosition x] - [currentFrame xPos])));
-	double xMove = distanceToMove * cos(moveAngle) * ([goalPosition x] - [currentFrame xPos]) / abs([goalPosition x] - [currentFrame xPos]);
-	double yMove = distanceToMove * sin(moveAngle) * ([goalPosition y] - [currentFrame yPos]) / abs([goalPosition y] - [currentFrame yPos]);
-	
+    double moveAngle = atan(fabs(([goalPosition y] - [currentFrame yPos]) / ([goalPosition x] - [currentFrame xPos])));
+    
+    double xMove = 0.0;
+    double yMove = 0.0;
+    
+    if ([goalPosition y] == [currentFrame yPos]) {
+        xMove = MIN(distanceToMove, [goalPosition x] - [currentFrame xPos]);
+    }
+    if ([goalPosition x] == [currentFrame xPos]){
+        yMove = MIN(distanceToMove, [goalPosition y] - [currentFrame yPos]);
+    }
+    if (fabs([goalPosition x] - [currentFrame xPos]) != 0.0) {
+        xMove = MIN(distanceToMove * cos(moveAngle) * ([goalPosition x] - [currentFrame xPos]) / fabs([goalPosition x] - [currentFrame xPos]), fabs([goalPosition x] - [currentFrame xPos]));
+    }
+    if (fabs([goalPosition y] - [currentFrame yPos]) != 0.0) {
+        yMove = MIN(distanceToMove * sin(moveAngle) * ([goalPosition y] - [currentFrame yPos]) / fabs([goalPosition y] - [currentFrame yPos]), fabs([goalPosition y] - [currentFrame yPos]));
+    }
 	[currentFrame setXPos: [currentFrame xPos] + xMove];
 	[currentFrame setYPos: [currentFrame yPos] + yMove];
     
 	if ([currentFrame collidesWith: boundary]) {
+        NSLog(@"3");
+
 		[currentFrame setXPos: [currentFrame xPos] - xMove];
 		[currentFrame setYPos: [currentFrame yPos] - yMove];
 		[self stopMovement];
+        return;
 	}
-}
-
-- (void) turnAround {
-	facing *= -1.0;
 }
 
 - (double) facing {
