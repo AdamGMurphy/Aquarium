@@ -7,12 +7,22 @@
 //
 
 #import "CreateViewController.h"
+#import "FishSaver.h"
+
+#import "AquariumController.h"
+#import "FishDataModel.h"
+#import "FishMovementModel.h"
+#import "FishColorModel.h"
+#import "FishBehaviorController.h"
+#import "Frame.h"
 
 @interface CreateViewController ()
 
 @end
 
 @implementation CreateViewController
+
+@synthesize name;
 
 @synthesize finsRedSlider;
 @synthesize finsGreenSlider;
@@ -92,6 +102,25 @@
 
 
 -(IBAction)saveButtonPressed:(id)sender{
+    
+    double size = 1.0;
+
+    CGRect mainScreen = [[UIScreen mainScreen] bounds];
+    CGRect rotatedScreen = CGRectMake(CGRectGetMinX(mainScreen), CGRectGetMinY(mainScreen), CGRectGetHeight(mainScreen), CGRectGetWidth(mainScreen));
+    
+    Frame *fishBoundary = [[Frame alloc] initWithxPos:CGRectGetMinX(rotatedScreen) yPos:CGRectGetMinY(rotatedScreen) width:CGRectGetWidth(rotatedScreen) height:CGRectGetHeight(rotatedScreen)];
+
+    Frame *fishFrame = [[Frame alloc] initWithxPos:0.0 yPos:0.0 width:60.0 * size height:50.0 * size];
+
+    FishMovementModel *movementModel = [[FishMovementModel alloc] initWithFrame:fishFrame boundary:fishBoundary refreshRate:0.1];
+    
+    FishColorModel *newFishColorModel = [[FishColorModel alloc] initWithFinColor:finsResultButton.backgroundColor bodyColor:bodyResultButton.backgroundColor eyeColor:eyesResultButton.backgroundColor];
+    
+    FishDataModel *newFishDataModel = [[FishDataModel alloc] initWithName:name.text Size:1 movementModel:movementModel colorModel: newFishColorModel maxHunger:100.0 currentHunger:50.0];
+    
+    FishSaver *newFishSaver = [[FishSaver alloc] init];
+    
+    [newFishSaver saveFish:newFishDataModel];
     
     
 }

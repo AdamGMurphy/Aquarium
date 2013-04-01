@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Frame.h"
 
 @interface CreateViewController : UIViewController{
 
@@ -14,6 +15,7 @@
     UIButton *bodyResultButton;
     UIButton *eyesResultButton;
     
+
     IBOutlet UISlider *finsRedSlider;
     IBOutlet UISlider *finsGreenSlider;
     IBOutlet UISlider *finsBlueSlider;
@@ -29,6 +31,7 @@
    
 
 }
+@property (weak, nonatomic) IBOutlet UITextField *name;
 
 
 @property(nonatomic, retain) IBOutlet UISlider *finsRedSlider;
