@@ -29,7 +29,7 @@
     foodTimer = [NSTimer scheduledTimerWithTimeInterval: 0.1 target:self selector:@selector (timerFunction) userInfo:nil repeats:YES];
 }
 
-- (Frame *) getFoodFrame {
+- (Frame *) foodFrame {
     return frame;
 }
 

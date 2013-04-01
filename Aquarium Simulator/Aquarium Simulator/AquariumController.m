@@ -12,12 +12,14 @@
 #import "FishColorModel.h"
 #import "FishBehaviorController.h"
 #import "Frame.h"
+#import "FoodModel.h"
 
 @implementation AquariumController {
     FishDataModel *fishModel;
     FishMovementModel *movementModel;
     FishColorModel *colorModel;
     FishBehaviorController *behaviorController;
+	FoodModel *foodModel;
 }
 
 - (id) initWithFish: (FishDataModel *) setFishModel Boundary: (CGRect) rectBoundary {
@@ -43,17 +45,9 @@
 	behaviorController = [[FishBehaviorController alloc] initWithFishModel: fishModel boundary: screen];
 	[behaviorController beginAction];
 	
-    return self;
-}
-
-- (NSMutableArray *) colorArray{
-	NSMutableArray *colorArray = [NSMutableArray array];
-	FishColorModel *currentColorModel = [fishModel colorModel];
-	[colorArray addObject:[currentColorModel finColor]];
-	[colorArray addObject:[currentColorModel bodyColor]];
-	[colorArray addObject:[currentColorModel eyeColor]];
+	foodModel = [[FoodModel alloc] initWithBoundary:screen];
 	
-	return colorArray;
+    return self;
 }
 
 - (Frame *) frame {
@@ -66,6 +60,34 @@
 
 - (double) facing {
 	return [fishModel facing];
+}
+
+- (NSMutableArray *) colorArray{
+	NSMutableArray *colorArray = [NSMutableArray array];
+	FishColorModel *tempColorModel = [fishModel colorModel];
+	[colorArray addObject: [tempColorModel finColor]];
+	[colorArray addObject: [tempColorModel bodyColor]];
+	[colorArray addObject: [tempColorModel eyeColor]];
+	
+	return colorArray;
+}
+
+- (void) addFoodAtX: (double) x y: (double) y {
+    if([foodModel isFood]) {
+        return;
+    }
+    
+    Frame *foodFrame = [[Frame alloc] initWithxPos:x yPos:y width:10.0 height:10.0];
+    
+    [foodModel createFoodWithFrame:foodFrame];
+}
+
+- (Boolean) isFood {
+    return [foodModel isFood];
+}
+
+- (Frame *) foodFrame {
+    return [foodModel foodFrame];
 }
 
 @end

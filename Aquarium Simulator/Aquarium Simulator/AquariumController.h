@@ -14,12 +14,18 @@
 
 - (id) initWithFish: (FishDataModel *) setFishModel Boundary: (CGRect) rectBoundary;
 
-- (NSMutableArray *) colorArray;
-
 - (Frame *) frame;
 
 - (double) size;
 
 - (double) facing;
+
+- (NSMutableArray*) colorArray;
+
+- (void) addFoodAtX: (double) x y: (double) y ;
+
+- (Boolean) isFood;
+
+- (Frame *) foodFrame;
 
 @end

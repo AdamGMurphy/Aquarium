@@ -34,6 +34,10 @@
     double facing = [delegate facing];
     
     [self drawFish: context colorArray: colorArray frame: frame size:size facing:facing];
+    
+    if ([delegate isFood]) {
+        [self drawFoodWithContext:context frame:[delegate foodFrame]];
+    }
 }
 
 - (void) drawFish: (CGContextRef) context colorArray: (NSMutableArray*) colorArray frame: (Frame *) frame size: (double) size facing: (double) facing {
@@ -99,6 +103,15 @@
     CGContextFillPath(context);
 }
 
-
+- (void) drawFoodWithContext: (CGContextRef) context frame: (Frame *) frame {
+    CGContextBeginPath(context);
+    CGContextMoveToPoint(context, [frame xPos], [frame yPos]);
+    CGContextAddLineToPoint(context, [frame xPos] + [frame width], [frame yPos]);
+    CGContextAddLineToPoint(context, [frame xPos] + [frame width], [frame yPos] + [frame height]);
+    CGContextAddLineToPoint(context, [frame xPos], [frame yPos] + [frame height]);
+    CGContextClosePath(context);
+    CGContextSetFillColorWithColor(context, [[UIColor brownColor] CGColor]);
+    CGContextFillPath(context);
+}
 
 @end

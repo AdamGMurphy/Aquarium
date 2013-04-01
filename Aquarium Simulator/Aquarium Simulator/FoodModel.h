@@ -15,7 +15,7 @@
 
 - (void) createFoodWithFrame: setFrame;
 
-- (Frame *) getFoodFrame;
+- (Frame *) foodFrame;
 
 - (Boolean) isFood;
 

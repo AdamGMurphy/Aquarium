@@ -26,7 +26,6 @@
     AquariumController *aquaController;
     AquariumView *aquaView;
     FishDataModel *fishModel;
-    FoodModel *foodModel;
 }
 
 
@@ -36,13 +35,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        fishModel = setFishModel;
-        
-        CGRect mainScreen = [[UIScreen mainScreen] bounds];
-        CGRect rotatedScreen = CGRectMake(CGRectGetMinX(mainScreen), CGRectGetMinY(mainScreen), CGRectGetHeight(mainScreen), CGRectGetWidth(mainScreen));
-        Frame *screen = [[Frame alloc] initWithxPos:CGRectGetMinX(rotatedScreen) yPos:CGRectGetMinY(rotatedScreen) width:CGRectGetWidth(rotatedScreen) height:CGRectGetHeight(rotatedScreen)];
-       
-        foodModel = [[FoodModel alloc] initWithBoundary:screen];
+        fishModel = setFishModel; 
         // Custom initialization
 
     }
@@ -83,17 +76,9 @@
     [self.view addGestureRecognizer:tapRecognizer];
 }
 
-- (void) addFood:(UILongPressGestureRecognizer *) press {
-    if([foodModel isFood]) {
-        return;
-    }
-    
-    double xPos = [press locationInView:self.view].x;
-    double yPos = [press locationInView:self.view].y;
-    
-    Frame *foodFrame = [[Frame alloc] initWithxPos:xPos yPos:yPos width:10.0 height:10.0];
-    
-    [foodModel createFoodWithFrame:foodFrame];
+- (void) addFood:(UILongPressGestureRecognizer *)press {
+
+    [aquaController addFoodAtX: [press locationInView:self.view].x y: [press locationInView:self.view].y];
 }
 
 - (void) refresh {

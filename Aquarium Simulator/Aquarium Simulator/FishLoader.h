@@ -13,6 +13,6 @@
 
 - (Boolean) savedFish;
 
-- (FishDataModel *) loadFishWithBoundary: (Frame *) fishBoundary;
+- (FishDataModel *) loadFish;
 
 @end

@@ -13,4 +13,10 @@
 
 - (id)initWithFish: (FishDataModel *) setFishModel NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
 
+- (void) addFood:(UILongPressGestureRecognizer *) press;
+
+- (Boolean) isFood;
+
+- (Frame *) foodFrame;
+
 @end
