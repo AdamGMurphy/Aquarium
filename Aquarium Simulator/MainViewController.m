@@ -18,6 +18,8 @@
 
 @implementation MainViewController
 
+@synthesize viewButton;
+
 - (id)initWithFish: (FishDataModel *) setFishModel NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,7 +28,7 @@
         fishModel = setFishModel;
         // Custom initialization
         
-        //if(
+          
     }
     return self;
 }
@@ -36,6 +38,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     //[self.navigationController setNavigationBarHidden:YES];
+    
+    FishLoader *newFishLoader = [[FishLoader alloc] init];
+    NSLog(@"s234234242342");
+    if(![newFishLoader savedFish]){
+        NSLog(@"sdlfjsldfslf");
+        self.viewButton.enabled = NO;
+    }
 }
 
 

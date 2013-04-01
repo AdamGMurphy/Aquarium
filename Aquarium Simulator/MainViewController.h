@@ -13,9 +13,12 @@
 #import "StatsViewController.h"
 #import "FishDataModel.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController{
+    
+    IBOutlet UIButton *viewButton;
+}
 
-
+@property (strong, nonatomic) IBOutlet UIButton *viewButton;
 
 -(IBAction)newGamePressed:(id)sender;
 -(IBAction)loadGamePressed:(id)sender;
