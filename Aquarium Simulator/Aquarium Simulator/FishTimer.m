@@ -13,7 +13,8 @@
 @implementation FishTimer {
     FishDataModel *fishModel;
     FishSaver *fishSaver;
-    NSTimer *fishTimer;
+    NSTimer *hungerTimer;
+    NSTimer *saveTimer;
 }
 
 - (id) initWithFishModel: (FishDataModel * )setFishModel {
@@ -22,21 +23,29 @@
     fishModel = setFishModel;
     fishSaver = [[FishSaver alloc] init];
     
-    fishTimer = [[NSTimer alloc] init];
-    fishTimer = [NSTimer scheduledTimerWithTimeInterval: 18000 target:self selector:@selector (timerFunction) userInfo:nil repeats:YES];
+    hungerTimer = [[NSTimer alloc] init];
+    hungerTimer = [NSTimer scheduledTimerWithTimeInterval: 120 target:self selector:@selector (timerFunction) userInfo:nil repeats:YES];
+    
+    saveTimer = [[NSTimer alloc] init];
+    saveTimer = [NSTimer scheduledTimerWithTimeInterval: 30 target:self selector:@selector (saveFunction) userInfo:nil repeats:YES];
     
     return self;
 }
 
-- (void) timerFunction {
+- (void) hungerFunction {
     [fishModel setHunger: [fishModel hunger] - 1];
+}
+
+- (void) saveFunction {
     [fishSaver saveFish:fishModel];
 }
 
 - (void) stopTimer {
-    if (fishTimer != nil) {
-        [fishTimer invalidate];
-        fishTimer = nil;
+    if (hungerTimer != nil) {
+        [hungerTimer invalidate];
+        [saveTimer invalidate];
+        hungerTimer = nil;
+        saveTimer = nil;
     }
 }
 

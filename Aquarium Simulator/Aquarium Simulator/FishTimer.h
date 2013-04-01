@@ -13,7 +13,9 @@
 
 - (id) initWithFishModel: (FishDataModel * )setFishModel;
 
-- (void) timerFunction;
+- (void) hungerFunction;
+
+- (void) saveFunction;
 
 - (void) stopTimer;
 
