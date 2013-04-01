@@ -8,3 +8,5 @@ Aquarium Simulator/Aquarium Simulator.xcodeproj/project.pbxproj
 Aquarium Simulator/Aquarium Simulator.xcodeproj/project.xcworkspace/xcuserdata/dazza.xcuserdatad/UserInterfaceState.xcuserstate
 
 *.xcuserstate
+
+*.xcbkptlist

@@ -39,7 +39,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "86"
          endingLineNumber = "86"
-         landmarkName = "-moveToPosition:withSpeed:"
+         landmarkName = "-moveToFood"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -52,7 +52,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "88"
          endingLineNumber = "88"
-         landmarkName = "-moveToPosition:withSpeed:"
+         landmarkName = "-moveToFood"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -65,7 +65,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "91"
          endingLineNumber = "91"
-         landmarkName = "-moveToPosition:withSpeed:"
+         landmarkName = "-moveToFood"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -78,7 +78,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "92"
          endingLineNumber = "92"
-         landmarkName = "-moveToPosition:withSpeed:"
+         landmarkName = "-moveToFood"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
