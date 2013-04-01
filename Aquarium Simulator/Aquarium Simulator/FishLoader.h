@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FishDataModel.h"
 
 @interface FishLoader : NSObject
+
+- (Boolean) savedFish;
+
+- (FishDataModel *) loadFishWithBoundary: (Frame *) fishBoundary;
 
 @end
