@@ -32,8 +32,6 @@
 		732A6DFC17076AB100E0D451 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732A6DFB17076AB100E0D451 /* OpenGLES.framework */; };
 		733EDF3B1708BE2800E99649 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 733EDF3A1708BE2800E99649 /* CreateViewController.m */; };
 		733EDF3C1708BE4D00E99649 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 733EDF3A1708BE2800E99649 /* CreateViewController.m */; };
-		733EDF3F1708BE9E00E99649 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 733EDF3E1708BE9E00E99649 /* StatsViewController.m */; };
-		733EDF401708BEEE00E99649 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 733EDF3E1708BE9E00E99649 /* StatsViewController.m */; };
 		733EDF421708BF3700E99649 /* CreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF411708BF3700E99649 /* CreateViewController.xib */; };
 		733EDF631708BFD300E99649 /* back2smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF471708BFD300E99649 /* back2smallr.png */; };
 		733EDF651708BFD300E99649 /* back4smallr.png in Resources */ = {isa = PBXBuildFile; fileRef = 733EDF491708BFD300E99649 /* back4smallr.png */; };
@@ -89,6 +87,11 @@
 		EB670BA11706B5D800D01CB6 /* stats.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B8A1706B5D800D01CB6 /* stats.png */; };
 		EB670BA21706B5D800D01CB6 /* trade.png in Resources */ = {isa = PBXBuildFile; fileRef = EB670B8B1706B5D800D01CB6 /* trade.png */; };
 		EB670BAF1706B9F800D01CB6 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB670BAE1706B9F800D01CB6 /* GameKit.framework */; };
+		EBB374DE17091D1A005808B1 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB374DC17091D1A005808B1 /* StatsViewController.m */; };
+		EBB374DF17091D1A005808B1 /* StatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB374DD17091D1A005808B1 /* StatsViewController.xib */; };
+		EBB374E317091D7C005808B1 /* age.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB374E017091D7C005808B1 /* age.png */; };
+		EBB374E417091D7C005808B1 /* name.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB374E117091D7C005808B1 /* name.png */; };
+		EBB374E517091D7C005808B1 /* size.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB374E217091D7C005808B1 /* size.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,8 +142,6 @@
 		732A6DFB17076AB100E0D451 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		733EDF391708BE2800E99649 /* CreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateViewController.h; sourceTree = "<group>"; };
 		733EDF3A1708BE2800E99649 /* CreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateViewController.m; sourceTree = "<group>"; };
-		733EDF3D1708BE9E00E99649 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
-		733EDF3E1708BE9E00E99649 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		733EDF411708BF3700E99649 /* CreateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateViewController.xib; sourceTree = "<group>"; };
 		733EDF471708BFD300E99649 /* back2smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back2smallr.png; sourceTree = SOURCE_ROOT; };
 		733EDF491708BFD300E99649 /* back4smallr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back4smallr.png; sourceTree = SOURCE_ROOT; };
@@ -204,6 +205,12 @@
 		EB670B8A1706B5D800D01CB6 /* stats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stats.png; path = ../stats.png; sourceTree = "<group>"; };
 		EB670B8B1706B5D800D01CB6 /* trade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trade.png; path = ../trade.png; sourceTree = "<group>"; };
 		EB670BAE1706B9F800D01CB6 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		EBB374DB17091D1A005808B1 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		EBB374DC17091D1A005808B1 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
+		EBB374DD17091D1A005808B1 /* StatsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatsViewController.xib; sourceTree = "<group>"; };
+		EBB374E017091D7C005808B1 /* age.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = age.png; sourceTree = "<group>"; };
+		EBB374E117091D7C005808B1 /* name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = name.png; sourceTree = "<group>"; };
+		EBB374E217091D7C005808B1 /* size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = size.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,14 +289,15 @@
 				733EDF391708BE2800E99649 /* CreateViewController.h */,
 				733EDF3A1708BE2800E99649 /* CreateViewController.m */,
 				733EDF411708BF3700E99649 /* CreateViewController.xib */,
-				733EDF3D1708BE9E00E99649 /* StatsViewController.h */,
-				733EDF3E1708BE9E00E99649 /* StatsViewController.m */,
 				EB670B7B1706B5D800D01CB6 /* BluetoothViewController.h */,
 				EB670B7C1706B5D800D01CB6 /* BluetoothViewController.m */,
 				EB670B7D1706B5D800D01CB6 /* BluetoothViewController.xib */,
 				EB670B851706B5D800D01CB6 /* MainViewController.h */,
 				EB670B861706B5D800D01CB6 /* MainViewController.m */,
 				EB670B871706B5D800D01CB6 /* MainViewController.xib */,
+				EBB374DB17091D1A005808B1 /* StatsViewController.h */,
+				EBB374DC17091D1A005808B1 /* StatsViewController.m */,
+				EBB374DD17091D1A005808B1 /* StatsViewController.xib */,
 				7301138D1704DEBB0004F4B0 /* Supporting Files */,
 			);
 			path = "Aquarium Simulator";
@@ -368,6 +376,9 @@
 		733EDF451708BF9400E99649 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EBB374E017091D7C005808B1 /* age.png */,
+				EBB374E117091D7C005808B1 /* name.png */,
+				EBB374E217091D7C005808B1 /* size.png */,
 				73E215111708C10400FF97A5 /* statstitle.png */,
 				73E2150F1708C0FA00FF97A5 /* table.png */,
 				733EDF4B1708BFD300E99649 /* bluedot.png */,
@@ -548,6 +559,10 @@
 				73E2150E1708C09100FF97A5 /* back4smallr.png in Resources */,
 				73E215101708C0FA00FF97A5 /* table.png in Resources */,
 				73E215121708C10400FF97A5 /* statstitle.png in Resources */,
+				EBB374DF17091D1A005808B1 /* StatsViewController.xib in Resources */,
+				EBB374E317091D7C005808B1 /* age.png in Resources */,
+				EBB374E417091D7C005808B1 /* name.png in Resources */,
+				EBB374E517091D7C005808B1 /* size.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,7 +597,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				733EDF401708BEEE00E99649 /* StatsViewController.m in Sources */,
 				733EDF3C1708BE4D00E99649 /* CreateViewController.m in Sources */,
 				730113931704DEBB0004F4B0 /* main.m in Sources */,
 				730113C71704DFF50004F4B0 /* FishDataModel.m in Sources */,
@@ -601,6 +615,7 @@
 				732A6DEC1707525300E0D451 /* FishBehaviorController.m in Sources */,
 				732A6DEF17075C1600E0D451 /* AquariumController.m in Sources */,
 				73174F451708E144001717A4 /* AquariumView.m in Sources */,
+				EBB374DE17091D1A005808B1 /* StatsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,7 +625,6 @@
 			files = (
 				730113BB1704DEBB0004F4B0 /* Aquarium_SimulatorTests.m in Sources */,
 				733EDF3B1708BE2800E99649 /* CreateViewController.m in Sources */,
-				733EDF3F1708BE9E00E99649 /* StatsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

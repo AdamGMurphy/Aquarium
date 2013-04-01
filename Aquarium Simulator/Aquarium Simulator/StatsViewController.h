@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StatsViewController : UIViewController
+@interface StatsViewController : UIViewController{
+    
+    IBOutlet UILabel *nameText;
+    IBOutlet UILabel *ageText;
+    IBOutlet UILabel *sizeText;
+}
+
+@property(atomic, readwrite) IBOutlet UILabel *nameText;
+@property(atomic, readwrite) IBOutlet UILabel *ageText;
+@property(atomic, readwrite) IBOutlet UILabel *sizeText;
 
 @end

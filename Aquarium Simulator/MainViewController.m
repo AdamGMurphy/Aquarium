@@ -57,6 +57,8 @@
 
 -(IBAction)statsPressed:(id)sender{
     
+    StatsViewController *statsView = [[StatsViewController alloc] initWithNibName:@"StatsViewController" bundle:nil];
+    [self.navigationController pushViewController:statsView animated:YES];
     
 }
 

@@ -10,6 +10,7 @@
 #import "BluetoothViewController.h"
 #import "AquariumViewController.h"
 #import "CreateViewController.h"
+#import "StatsViewController.h"
 
 @interface MainViewController : UIViewController
 
