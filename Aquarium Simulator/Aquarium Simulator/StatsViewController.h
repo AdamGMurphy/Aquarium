@@ -11,12 +11,12 @@
 @interface StatsViewController : UIViewController{
     
     IBOutlet UILabel *nameText;
-    IBOutlet UILabel *ageText;
+    IBOutlet UILabel *hungerText;
     IBOutlet UILabel *sizeText;
 }
 
 @property(atomic, readwrite) IBOutlet UILabel *nameText;
-@property(atomic, readwrite) IBOutlet UILabel *ageText;
+@property(atomic, readwrite) IBOutlet UILabel *hungerText;
 @property(atomic, readwrite) IBOutlet UILabel *sizeText;
 
 @end

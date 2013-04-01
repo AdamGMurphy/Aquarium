@@ -15,7 +15,7 @@
 @implementation StatsViewController
 
 @synthesize nameText;
-@synthesize ageText;
+@synthesize hungerText;
 @synthesize sizeText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
