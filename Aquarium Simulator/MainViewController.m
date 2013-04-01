@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "FishLoader.h"
 
 @interface MainViewController ()
 
@@ -19,6 +20,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+        //if(
     }
     return self;
 }
