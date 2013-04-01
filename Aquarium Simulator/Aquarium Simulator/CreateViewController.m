@@ -126,7 +126,11 @@
 }
 
 
-
+//clear the keyboard if clicked outside the text field
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [name resignFirstResponder];
+}
 
 
 
