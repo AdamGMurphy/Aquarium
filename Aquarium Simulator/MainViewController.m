@@ -9,9 +9,11 @@
 #import "MainViewController.h"
 #import "FishLoader.h"
 #import "FishDataModel.h"
+#import "FishTimer.h"
 
 @interface MainViewController () {
     FishDataModel *fishModel;
+    FishTimer *fishTimer;
 }
 
 @end
@@ -40,11 +42,10 @@
     //[self.navigationController setNavigationBarHidden:YES];
     
     FishLoader *newFishLoader = [[FishLoader alloc] init];
-    NSLog(@"s234234242342");
     if(![newFishLoader savedFish]){
-        NSLog(@"sdlfjsldfslf");
         self.viewButton.enabled = NO;
     }
+    fishTimer = nil;
 }
 
 
@@ -58,6 +59,8 @@
 
 - (void) setFish: (FishDataModel *) setFishModel {
     fishModel = setFishModel;
+    [fishTimer stopTimer];
+    fishTimer = [[FishTimer alloc] initWithFishModel:fishModel];
 }
 
 -(IBAction)loadGamePressed:(id)sender{

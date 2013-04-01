@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FishDataModel.h"
 
 @interface FishTimer : NSObject
+
+- (id) initWithFishModel: (FishDataModel * )setFishModel;
+
+- (void) timerFunction;
+
+- (void) stopTimer;
 
 @end
