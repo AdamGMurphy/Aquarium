@@ -185,6 +185,10 @@
     if (fabs([goalPosition y] - [currentFrame yPos]) != 0.0) {
         yMove = MIN(distanceToMove * sin(moveAngle) * ([goalPosition y] - [currentFrame yPos]) / fabs([goalPosition y] - [currentFrame yPos]), fabs([goalPosition y] - [currentFrame yPos]));
     }
+    
+    NSLog([NSString stringWithFormat:@"%f", xMove]);
+    NSLog([NSString stringWithFormat:@"%f", [currentFrame xPos]]);
+    
 	[currentFrame setXPos: [currentFrame xPos] + xMove];
 	[currentFrame setYPos: [currentFrame yPos] + yMove];
     

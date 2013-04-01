@@ -75,7 +75,6 @@
 }
 
 -(IBAction)loadGamePressed:(id)sender{
-    
     AquariumViewController *aquariumView = [[AquariumViewController alloc] initWithFish: fishModel NibName:@"AquariumViewController" bundle:nil];
     [self.navigationController pushViewController:aquariumView animated:YES];
     

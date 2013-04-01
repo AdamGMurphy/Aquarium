@@ -33,6 +33,7 @@
 
 - (void) setXPos: (double) setXPos {
     xPos = setXPos;
+	NSLog([NSString stringWithFormat:@"%f", xPos]);
 }
 
 - (void) setYPos: (double) setYPos {
