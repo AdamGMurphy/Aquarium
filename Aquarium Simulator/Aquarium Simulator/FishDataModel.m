@@ -13,6 +13,7 @@
 #import "Frame.h"
 #import "Position.h"
 
+
 @implementation FishDataModel {
 	FishMovementModel *movementModel;
 	FishColorModel *colorModel;
@@ -67,7 +68,7 @@
 }
 
 - (void) incrementSize: (double) increment {
-	size = log(pow(10, size) + increment);
+	size = log(pow(10.0, size) + increment) / log(8.5);
 }
 
 - (void) setAction: (int) setAction {
@@ -130,5 +131,8 @@
     return [delegate foodFrame];
 }
 
+- (void) destroyFood {
+    [delegate destroyFood];
+}
 
 @end

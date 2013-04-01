@@ -31,4 +31,6 @@
 
 - (Frame*) foodFrame;
 
+- (void) destroyFood;
+
 @end

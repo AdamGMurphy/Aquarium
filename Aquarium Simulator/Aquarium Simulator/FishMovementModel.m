@@ -95,6 +95,7 @@
     if ([foodFrame containedWithin:currentFrame]){
         [delegate incrementSize:1.0];
         [delegate setHunger: [delegate hunger] + 10.0];
+        [delegate destroyFood];
         
         [self stopMovement];
         return;
@@ -103,6 +104,12 @@
 
     goalPosition = [[Position alloc] initWithX:[foodFrame xPos] - [currentFrame width] / 2 y:[foodFrame yPos] - [currentFrame height] / 2];
 
+    
+    if ([goalPosition x] < [currentFrame xPos] && facing == -1.0)
+        [self turnAround];
+    if ([goalPosition x] > [currentFrame xPos] && facing == 1.0)
+        [self turnAround];
+    
     [self moveToGoal];
 }
 
@@ -133,6 +140,10 @@
 	[self stopMovement];
 		facing *= -1.0;
     [delegate turningStopped];
+}
+
+- (void) turnAround {
+    facing *= -1.0;
 }
 
 - (void) stopMovement {
@@ -183,32 +194,9 @@
         yMove = MIN(distanceToMove * sin(moveAngle) * ([goalPosition y] - [currentFrame yPos]) / fabs([goalPosition y] - [currentFrame yPos]), fabs([goalPosition y] - [currentFrame yPos]));
     }
 
-    NSLog(@"---");
-    NSLog([NSString stringWithFormat:@"%f", [currentFrame xPos]]);
-    NSLog([NSString stringWithFormat:@"%f", [currentFrame yPos]]);
-    
-    NSLog([NSString stringWithFormat:@"%f", [goalPosition x]]);
-    NSLog([NSString stringWithFormat:@"%f", [goalPosition y]]);
-    
-    NSLog(@"+++");
-    
-    NSLog([NSString stringWithFormat:@"%f", xMove]);
-    NSLog([NSString stringWithFormat:@"%f", yMove]);
-    
-    double first = fabs([goalPosition y] - [currentFrame yPos]);
-    double second = ([goalPosition y] - [currentFrame yPos]) / fabs([goalPosition y] - [currentFrame yPos]);
-    double third = sin(moveAngle) * ([goalPosition y] - [currentFrame yPos]) / fabs([goalPosition y] - [currentFrame yPos]);
-    double fourth =  distanceToMove * sin(moveAngle) * ([goalPosition y] - [currentFrame yPos]) / fabs([goalPosition y] - [currentFrame yPos]);
-    
-    NSLog(@"number tests");
-    NSLog([NSString stringWithFormat:@"%f", first]);
-    NSLog([NSString stringWithFormat:@"%f", second]);
-    NSLog([NSString stringWithFormat:@"%f", third]);
-    NSLog([NSString stringWithFormat:@"%f", fourth]);
-    
 	[currentFrame setXPos: [currentFrame xPos] + xMove];
 	[currentFrame setYPos: [currentFrame yPos] + yMove];
-    
+     
 	if ([currentFrame collidesWith: boundary]) {
 
 		[currentFrame setXPos: [currentFrame xPos] - xMove];
@@ -226,5 +214,9 @@
 	return currentFrame;
 }
 
+- (void) changeFrameSizeWithFishSize: (double) size {
+    [currentFrame setHeight: 50 * size];
+    [currentFrame setWidth: 60 * size];
+}
 
 @end

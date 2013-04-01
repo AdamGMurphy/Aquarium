@@ -104,4 +104,8 @@
     return [foodModel foodFrame];
 }
 
+- (void) destroyFood {
+	[foodModel destroyFood];
+}
+
 @end

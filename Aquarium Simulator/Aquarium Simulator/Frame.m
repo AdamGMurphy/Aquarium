@@ -69,19 +69,27 @@
  Return - true if the given frame overlaps this frame, false otherwise.
  */
 - (Boolean) collidesWith: (Frame *) otherFrame {
-    if ((yPos - height < [otherFrame yPos] && yPos - height > [otherFrame yPos] - [otherFrame height]) || (yPos < [otherFrame yPos] && yPos < [otherFrame yPos] - [otherFrame height])){
-        if (xPos - width < [otherFrame xPos] && xPos > [otherFrame xPos]){
+	
+	NSLog([NSString stringWithFormat:@"%f", xPos]);
+	NSLog([NSString stringWithFormat:@"%f", width]);
+	NSLog([NSString stringWithFormat:@"%f", [otherFrame xPos]]);
+	NSLog([NSString stringWithFormat:@"%f", [otherFrame width]]);
+	
+	
+	
+    if ((yPos + height > [otherFrame yPos] && yPos + height < [otherFrame yPos] + [otherFrame height]) || (yPos > [otherFrame yPos] && yPos < [otherFrame yPos] + [otherFrame height])){
+        if (xPos + width > [otherFrame xPos] && xPos < [otherFrame xPos]){
 			return true;
 		}
-		if (xPos > [otherFrame xPos] - [otherFrame width] && xPos - width < [otherFrame xPos] - [otherFrame width]) {
+		if (xPos < [otherFrame xPos] + [otherFrame width] && xPos + width > [otherFrame xPos] + [otherFrame width]) {
             return true;
         }
     }
-	if ((xPos - width < [otherFrame xPos] && xPos - width > [otherFrame xPos] - [otherFrame width]) || (xPos < [otherFrame xPos] && xPos > [otherFrame xPos] - [otherFrame width])) {
-		if (yPos - height < [otherFrame yPos] && yPos > [otherFrame yPos]){
+	if ((xPos + width > [otherFrame xPos] && xPos + width < [otherFrame xPos] + [otherFrame width]) || (xPos > [otherFrame xPos] && xPos < [otherFrame xPos] + [otherFrame width])) {
+		if (yPos + height > [otherFrame yPos] && yPos < [otherFrame yPos]){
 			return true;
 		}
-		if (yPos > [otherFrame yPos] - [otherFrame height] && yPos - height < [otherFrame yPos] - [otherFrame height]) {
+		if (yPos < [otherFrame yPos] + [otherFrame height] && yPos + height > [otherFrame yPos] + [otherFrame height]) {
             return true;
         }
 	}

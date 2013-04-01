@@ -115,6 +115,8 @@
     return [delegate foodFrame];
 }
 
-
+- (void) destroyFood {
+	[delegate destroyFood];
+}
 
 @end
