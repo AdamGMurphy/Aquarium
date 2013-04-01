@@ -16,6 +16,8 @@
 #import "FishBehaviorController.h"
 #import "Frame.h"
 
+#define ARC4RANDOM_MAX      0x100000000
+
 @interface CreateViewController ()
 
 @end
@@ -161,17 +163,56 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    double val = ((double)arc4random() / ARC4RANDOM_MAX);
+    
     [finsRedSlider setThumbImage:[UIImage imageNamed:@"reddot"] forState:UIControlStateNormal];
+    finsRedSlider.value = val;
+    
+    val = ((double)arc4random() / ARC4RANDOM_MAX);
     [bodyRedSlider setThumbImage:[UIImage imageNamed:@"reddot"] forState:UIControlStateNormal];
+    bodyRedSlider.value = val;
+    
+    val = ((double)arc4random() / ARC4RANDOM_MAX);
     [eyesRedSlider setThumbImage:[UIImage imageNamed:@"reddot"] forState:UIControlStateNormal];
+    eyesRedSlider.value = val;
+    
+    
+    val = ((double)arc4random() / ARC4RANDOM_MAX);
     
     [finsGreenSlider setThumbImage:[UIImage imageNamed:@"greendot"] forState:UIControlStateNormal];
+    finsGreenSlider.value = val;
+    
+    val = ((double)arc4random() / ARC4RANDOM_MAX);
     [bodyGreenSlider setThumbImage:[UIImage imageNamed:@"greendot"] forState:UIControlStateNormal];
+    bodyGreenSlider.value = val;
+
+    val = ((double)arc4random() / ARC4RANDOM_MAX);
     [eyesGreenSlider setThumbImage:[UIImage imageNamed:@"greendot"] forState:UIControlStateNormal];
+    eyesGreenSlider.value = val;
+    
+    
+    val = ((double)arc4random() / ARC4RANDOM_MAX);
     
     [finsBlueSlider setThumbImage:[UIImage imageNamed:@"bluedot"] forState:UIControlStateNormal];
+    finsBlueSlider.value = val;
+
+    val = ((double)arc4random() / ARC4RANDOM_MAX);
     [bodyBlueSlider setThumbImage:[UIImage imageNamed:@"bluedot"] forState:UIControlStateNormal];
+    bodyBlueSlider.value = val;
+    
+    val = ((double)arc4random() / ARC4RANDOM_MAX);
     [eyesBlueSlider setThumbImage:[UIImage imageNamed:@"bluedot"] forState:UIControlStateNormal];
+    eyesBlueSlider.value = val;
+    
+    
+    [finsResultButton setBackgroundColor:[UIColor colorWithRed:finsRedSlider.value green:finsGreenSlider.value blue:finsBlueSlider.value alpha:1]];
+    
+    [bodyResultButton setBackgroundColor:[UIColor colorWithRed:bodyRedSlider.value green:bodyGreenSlider.value blue:bodyBlueSlider.value alpha:1]];
+    
+    [eyesResultButton setBackgroundColor:[UIColor colorWithRed:eyesRedSlider.value green:eyesGreenSlider.value blue:eyesBlueSlider.value alpha:1]];
+    
+    
+    
     
     [self.navigationController setNavigationBarHidden:NO];
     self.title = @"Customize Pet";
