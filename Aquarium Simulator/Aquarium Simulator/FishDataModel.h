@@ -52,4 +52,10 @@
 
 - (void) turnAroundWithSpeed: (double) speed;
 
+- (void) moveToFoodWithSpeed: (double) speed;
+
+- (Boolean) isFood;
+
+- (Frame*) foodFrame;
+
 @end

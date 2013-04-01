@@ -19,6 +19,8 @@
 
 - (id) initWithFishModel: (FishDataModel *) setFishModel boundary: (Frame *) setBoundary;
 
+- (void) setDelegate: (id) newDelegate;
+
 - (void) actionFinished;
 
 - (void) beginAction;

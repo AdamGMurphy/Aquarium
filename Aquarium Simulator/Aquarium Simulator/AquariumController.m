@@ -20,6 +20,7 @@
     FishColorModel *colorModel;
     FishBehaviorController *behaviorController;
 	FoodModel *foodModel;
+	NSThread *behaviorThread;
 }
 
 - (id) initWithFish: (FishDataModel *) setFishModel Boundary: (CGRect) rectBoundary {
@@ -43,11 +44,17 @@
 	fishModel = setFishModel;
 	
 	behaviorController = [[FishBehaviorController alloc] initWithFishModel: fishModel boundary: screen];
-	[behaviorController beginAction];
+	[behaviorController setDelegate: self];
+	
+	behaviorThread = [[NSThread alloc] initWithTarget: behaviorController selector: @selector(beginAction) object: nil];
 	
 	foodModel = [[FoodModel alloc] initWithBoundary:screen];
 	
     return self;
+}
+
+- (void) endBehavior {
+	
 }
 
 - (Frame *) frame {

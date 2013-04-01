@@ -118,4 +118,17 @@
 	[movementModel turnAroundWithSpeed: speed];
 }
 
+- (void) moveToFoodWithSpeed:(double)speed {
+    [movementModel moveToFoodWithSpeed: speed];
+}
+
+- (Boolean) isFood {
+    return [delegate isFood];
+}
+
+- (Frame*) foodFrame {
+    return [delegate foodFrame];
+}
+
+
 @end

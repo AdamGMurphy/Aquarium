@@ -21,6 +21,7 @@
     Position *goalPosition;
     NSTimer *moveTimer;
     Boolean moving;
+    Boolean movingToFood;
 	Boolean turning;
     double speed;
     id delegate;
@@ -74,6 +75,36 @@
     return delegate;
 }
 
+- (void) moveToFoodWithSpeed:(double) setSpeed {
+    moveTimer = [[NSTimer alloc] init];
+    moveTimer = [NSTimer scheduledTimerWithTimeInterval: refreshRate target:self selector:@selector (moveToFood) userInfo:nil repeats:YES];
+    moving = true;
+    movingToFood = true;
+}
+
+- (void) moveToFood {
+    if (![delegate isFood]) {
+        [self stopMovement];
+        return;
+    }
+    
+    Frame *foodFrame = [delegate foodFrame];
+
+    if ([foodFrame containedWithin:currentFrame]){
+        [delegate incrementSize:1.0];
+        [delegate setHunger: [delegate hunger] + 10.0];
+        
+        [self stopMovement];
+        return;
+    }
+
+
+    goalPosition = [[Position alloc] initWithX:[foodFrame xPos] - [currentFrame width] y:[foodFrame yPos] - [currentFrame height]];
+
+    [self moveToGoal];
+}
+
+
 - (Boolean) moveToPosition: (Position *) position withSpeed: (double) setSpeed{
     [self stopMovement];
     
@@ -112,6 +143,7 @@
         [moveTimer invalidate];
         moveTimer = nil;
 		moving = false;
+        movingToFood = false;
 		goalPosition = nil;
 		speed = 0.0;
         [delegate movementStopped];
@@ -120,17 +152,19 @@
 
 - (void) moveToGoal {
 
-    if ([goalPosition x] < [currentFrame xPos] && facing == -1.0){
-        [self stopMovement];
-        return;
-    }
-    if ([goalPosition x] > [currentFrame xPos] && facing == 1.0){
-        [self stopMovement];
-        return;
-    }
-    if ([goalPosition x] - [currentFrame xPos] == 0.0 && [goalPosition y] - [currentFrame yPos] == 0) {
-        [self stopMovement];
-        return;
+    if (!movingToFood) {
+        if ([goalPosition x] < [currentFrame xPos] && facing == -1.0){
+            [self stopMovement];
+            return;
+        }
+        if ([goalPosition x] > [currentFrame xPos] && facing == 1.0){
+            [self stopMovement];
+            return;
+        }
+        if ([goalPosition x] - [currentFrame xPos] == 0.0 && [goalPosition y] - [currentFrame yPos] == 0) {
+            [self stopMovement];
+            return;
+        }
     }
     
     double distanceToMove = speed * refreshRate;
@@ -155,7 +189,6 @@
 	[currentFrame setYPos: [currentFrame yPos] + yMove];
     
 	if ([currentFrame collidesWith: boundary]) {
-        NSLog(@"3");
 
 		[currentFrame setXPos: [currentFrame xPos] - xMove];
 		[currentFrame setYPos: [currentFrame yPos] - yMove];

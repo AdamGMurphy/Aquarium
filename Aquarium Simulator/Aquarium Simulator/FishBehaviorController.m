@@ -14,6 +14,7 @@
 #import "TurningLayer.h"
 #import "RestingLayer.h"
 #import "MovingLayer.h"
+#import "AquariumController.h"
 
 @implementation FishBehaviorController {
     FishDataModel *fishModel;
@@ -22,6 +23,7 @@
     TurningLayer *turningLayer;
     RestingLayer *restingLayer;
     MovingLayer *movingLayer;
+	id delegate;
 }
 
 - (id) initWithFishModel: (FishDataModel *) setFishModel boundary: (Frame *) setBoundary{
@@ -36,6 +38,10 @@
     movingLayer = [[MovingLayer alloc] initWithMaxHunger:[fishModel maxHunger] movementModifier:0.0];
     
     return self;
+}
+
+- (void) setDelegate: (id) newDelegate {
+	delegate = newDelegate;
 }
 
 - (void) actionFinished {
@@ -68,6 +74,12 @@
 		[fishModel setAction: 2];
 		[fishModel turnAroundWithSpeed: 1.0];
 	}
+	else if (action == 3) {
+		[movingLayer resetMovementModifier];
+		[turningLayer resetMovementModifier];
+		[fishModel setAction: 3];
+		[fishModel moveToFoodWithSpeed: 1.0];
+	}
 }
 
 - (int) nextAction {
@@ -84,6 +96,12 @@
 	if (turningActivation > activationRequirement) {
 		activationRequirement = turningActivation;
 		action = 2;
+	}
+	
+	double hungerActivation = [hungerLayer activationWithHunger:[fishModel hunger] food:[delegate isFood]];
+	if (hungerActivation > activationRequirement) {
+		activationRequirement = hungerActivation;
+		action = 3;
 	}
 
 	return action;

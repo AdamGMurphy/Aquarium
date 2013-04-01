@@ -28,6 +28,8 @@
 
 - (void) turnAroundWithSpeed: (double) setSpeed;
 
+- (void) moveToFoodWithSpeed:(double) setSpeed;
+
 - (void) stopMovement;
 
 - (void) moveToGoal;
