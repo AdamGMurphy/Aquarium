@@ -61,6 +61,7 @@
 		734C7FA717091EE8006A57E3 /* FishSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = 734C7FA617091EE8006A57E3 /* FishSaver.m */; };
 		734C7FAA17092262006A57E3 /* FishLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 734C7FA917092262006A57E3 /* FishLoader.m */; };
 		734C7FB117092F13006A57E3 /* FishTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 734C7FB017092F13006A57E3 /* FishTimer.m */; };
+		734C7FB9170935DB006A57E3 /* FoodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 734C7FB8170935DB006A57E3 /* FoodModel.m */; };
 		739A2E3417074BA100A3EC82 /* HungerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3317074BA100A3EC82 /* HungerLayer.m */; };
 		739A2E3717074C0300A3EC82 /* MovingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3617074C0300A3EC82 /* MovingLayer.m */; };
 		739A2E3A17074CE700A3EC82 /* RestingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 739A2E3917074CE700A3EC82 /* RestingLayer.m */; };
@@ -178,6 +179,8 @@
 		734C7FA917092262006A57E3 /* FishLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishLoader.m; sourceTree = "<group>"; };
 		734C7FAF17092F13006A57E3 /* FishTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FishTimer.h; sourceTree = "<group>"; };
 		734C7FB017092F13006A57E3 /* FishTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishTimer.m; sourceTree = "<group>"; };
+		734C7FB7170935DB006A57E3 /* FoodModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodModel.h; sourceTree = "<group>"; };
+		734C7FB8170935DB006A57E3 /* FoodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodModel.m; sourceTree = "<group>"; };
 		739A2E3217074BA100A3EC82 /* HungerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HungerLayer.h; sourceTree = "<group>"; };
 		739A2E3317074BA100A3EC82 /* HungerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HungerLayer.m; sourceTree = "<group>"; };
 		739A2E3517074C0300A3EC82 /* MovingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingLayer.h; sourceTree = "<group>"; };
@@ -361,6 +364,8 @@
 				730113CF1704E3C80004F4B0 /* Frame.m */,
 				730113D4170518440004F4B0 /* Position.h */,
 				730113D5170518440004F4B0 /* Position.m */,
+				734C7FB7170935DB006A57E3 /* FoodModel.h */,
+				734C7FB8170935DB006A57E3 /* FoodModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -646,6 +651,7 @@
 				734C7FA717091EE8006A57E3 /* FishSaver.m in Sources */,
 				734C7FAA17092262006A57E3 /* FishLoader.m in Sources */,
 				734C7FB117092F13006A57E3 /* FishTimer.m in Sources */,
+				734C7FB9170935DB006A57E3 /* FoodModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
