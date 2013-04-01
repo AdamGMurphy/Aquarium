@@ -24,6 +24,8 @@
 
 @synthesize name;
 
+@synthesize saveButton;
+
 @synthesize finsRedSlider;
 @synthesize finsGreenSlider;
 @synthesize finsBlueSlider;
@@ -122,6 +124,15 @@
     
     [newFishSaver saveFish:newFishDataModel];
     
+
+
+    self.saveButton.enabled = NO;
+    
+    [NSThread sleepForTimeInterval:0.5];
+
+    self.saveButton.enabled = YES;
+
+    [self.navigationController popToRootViewControllerAnimated:YES];
     
 }
 

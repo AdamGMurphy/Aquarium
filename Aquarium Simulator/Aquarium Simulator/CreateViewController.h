@@ -15,7 +15,6 @@
     UIButton *bodyResultButton;
     UIButton *eyesResultButton;
     
-
     IBOutlet UISlider *finsRedSlider;
     IBOutlet UISlider *finsGreenSlider;
     IBOutlet UISlider *finsBlueSlider;
@@ -33,6 +32,7 @@
 }
 @property (weak, nonatomic) IBOutlet UITextField *name;
 
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 @property(nonatomic, retain) IBOutlet UISlider *finsRedSlider;
 @property(nonatomic, retain) IBOutlet UISlider *finsGreenSlider;
