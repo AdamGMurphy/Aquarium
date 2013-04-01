@@ -23,4 +23,6 @@
 
 - (void) refresh;
 
+- (BOOL)canBecomeFirstResponder;
+
 @end

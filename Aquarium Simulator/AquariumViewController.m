@@ -45,14 +45,11 @@
 
 - (void)viewDidLoad
 {
-    
-    
-    
+  
     NSArray *imageArray2 = [NSArray arrayWithObjects:@"back1smallr.png",@"back1smallr.png",@"back2smallr.png",@"back3smallr.png",@"back4smallr.png",@"back4smallr.png", nil];
     
     int i = random()%5;
-    
-    NSLog(@"this is %d", i);
+
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:imageArray2[i]]];
     
