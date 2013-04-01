@@ -69,14 +69,6 @@
  Return - true if the given frame overlaps this frame, false otherwise.
  */
 - (Boolean) collidesWith: (Frame *) otherFrame {
-	
-	NSLog([NSString stringWithFormat:@"%f", xPos]);
-	NSLog([NSString stringWithFormat:@"%f", width]);
-	NSLog([NSString stringWithFormat:@"%f", [otherFrame xPos]]);
-	NSLog([NSString stringWithFormat:@"%f", [otherFrame width]]);
-	
-	
-	
     if ((yPos + height > [otherFrame yPos] && yPos + height < [otherFrame yPos] + [otherFrame height]) || (yPos > [otherFrame yPos] && yPos < [otherFrame yPos] + [otherFrame height])){
         if (xPos + width > [otherFrame xPos] && xPos < [otherFrame xPos]){
 			return true;

@@ -84,8 +84,6 @@
 		[self beginAction];
 		return;
 	}
-	
-	NSLog([NSString stringWithFormat:@"%d", action]);
 }
 
 - (int) nextAction {
