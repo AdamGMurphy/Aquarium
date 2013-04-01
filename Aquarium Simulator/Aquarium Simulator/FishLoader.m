@@ -56,7 +56,7 @@
     Frame *fishBoundary = [[Frame alloc] initWithxPos:CGRectGetMinX(rotatedScreen) yPos:CGRectGetMinY(rotatedScreen) width:CGRectGetWidth(rotatedScreen) height:CGRectGetHeight(rotatedScreen)];
 
     Frame *fishFrame = [[Frame alloc] initWithxPos:50.0 yPos:50.0 width:60.0 * size height:50.0 * size];
-    FishMovementModel *movementModel = [[FishMovementModel alloc] initWithFrame:fishFrame boundary:fishBoundary refreshRate:0.1];
+    FishMovementModel *movementModel = [[FishMovementModel alloc] initWithFrame:fishFrame boundary:fishBoundary refreshRate:0.01];
     
     FishDataModel *fishModel = [[FishDataModel alloc] initWithName:name Size:size movementModel:movementModel colorModel:colorModel maxHunger:100.0 currentHunger:hunger];
 
