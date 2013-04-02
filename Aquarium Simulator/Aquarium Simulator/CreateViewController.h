@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Frame.h"
 
-@interface CreateViewController : UIViewController{
+@interface CreateViewController : UIViewController {
 
     UIButton *finsResultButton;
     UIButton *bodyResultButton;

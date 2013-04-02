@@ -115,39 +115,52 @@
 //entered by the user
 -(IBAction)saveButtonPressed:(id)sender{
     
-    double size = 1.0;
+    //if there's no name entered alert the user
+    if ([name.text isEqualToString:@""]) {
+        UIAlertView *alert1 = [[UIAlertView alloc] initWithTitle:@"No Pet Name!"
+                                                        message:@"You must have a pet name to save."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert1 show];
+    }
 
-    CGRect mainScreen = [[UIScreen mainScreen] bounds];
-    CGRect rotatedScreen = CGRectMake(CGRectGetMinX(mainScreen), CGRectGetMinY(mainScreen), CGRectGetHeight(mainScreen), CGRectGetWidth(mainScreen));
-    
-    Frame *fishBoundary = [[Frame alloc] initWithxPos:CGRectGetMinX(rotatedScreen) yPos:CGRectGetMinY(rotatedScreen) width:CGRectGetWidth(rotatedScreen) height:CGRectGetHeight(rotatedScreen)];
-
-    Frame *fishFrame = [[Frame alloc] initWithxPos:0.0 yPos:0.0 width:60.0 * size height:50.0 * size];
-
-    FishMovementModel *movementModel = [[FishMovementModel alloc] initWithFrame:fishFrame boundary:fishBoundary refreshRate:0.01];
-    
-    FishColorModel *newFishColorModel = [[FishColorModel alloc] initWithFinColor:finsResultButton.backgroundColor bodyColor:bodyResultButton.backgroundColor eyeColor:eyesResultButton.backgroundColor];
-    
-    FishDataModel *newFishDataModel = [[FishDataModel alloc] initWithName:name.text Size:1 movementModel:movementModel colorModel: newFishColorModel maxHunger:100.0 currentHunger:50.0];
-    
-    FishSaver *newFishSaver = [[FishSaver alloc] init];
-    
-    [newFishSaver saveFish:newFishDataModel];
-    
-
-
-    //temporarily disable the save button
-    //and pause the application to indicate to the
-    //user that their data has been saved
-    self.saveButton.enabled = NO;
-    
-    [NSThread sleepForTimeInterval:0.3];
-
-    self.saveButton.enabled = YES;
-
-    //return to the start screen after the save
-    [self.navigationController popToRootViewControllerAnimated:YES];
-    
+    else {
+        double size = 1.0;
+        
+        CGRect mainScreen = [[UIScreen mainScreen] bounds];
+        CGRect rotatedScreen = CGRectMake(CGRectGetMinX(mainScreen), CGRectGetMinY(mainScreen), CGRectGetHeight(mainScreen), CGRectGetWidth(mainScreen));
+        
+        Frame *fishBoundary = [[Frame alloc] initWithxPos:CGRectGetMinX(rotatedScreen) yPos:CGRectGetMinY(rotatedScreen) width:CGRectGetWidth(rotatedScreen) height:CGRectGetHeight(rotatedScreen)];
+        
+        Frame *fishFrame = [[Frame alloc] initWithxPos:0.0 yPos:0.0 width:60.0 * size height:50.0 * size];
+        
+        FishMovementModel *movementModel = [[FishMovementModel alloc] initWithFrame:fishFrame boundary:fishBoundary refreshRate:0.01];
+        
+        FishColorModel *newFishColorModel = [[FishColorModel alloc] initWithFinColor:finsResultButton.backgroundColor bodyColor:bodyResultButton.backgroundColor eyeColor:eyesResultButton.backgroundColor];
+        
+        FishDataModel *newFishDataModel = [[FishDataModel alloc] initWithName:name.text Size:1 movementModel:movementModel colorModel: newFishColorModel maxHunger:100.0 currentHunger:50.0];
+        
+        FishSaver *newFishSaver = [[FishSaver alloc] init];
+        
+        [newFishSaver saveFish:newFishDataModel];
+        
+        
+        
+        //temporarily disable the save button
+        //and pause the application to indicate to the
+        //user that their data has been saved
+        self.saveButton.enabled = NO;
+        
+        [NSThread sleepForTimeInterval:0.3];
+        
+        self.saveButton.enabled = YES;
+        
+        //return to the start screen after the save
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        
+    }
+   
 }
 
 
