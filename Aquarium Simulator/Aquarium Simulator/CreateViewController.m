@@ -124,7 +124,7 @@
                                               otherButtonTitles:nil];
         [alert1 show];
     }
-
+    //otherwise save the fish and return to the start menu
     else {
         double size = 1.0;
         
@@ -146,16 +146,14 @@
         [newFishSaver saveFish:newFishDataModel];
         
         
-        
-        //temporarily disable the save button
-        //and pause the application to indicate to the
-        //user that their data has been saved
-        self.saveButton.enabled = NO;
-        
-        [NSThread sleepForTimeInterval:0.3];
-        
-        self.saveButton.enabled = YES;
-        
+        //inform the user their pet has been saved
+        UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Pet saved!"
+                                                             message:@"Your pet has been saved."
+                                                            delegate:nil
+                                                   cancelButtonTitle:@"OK"
+                                                   otherButtonTitles:nil];
+        [alert2 show];
+
         //return to the start screen after the save
         [self.navigationController popToRootViewControllerAnimated:YES];
         
