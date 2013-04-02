@@ -11,6 +11,7 @@
 #import "FishLoader.h"
 #import "MainViewController.h"  
 
+//controller for the statistics screen
 @interface StatsViewController (){
     
     id delegate;
@@ -21,6 +22,7 @@
 
 @implementation StatsViewController
 
+//the stats to display
 @synthesize nameText;
 @synthesize hungerText;
 @synthesize sizeText;
@@ -35,6 +37,7 @@
     return self;
 }
 
+//initialize delegate
 - (void) setDelegate: (id) newDelegate {
 	delegate = newDelegate;
 }
@@ -42,6 +45,7 @@
 - (id) delegate{
 	return delegate;
 }
+
 
 - (void)viewDidLoad
 {
@@ -52,6 +56,7 @@
     [self.navigationController setNavigationBarHidden:NO];
     self.title = @"Statistics";
     
+    //get the data model for the stats
     FishDataModel *statsFish = [delegate getFish];
     
     nameText.text = statsFish.name;

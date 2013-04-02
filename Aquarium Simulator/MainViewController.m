@@ -21,7 +21,8 @@
 
 @implementation MainViewController
 
-@synthesize viewButton;
+@synthesize viewButton; //disabled if no fish available
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,12 +39,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    //[self.navigationController setNavigationBarHidden:YES];
 
     fishTimer = nil;
 }
 
-//Initialize a fish object when appears
+//Initialize a fish object when view appears
 -(void) viewWillAppear:(BOOL)animated{
     
     FishLoader *newFishLoader = [[FishLoader alloc] init];
