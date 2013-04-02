@@ -24,7 +24,7 @@
     //initialize the nav controller with the main view
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mainView];
     
-    //make the nav controller the root
+    //make the nav controller the root controller
     self.window.rootViewController = navController;
     
     navController.navigationBarHidden = YES;
