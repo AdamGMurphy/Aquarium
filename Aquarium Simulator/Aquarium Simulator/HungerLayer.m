@@ -30,7 +30,7 @@
 	}
 	
 	double randomDesire = ((arc4random() % 60) - 10.0) / 100.0;
-	return (hunger / 100.0) + randomDesire * (1 - hunger / 100.0);
+	return (1 - hunger / 100.0) + randomDesire * (hunger / 100.0);
 }
 
 @end
