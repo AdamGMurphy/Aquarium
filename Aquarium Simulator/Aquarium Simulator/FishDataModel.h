@@ -16,6 +16,8 @@
 
 - (id) initWithName: (NSString *) setName Size: (double) setSize movementModel: (FishMovementModel *) setMovementModel colorModel: (FishColorModel *) setColorModel maxHunger: (double) setMaxHunger currentHunger: (double) setHunger;
 
+- (id) initWithArchive: (NSData *) archive;
+
 - (NSString *) name;
 
 - (void) setDelegate: setDelegate;
@@ -59,5 +61,9 @@
 - (Frame*) foodFrame;
 
 - (void) destroyFood;
+
+- (void) setKeys;
+
+- (NSData *) archive;
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "BluetoothViewController.h"
+#import "MainViewController.h"
+#import "FishDataModel.h"
 
 
 @interface BluetoothViewController ()
@@ -23,6 +25,8 @@
 @synthesize connectionPicker;
 @synthesize session = _session;
 
+id delegate;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -31,6 +35,10 @@
         
     }
     return self;
+}
+
+- (void) setDelegate: (id) newDelegate {
+    delegate = newDelegate;
 }
 
 
@@ -114,11 +122,6 @@
         self.session = nil; //allow session to reconnect if it gets disconnected
     }
 }
-
-
-
-
-
 
 
 - (void)viewDidLoad
