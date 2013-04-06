@@ -12,7 +12,6 @@
 #import "Position.h"
 
 @implementation FishMovementModel {
-//    double angle;
     double facing;
 	Frame *currentFrame;
     
@@ -27,38 +26,60 @@
     id delegate;
 }
 
+/*
+ Initializes this fishMovementModel with a relative frame for a fish, the boundary frame of the phone's screen, and a refresh rate at which to update the fish's position.
+ The facing of the fish is set to the right.
+ 
+ setFrame the frame for the fish.
+ setBoundary the frame for the phone screen.
+ setRefreshRate the rate at which to update the position of the fish.
+ */
 - (id) initWithFrame: (Frame *) setFrame boundary: (Frame *) setBoundary refreshRate: (double) setRefreshRate {
     self = [super init];
     
     currentFrame = setFrame;
     boundary = setBoundary;
     facing = 1.0;
-//    angle = 0.0;
     moving = false;
     refreshRate = setRefreshRate;
     
     return self;
 }
 
+/*
+ Initializes this fishMovementModel with a relative frame for a fish, the direction the fish is facing, the boundary frame of the phone's screen, and a refresh rate at which to update the fish's position.
+ 
+ setFrame the frame for the fish.
+ setFacing the direction the fishing is facing, 1.0 is right, -1.0 is left.
+ setBoundary the frame for the phone screen.
+ setRefreshRate the rate at which to update the position of the fish.
+ */
 - (id) initWithFrame: (Frame *) setFrame facing: (double) setFacing boundary: (Frame *) setBoundary refreshRate: (double) setRefreshRate {
     self = [super init];
     
     currentFrame = setFrame;
     boundary = setBoundary;
     facing = setFacing;
-//    angle = setAngle;
     moving = false;
     refreshRate = setRefreshRate;
     
     return self;
 }
 
+/*
+ Initializes this fishMovementModel with a relative frame for a fish, the direction the fish is facing, the boundary frame of the phone's screen, and a refresh rate at which to update the fish's position.
+ 
+ setFrame the frame for the fish.
+ setFacing the direction the fishing is facing, 1.0 is right, -1.0 is left.
+ setBoundary the frame for the phone screen.
+ setRefreshRate the rate at which to update the position of the fish.
+ setDelegate the delegate for this object.
+ */
 - (id) initWithPosition: (Frame *) setFrame facing: (double) setFacing boundary: (Frame *) setBoundary refreshRate: (double) setRefreshRate delegate: setDelegate {
     self = [super init];
     
     currentFrame = setFrame;
     boundary = setBoundary;
-//    angle = setAngle;
     facing = setFacing;
     delegate = setDelegate;
     moving = false;
@@ -67,19 +88,26 @@
     return self;
 }
 
+//Sets the delegate for this object.
 - (void) setDelegate: (id) setDelegate {
     delegate = setDelegate;
 }
 
+//Returns the delegate for this object.
 - (id) delegate {
     return delegate;
 }
 
+/*
+ Instructs the fish to move towards the location of food.
+ The location of food is found out by requesting its location from this object's delegate.
+ */
 - (void) moveToFoodWithSpeed:(double) setSpeed {
     moving = true;
     movingToFood = true;
     speed = setSpeed;
     
+    //The position of the fish is updated according to refresh rate.
     moveTimer = [[NSTimer alloc] init];
     moveTimer = [NSTimer scheduledTimerWithTimeInterval: refreshRate target:self selector:@selector (moveToFood) userInfo:nil repeats:YES];
 }
