@@ -124,7 +124,7 @@
 
     Frame *fishFrame = [[Frame alloc] initWithxPos:0.0 yPos:0.0 width:60.0 * size height:50.0 * size];
 
-    FishMovementModel *movementModel = [[FishMovementModel alloc] initWithFrame:fishFrame boundary:fishBoundary refreshRate:0.1];
+    FishMovementModel *movementModel = [[FishMovementModel alloc] initWithFrame:fishFrame boundary:fishBoundary refreshRate:0.01];
     
     FishColorModel *newFishColorModel = [[FishColorModel alloc] initWithFinColor:finsResultButton.backgroundColor bodyColor:bodyResultButton.backgroundColor eyeColor:eyesResultButton.backgroundColor];
     

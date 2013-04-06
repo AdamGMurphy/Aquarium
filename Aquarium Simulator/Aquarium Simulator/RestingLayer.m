@@ -22,18 +22,19 @@
 }
 
 - (double) activationWithHunger: (double) hunger food: (Boolean) food {
-	if (food) {
+	if (food && hunger < 100.0) {
 		if (hunger == 100.0)
 			return 0.0;
-		double desire = 1.0 - hunger / 100.0;
-		double randomDesire = ((arc4random() % 60) - 30.0) / 100.0;
-		double finalDesire = desire + randomDesire * (1 - desire);
-        return MIN(MAX(finalDesire, 0.0), 100.0);
+		double desire = hunger / 100.0;;
+        return MIN(MAX(desire, 0.0), 100.0);
 	}
 	else {
-		double desire = hunger / 100.0;
+		double desire = (1 - hunger / 100.0);
 		double randomDesire = ((arc4random() % 60) - 30.0) / 100.0;
 		double finalDesire = desire + randomDesire * (1 - desire);
+        
+        NSLog([NSString stringWithFormat:@"%f", MIN(MAX(finalDesire, 0.0), 100.0)]);
+        
         return MIN(MAX(finalDesire, 0.0), 100.0);
 	}
 }

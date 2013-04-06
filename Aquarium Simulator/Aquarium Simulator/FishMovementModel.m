@@ -84,6 +84,12 @@
     moveTimer = [NSTimer scheduledTimerWithTimeInterval: refreshRate target:self selector:@selector (moveToFood) userInfo:nil repeats:YES];
 }
 
+- (void) restForTime: (float) time {
+    moveTimer = [[NSTimer alloc] init];
+    moveTimer = [NSTimer scheduledTimerWithTimeInterval: time target:self selector:@selector (stopMovement) userInfo:nil repeats:NO];
+    moving = true;
+}
+
 - (void) moveToFood {
     if (![delegate isFood]) {
         [self stopMovement];
@@ -132,7 +138,6 @@
     
 
     speed = setSpeed;
-    moving = true;
     return true;
 }
 

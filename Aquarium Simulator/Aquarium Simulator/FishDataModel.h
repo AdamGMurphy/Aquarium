@@ -50,6 +50,8 @@
 
 - (void) turningStopped;
 
+- (void) restForTime: (float) time;
+
 - (Boolean) moveToPosition: (Position *) position withSpeed: (double) speed;
 
 - (void) turnAroundWithSpeed: (double) speed;

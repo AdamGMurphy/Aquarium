@@ -32,7 +32,7 @@
 }
 
 - (double) activationWithHunger: (double) hunger {
-	double desire = (abs(hunger - maxHunger) / maxHunger) * 0.5;
+	double desire = (maxHunger / maxHunger) * 0.5;
 	double randomDesire = ((arc4random() % 20) - 10.0) / 100.0;
 	double finalDesire = desire + randomDesire * ((0.5 - abs(desire - 0.5)) / 0.5) + turningModifier;
     

@@ -26,6 +26,9 @@
 @synthesize session = _session;
 
 id delegate;
+Boolean selfTradeAccepted;
+Boolean otherTradeAccepted;
+FishDataModel *receivedFish;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,6 +37,10 @@ id delegate;
         // Custom initialization
         
     }
+    
+    selfTradeAccepted = false;
+    otherTradeAccepted = false;
+    
     return self;
 }
 
@@ -67,23 +74,26 @@ id delegate;
 
 -(IBAction)tradePressed:(id)sender{
     
-    //TODO
-    
-    //package text field text as NSData object
-    //NSData *textData = [self.messageToSendTextField.text dataUsingEncoding:NSASCIIStringEncoding];
-    //send data to all connected devices
-    //[self.session sendDataToAllPeers:textData withDataMode:GKSendDataReliable error:nil];
+    NSData *fishData = [[delegate getFish] archive];
+    [self.session sendDataToAllPeers:fishData withDataMode:GKSendDataReliable error:nil];
+    selfTradeAccepted = true;
+    if (selfTradeAccepted && otherTradeAccepted)
+        [self completeTrade];
     
 }
 
 //TODO The receiving data method.
 - (void)receiveData:(NSData *)data fromPeer:(NSString *)peer inSession:(GKSession *)session context:(void *)context
 {
-    //unpackage NSData to NSString and set incoming text as label's text
-    //NSString *receivedString = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-    //self.messageReceivedLabel.text = receivedString;
+    receivedFish = [[FishDataModel alloc] initWithArchive:data];
+    otherTradeAccepted = true;
+    if (selfTradeAccepted && otherTradeAccepted)
+        [self completeTrade];
 }
 
+- (void) completeTrade {
+    [delegate setFish:receivedFish];
+}
 
 //Get a session based on the connection type specified.
 - (GKSession *)peerPickerController:(GKPeerPickerController *)picker sessionForConnectionType:(GKPeerPickerConnectionType)type

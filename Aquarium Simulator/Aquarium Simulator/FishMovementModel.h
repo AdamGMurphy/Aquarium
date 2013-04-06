@@ -24,6 +24,8 @@
 
 - (id) delegate;
 
+- (void) restForTime: (float) time;
+
 - (Boolean) moveToPosition: (Position *) position withSpeed: (double) setSpeed;
 
 - (void) turnAroundWithSpeed: (double) setSpeed;

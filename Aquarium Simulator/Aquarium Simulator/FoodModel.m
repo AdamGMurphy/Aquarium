@@ -13,12 +13,14 @@
     Frame *frame;
     Frame *boundary;
     NSTimer *foodTimer;
+    float refreshRate;
 }
 
 - (id) initWithBoundary: (Frame *) setBoundary {
     self = [super init];
     
     boundary = setBoundary;
+    refreshRate = 0.01;
     
     return self;
 }
@@ -26,7 +28,7 @@
 - (void) createFoodWithFrame: setFrame {
     frame = setFrame;
     foodTimer = [[NSTimer alloc] init];
-    foodTimer = [NSTimer scheduledTimerWithTimeInterval: 0.1 target:self selector:@selector (timerFunction) userInfo:nil repeats:YES];
+    foodTimer = [NSTimer scheduledTimerWithTimeInterval: refreshRate target:self selector:@selector (timerFunction) userInfo:nil repeats:YES];
 }
 
 - (Frame *) foodFrame {
@@ -44,7 +46,7 @@
 }
 
 - (void) timerFunction {
-    [frame setYPos: [frame yPos] + 2.0];
+    [frame setYPos: [frame yPos] + 15.0 * refreshRate];
     if ([boundary height] < [frame yPos]) {
         [self destroyFood];
     }

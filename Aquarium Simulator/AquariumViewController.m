@@ -71,7 +71,6 @@
     [aquaView setDelegate: aquaController];
     [self.view addSubview: aquaView];
     
-    //screen refresh rate
     [NSTimer scheduledTimerWithTimeInterval: 0.01 target:self selector:@selector(refresh) userInfo: nil repeats: YES];
 
     //add food recognizer

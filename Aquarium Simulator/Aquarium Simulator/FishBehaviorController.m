@@ -12,7 +12,6 @@
 #import "FishDataModel.h"
 #import "HungerLayer.h"
 #import "TurningLayer.h"
-#import "RestingLayer.h"
 #import "MovingLayer.h"
 #import "AquariumController.h"
 
@@ -21,7 +20,6 @@
     Frame *boundary;
 	HungerLayer *hungerLayer;
     TurningLayer *turningLayer;
-    RestingLayer *restingLayer;
     MovingLayer *movingLayer;
 	id delegate;
 }
@@ -33,7 +31,6 @@
 	[fishModel setDelegate:self];
     boundary = setBoundary;
     hungerLayer = [[HungerLayer alloc] initWithMaxHunger:[fishModel maxHunger]];
-    restingLayer = [[RestingLayer alloc] initWithMaxHunger:[fishModel maxHunger]];
     turningLayer = [[TurningLayer alloc] initWithMaxHunger:[fishModel maxHunger] turningModifier:0.0];
     movingLayer = [[MovingLayer alloc] initWithMaxHunger:[fishModel maxHunger] movementModifier:0.0];
     

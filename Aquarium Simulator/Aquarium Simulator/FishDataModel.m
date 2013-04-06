@@ -62,6 +62,7 @@
      1 - Moving
      2 - Turning
      3 - Moving to food
+     4 - Resting
      */
     
 	return self;
@@ -103,14 +104,14 @@
     Frame *fishBoundary = [[Frame alloc] initWithxPos:CGRectGetMinX(rotatedScreen) yPos:CGRectGetMinY(rotatedScreen) width:CGRectGetWidth(rotatedScreen) height:CGRectGetHeight(rotatedScreen)];
     
     Frame *fishFrame = [[Frame alloc] initWithxPos:50.0 yPos:50.0 width:60.0 * size height:50.0 * size];
-    FishMovementModel *movementModel = [[FishMovementModel alloc] initWithFrame:fishFrame boundary:fishBoundary refreshRate:0.01];
+    FishMovementModel *newMovementModel = [[FishMovementModel alloc] initWithFrame:fishFrame boundary:fishBoundary refreshRate:0.01];
     
     NSString *unarchivedName = [unarchiver decodeObjectForKey:nameKey];
     float unarchivedSize = [unarchiver decodeFloatForKey:sizeKey];
     float unarchivedHunger = [unarchiver decodeFloatForKey:hungerKey];
     float unarchivedMaxHunger = [unarchiver decodeFloatForKey:maxHungerKey];
     
-    self = [self initWithName:unarchivedName Size:unarchivedSize movementModel:movementModel colorModel:unarchivedColorModel maxHunger:unarchivedMaxHunger currentHunger:unarchivedHunger];
+    self = [self initWithName:unarchivedName Size:unarchivedSize movementModel:newMovementModel colorModel:unarchivedColorModel maxHunger:unarchivedMaxHunger currentHunger:unarchivedHunger];
     
     return self;
 }
@@ -136,7 +137,7 @@
 }
 
 - (void) incrementSize: (double) increment {
-	size = log(pow(10.0, size) + increment) / log(8.5);
+	size = log(pow(4, size) + increment) / log(4);
 }
 
 - (void) setAction: (int) setAction {
@@ -177,6 +178,11 @@
 
 - (void) turningStopped {
 	[delegate actionFinished];
+}
+
+- (void) restForTime: (float) time {
+    NSLog([NSString stringWithFormat:@"%f", time]);
+    [movementModel restForTime:time];
 }
 
 - (Boolean) moveToPosition: (Position *) position withSpeed: (double) speed {
