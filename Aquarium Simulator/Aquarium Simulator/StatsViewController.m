@@ -61,7 +61,7 @@
     
     nameText.text = statsFish.name;
     hungerText.text = [NSString stringWithFormat:@"%.f",statsFish.hunger];
-    sizeText.text = [NSString stringWithFormat:@"%f",statsFish.size];
+    sizeText.text = [NSString stringWithFormat:@"%.02f lbs",statsFish.size];
     
 }
 
