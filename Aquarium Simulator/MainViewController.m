@@ -77,7 +77,6 @@
 
 //retrieve the fish object
 - (FishDataModel *) getFish{
-    
     return fishModel;
 }
 

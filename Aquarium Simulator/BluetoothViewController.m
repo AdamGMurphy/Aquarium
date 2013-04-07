@@ -75,23 +75,56 @@ FishDataModel *receivedFish;
 -(IBAction)tradePressed:(id)sender{
     
     NSData *fishData = [[delegate getFish] archive];
-    [self.session sendDataToAllPeers:fishData withDataMode:GKSendDataReliable error:nil];
+    NSLog(@"Fish data retrieved and archived");
+    [self.session sendData: fishData toPeers:connectionPeers withDataMode:GKSendDataReliable error:nil];
+    NSLog(@"Fish data sent");
     selfTradeAccepted = true;
-    if (selfTradeAccepted && otherTradeAccepted)
+    if (selfTradeAccepted && otherTradeAccepted){
+        NSLog(@"Trade completed");
         [self completeTrade];
-    
+    }
+    else {
+        UIAlertView *alert1 = [[UIAlertView alloc] initWithTitle:@"Trade started!"
+                                                         message:@"Please wait for the other user to confirm the trade."
+                                                        delegate:nil
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles:nil];
+        [alert1 show];
+    }
 }
 
 //TODO The receiving data method.
 - (void)receiveData:(NSData *)data fromPeer:(NSString *)peer inSession:(GKSession *)session context:(void *)context
 {
+    
+    if (!otherTradeAccepted) {
+        UIAlertView *alert3 = [[UIAlertView alloc] initWithTitle:@"The other user wishes to trade!"
+                                                         message:@"Please accept the trade by clicking trade, or disconnect."
+                                                        delegate:nil
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles:nil];
+        [alert3 show];
+    }
+    
+    
+    NSLog(@"Fish data received");
     receivedFish = [[FishDataModel alloc] initWithArchive:data];
+    NSLog(@"Fish data converted into a fish.");
     otherTradeAccepted = true;
-    if (selfTradeAccepted && otherTradeAccepted)
+    if (selfTradeAccepted && otherTradeAccepted) {
+        NSLog(@"Trade completed");
         [self completeTrade];
+    }
 }
 
 - (void) completeTrade {
+    NSLog(@"Fish saved");
+    UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Trade Completed!"
+                                                     message:@"View your new fish from the main screen."
+                                                    delegate:nil
+                                           cancelButtonTitle:@"OK"
+                                           otherButtonTitles:nil];
+    [alert2 show];
     [delegate setFish:receivedFish];
 }
 
@@ -104,6 +137,8 @@ FishDataModel *receivedFish;
     GKSession *session = [[GKSession alloc] initWithSessionID:sessionIDString displayName:nil sessionMode:GKSessionModePeer];
     return session;
 }
+
+
 
 
 //Take control of the session and dismiss the picker.
@@ -121,6 +156,12 @@ FishDataModel *receivedFish;
 - (void)session:(GKSession *)session peer:(NSString *)peerID didChangeState:(GKPeerConnectionState)state
 {
     if (state == GKPeerStateConnected){
+        [connectionPeers addObject:peerID];
+        NSString *str = [NSString stringWithFormat:@"Connected with %@",[session displayNameForPeer:peerID]];
+        UIAlertView *alert4 = [[UIAlertView alloc] initWithTitle:@"Connected" message:str delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert4 show];
+        
+        
         [session setDataReceiveHandler:self withContext:nil]; //set ViewController to receive data
         self.tradeButton.enabled = YES; //enable send button when session is connected
         self.disconnectButton.enabled = YES; //enable disconnect button if connected
@@ -145,8 +186,7 @@ FishDataModel *receivedFish;
 
     //disable disconnect and trade buttons until connection available
     self.disconnectButton.enabled = NO;
-    self.tradeButton.enabled = NO; 
-    
+    self.tradeButton.enabled = NO;
 }
 
 -(void)viewWillDisappear:(BOOL)animated
