@@ -13,15 +13,12 @@
 
 - (id)initWithFish: (FishDataModel *) setFishModel NibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
 
--(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event;
-
-- (void) addFood:(UILongPressGestureRecognizer *)press;
-
-- (Boolean) isFood;
-
-- (Frame *) foodFrame;
+- (void) addFood:(UITapGestureRecognizer *)press;
 
 - (void) refresh;
+
+-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event;
+
 
 - (BOOL)canBecomeFirstResponder;
 

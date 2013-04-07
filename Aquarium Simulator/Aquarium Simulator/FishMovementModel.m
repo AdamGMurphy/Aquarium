@@ -112,33 +112,31 @@
     moveTimer = [NSTimer scheduledTimerWithTimeInterval: refreshRate target:self selector:@selector (moveToFood) userInfo:nil repeats:YES];
 }
 
-- (void) restForTime: (float) time {
-    moveTimer = [[NSTimer alloc] init];
-    moveTimer = [NSTimer scheduledTimerWithTimeInterval: time target:self selector:@selector (stopMovement) userInfo:nil repeats:NO];
-    moving = true;
-}
-
+//Moves the fish in the direction of food.
 - (void) moveToFood {
+    //Stop movement if not food is present.
     if (![delegate isFood]) {
         [self stopMovement];
         return;
     }
     
+    //Get location of food.
     Frame *foodFrame = [delegate foodFrame];
 
+    //If the food frame overlaps the fish frame, the fish has "eaten" the food.
     if ([foodFrame containedWithin:currentFrame]){
-        [delegate incrementSize:1.0];
-        [delegate setHunger: [delegate hunger] + 10.0];
-        [delegate destroyFood];
+        [delegate incrementSize:1.0]; //Increase fish size.
+        [delegate setHunger: [delegate hunger] + 10.0]; //Make fish less hungry.
+        [delegate destroyFood]; //Remove food.
         
         [self stopMovement];
         return;
     }
 
-
+    //Determine the current position of the food.
     goalPosition = [[Position alloc] initWithX:[foodFrame xPos] - [currentFrame width] / 2 y:[foodFrame yPos] - [currentFrame height] / 2];
 
-    
+    //Turn around if the food is behind the fish.
     if ([goalPosition x] < [currentFrame xPos] && facing == -1.0)
         [self turnAround];
     if ([goalPosition x] > [currentFrame xPos] && facing == 1.0)
@@ -148,18 +146,22 @@
 }
 
 
+//Moves the fish to the goal position with the given speed.
 - (Boolean) moveToPosition: (Position *) position withSpeed: (double) setSpeed{
     [self stopMovement];
     
     goalPosition = position;
 
+    //If the goal position is outside of the bounds of the screen, return false.
     if ([goalPosition x] < 0.0 || [goalPosition y] < 0.0 || [goalPosition x] + [currentFrame width] > [boundary width] || [goalPosition y] + [currentFrame height] > [boundary height]) {
         return false;
     }
     
+    //If the goal position is behind the fish, return false.
     if (([goalPosition x] < [currentFrame xPos] && facing == -1.0) || ([goalPosition x] > [currentFrame xPos] && facing == 1.0))
         return false;
     
+    //Update the fish position at a rate equal to refreshRate.
     moveTimer = [[NSTimer alloc] init];
     moveTimer = [NSTimer scheduledTimerWithTimeInterval: refreshRate target:self selector:@selector (moveToGoal) userInfo:nil repeats:YES];
     moving = true;
@@ -169,16 +171,20 @@
     return true;
 }
 
+
+//Flips the orientation of the fish. 
 - (void) turnAroundWithSpeed: (double) setSpeed {
 	[self stopMovement];
 		facing *= -1.0;
-    [delegate turningStopped];
+    [delegate movementStopped];
 }
 
+//Inverts the facing value for the fish.
 - (void) turnAround {
     facing *= -1.0;
 }
 
+//Stops all movements, removes timers, and informs the delegate that the fish has stopped moving.
 - (void) stopMovement {
     if (moving) {
         [moveTimer invalidate];
@@ -191,8 +197,10 @@
 	}
 }
 
+//Moves the fish in the direction of its goal.
 - (void) moveToGoal {
 
+    //If the fish is not moving towards food, determine whether its goal is behind itself. If so, it has reached its goal.
     if (!movingToFood) {
         if ([goalPosition x] < [currentFrame xPos] && facing == -1.0){
             [self stopMovement];
@@ -208,12 +216,14 @@
         }
     }
     
+    //Determine the distance the fish needs to move in each frame.
     double distanceToMove = speed * refreshRate;
     double moveAngle = atan(fabs(([goalPosition y] - [currentFrame yPos]) / ([goalPosition x] - [currentFrame xPos])));
     
     double xMove = 0.0;
     double yMove = 0.0;
     
+    //Determine the amount that the fish needs to move in the x and y directions.
     if ([goalPosition y] == [currentFrame yPos]) {
         xMove = MIN(distanceToMove, [goalPosition x] - [currentFrame xPos]);
     }
@@ -227,9 +237,11 @@
         yMove = MIN(distanceToMove * sin(moveAngle) * ([goalPosition y] - [currentFrame yPos]) / fabs([goalPosition y] - [currentFrame yPos]), fabs([goalPosition y] - [currentFrame yPos]));
     }
 
+    //Modify the current position of the fish with the amount that it has moved.
 	[currentFrame setXPos: [currentFrame xPos] + xMove];
 	[currentFrame setYPos: [currentFrame yPos] + yMove];
-     
+    
+    //If the movement has resulted in the fish moving outside of the screen, undo the move and stop movement.
 	if ([currentFrame collidesWith: boundary]) {
 
 		[currentFrame setXPos: [currentFrame xPos] - xMove];
@@ -239,14 +251,17 @@
 	}
 }
 
+//Returns the facing of the fish.
 - (double) facing {
 	return facing;
 }
 
+//Returns the frame of the fish.
 - (Frame *) frame {
 	return currentFrame;
 }
 
+//Modifies the size of the fish frame to reflect the graphical representation of the fish's size.
 - (void) changeFrameSizeWithFishSize: (double) size {
     [currentFrame setHeight: 50 * size];
     [currentFrame setWidth: 60 * size];

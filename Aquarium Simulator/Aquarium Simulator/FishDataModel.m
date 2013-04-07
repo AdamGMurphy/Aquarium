@@ -45,6 +45,15 @@
     NSString *hungerKey;
 }
 
+/*
+ Initialize with the basics for a fish.
+ name the name of the fish.
+ size the size of the fish.
+ movementModel the object representing the boundary and position of the fish.
+ colorModel the object representing the colors of the fish.
+ maxHunger the fish will not eat food when hunger is hgiher than this value
+ hunger the hunger level of the fish.
+ */
 - (id) initWithName: (NSString *) setName Size: (double) setSize movementModel: (FishMovementModel *) setMovementModel colorModel: (FishColorModel *) setColorModel maxHunger: (double) setMaxHunger currentHunger: (double) setHunger {
 	self = [super init];
     
@@ -68,6 +77,9 @@
 	return self;
 }
 
+/*
+ Initializes the fish using NSData received during a bluetooth exchange of fish.
+ */
 - (id) initWithArchive: (NSData *) archive {
     [self setKeys];
     
@@ -77,6 +89,7 @@
 	UIColor *unarchivedBodyColor;
 	UIColor *unarchivedEyeColor;
 	
+    //Get the color of the fish's fins.
 	NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:archive];
 	float red = [unarchiver decodeFloatForKey:finColorRedKey];
 	float green = [unarchiver decodeFloatForKey:finColorGreenKey];
@@ -84,131 +97,151 @@
 	float alpha = [unarchiver decodeFloatForKey:finColorAlphaKey];
 	unarchivedFinColor = [[UIColor alloc] initWithRed:red green:green blue:blue alpha:alpha];
 	
+    //Get the color of the fish's body.
 	red = [unarchiver decodeFloatForKey:bodyColorRedKey];
 	green = [unarchiver decodeFloatForKey:bodyColorGreenKey];
 	blue = [unarchiver decodeFloatForKey:bodyColorBlueKey];
 	alpha = [unarchiver decodeFloatForKey:bodyColorAlphaKey];
 	unarchivedBodyColor = [[UIColor alloc] initWithRed:red green:green blue:blue alpha:alpha];
 	
+    //Get the color of the fish's eye.
 	red = [unarchiver decodeFloatForKey:bodyColorRedKey];
 	green = [unarchiver decodeFloatForKey:bodyColorGreenKey];
 	blue = [unarchiver decodeFloatForKey:bodyColorBlueKey];
 	alpha = [unarchiver decodeFloatForKey:bodyColorAlphaKey];
 	unarchivedEyeColor = [[UIColor alloc] initWithRed:red green:green blue:blue alpha:alpha];
     
+    //Create a color model for the fish.
     unarchivedColorModel = [[FishColorModel alloc] initWithFinColor:unarchivedFinColor bodyColor:unarchivedBodyColor eyeColor:unarchivedEyeColor];
     
     
+    //Create the boundary of the screen.
     CGRect mainScreen = [[UIScreen mainScreen] bounds];
     CGRect rotatedScreen = CGRectMake(CGRectGetMinX(mainScreen), CGRectGetMinY(mainScreen), CGRectGetHeight(mainScreen), CGRectGetWidth(mainScreen));
     Frame *fishBoundary = [[Frame alloc] initWithxPos:CGRectGetMinX(rotatedScreen) yPos:CGRectGetMinY(rotatedScreen) width:CGRectGetWidth(rotatedScreen) height:CGRectGetHeight(rotatedScreen)];
     
+    //Create a frame that represents the position and size of the fish.
     Frame *fishFrame = [[Frame alloc] initWithxPos:50.0 yPos:50.0 width:60.0 * size height:50.0 * size];
     FishMovementModel *newMovementModel = [[FishMovementModel alloc] initWithFrame:fishFrame boundary:fishBoundary refreshRate:0.01];
     
+    //Get other values for the fish, name, size, hunger and maxHunger.
     NSString *unarchivedName = [unarchiver decodeObjectForKey:nameKey];
     float unarchivedSize = [unarchiver decodeFloatForKey:sizeKey];
     float unarchivedHunger = [unarchiver decodeFloatForKey:hungerKey];
     float unarchivedMaxHunger = [unarchiver decodeFloatForKey:maxHungerKey];
     
+    //Call this constructor using the values obtained from the archive.
     self = [self initWithName:unarchivedName Size:unarchivedSize movementModel:newMovementModel colorModel:unarchivedColorModel maxHunger:unarchivedMaxHunger currentHunger:unarchivedHunger];
     
     return self;
 }
 
+//Return the name of the fish.
 - (NSString *) name {
     return name;
 }
 
+//Set the delegate for this object.
 - (void) setDelegate: setDelegate {
 	delegate = setDelegate;
 }
 
+//Return the delegate for this object.
 - (id) delegate{
 	return delegate;
 }
 
+//Return the size for the fish.
 - (double) size {
 	return size;
 }
 
+//Set the size of the fish.
 - (void) setSize: (double) setSize {
 	size = setSize;
 }
 
+//Increase the size of the fish.
 - (void) incrementSize: (double) increment {
 	size = log(pow(4, size) + increment) / log(4);
 }
 
+//Set the current action of the fish.
 - (void) setAction: (int) setAction {
     currentAction = setAction;
 }
 
+//Return the current action of the fish.
 - (int) action {
 	return currentAction;
 }
 
+//Reeturn the maxHunger of the fish.
 - (double) maxHunger {
     return maxHunger;
 }
 
+//Set the maxHunger of the fish.
 - (void) setHunger: (double) setHunger {
     hunger = setHunger;
 }
 
+//Return the hunger of the fish.
 - (double) hunger {
 	return hunger;
 }
 
+//Return the facing of the fish.
 - (double) facing {
     return [movementModel facing];
 }
 
+//Return the frame of the fish.
 - (Frame *) frame {
 	return [movementModel frame];
 }
 
+//Return the colorModel of the fish.
 - (FishColorModel *) colorModel {
 	return colorModel;
 }
 
+//Inform the delegate that the fish has stopped moving.
 - (void) movementStopped {
 	[delegate actionFinished];
 }
 
-- (void) turningStopped {
-	[delegate actionFinished];
-}
-
-- (void) restForTime: (float) time {
-    NSLog([NSString stringWithFormat:@"%f", time]);
-    [movementModel restForTime:time];
-}
-
+//Tells the movementModel for this fish to move to the given position with the indicated speed.
 - (Boolean) moveToPosition: (Position *) position withSpeed: (double) speed {
 	return [movementModel moveToPosition: position withSpeed: speed];
 }
 
+//Tells the movementModel for this fish to turn around with the indicated speed.
 - (void) turnAroundWithSpeed: (double) speed {
 	[movementModel turnAroundWithSpeed: speed];
 }
 
+//Tells the movementModel that it needs to move towards food with the indicated speed.
 - (void) moveToFoodWithSpeed:(double)speed {
     [movementModel moveToFoodWithSpeed: speed];
 }
 
+//Returns the status of the presence of food as indicated by the delegate.
 - (Boolean) isFood {
     return [delegate isFood];
 }
 
+//Returns the frame for the food on screen as given by the delegate.
 - (Frame*) foodFrame {
     return [delegate foodFrame];
 }
 
+//Tells the delegate to destroy any food on screen.
 - (void) destroyFood {
     [delegate destroyFood];
 }
 
+//Sets the keys required for archiving and unarchiving information for this object.
 - (void) setKeys {
 	finColorRedKey = @"fin_color_red";
 	finColorGreenKey = @"fin_color_green";
@@ -231,6 +264,7 @@
     hungerKey = @"hunger";
 }
 
+//Stores the important information for this fish in a NSData and returns it.
 - (NSData *) archive {
 	NSMutableData *archive = [NSMutableData data];
 	NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:archive];

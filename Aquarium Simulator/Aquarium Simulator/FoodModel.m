@@ -16,6 +16,7 @@
     float refreshRate;
 }
 
+//Initializes with the boundary of the screen.
 - (id) initWithBoundary: (Frame *) setBoundary {
     self = [super init];
     
@@ -25,6 +26,7 @@
     return self;
 }
 
+//Creates food with the given frame.
 - (void) createFoodWithFrame: setFrame {
     frame = setFrame;
     foodTimer = [[NSTimer alloc] init];
@@ -35,16 +37,19 @@
     return frame;
 }
 
+//Returns whether there is a piece of food on screen.
 - (Boolean) isFood {
     return frame != nil;
 }
 
+//Destroys the food that is on screen.
 - (void) destroyFood {
     [foodTimer invalidate];
     foodTimer = nil;
     frame = nil;
 }
 
+//Moves the food a distance modified by the refreshRate.
 - (void) timerFunction {
     [frame setYPos: [frame yPos] + 15.0 * refreshRate];
     if ([boundary height] < [frame yPos]) {

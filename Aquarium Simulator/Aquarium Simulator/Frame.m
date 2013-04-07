@@ -7,7 +7,7 @@
 //
 
 /*
- This class holds the x position, y position, and angle (facing) of a fish.
+ This class holds the x position, y position, width and height of an entity.
  */
 
 
@@ -20,6 +20,7 @@
     double height;
 }
 
+//Sets the x, y positions, and width and height of this frame.
 - (id) initWithxPos: (double) setXPos yPos: (double) setYPos width: (double) setWidth height: (double) setHeight {
     self = [super init];
     

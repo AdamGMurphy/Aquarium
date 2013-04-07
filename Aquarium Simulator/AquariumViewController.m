@@ -18,10 +18,6 @@
 
 @end
 
-
-
-
-
 @implementation AquariumViewController{
     AquariumController *aquaController;
     AquariumView *aquaView;
