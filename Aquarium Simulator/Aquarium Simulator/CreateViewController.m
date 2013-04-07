@@ -5,6 +5,10 @@
 //  Created by Dazza on 2013-03-30.
 //  Copyright (c) 2013 Adam G Murphy. All rights reserved.
 //
+//
+//  Computer Science 4768
+//  Team Project: My Pet Fish!
+//  By: Adam Murphy and Darren Perry
 
 #import "CreateViewController.h"
 #import "FishSaver.h"
@@ -18,6 +22,7 @@
 
 #define ARC4RANDOM_MAX      0x100000000
 
+//controller for the customization screen
 @interface CreateViewController ()
 
 @end

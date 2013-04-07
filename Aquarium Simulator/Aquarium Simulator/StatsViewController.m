@@ -5,6 +5,10 @@
 //  Created by Dazza on 2013-03-31.
 //  Copyright (c) 2013 Adam G Murphy. All rights reserved.
 //
+//
+//  Computer Science 4768
+//  Team Project: My Pet Fish!
+//  By: Adam Murphy and Darren Perry
 
 #import "StatsViewController.h"
 #import "FishDataModel.h"

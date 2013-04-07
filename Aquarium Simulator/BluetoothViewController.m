@@ -5,12 +5,16 @@
 //  Created by Dazza on 2013-03-28.
 //  Copyright (c) 2013 Darren Perry. All rights reserved.
 //
+//
+//  Computer Science 4768
+//  Team Project: My Pet Fish!
+//  By: Adam Murphy and Darren Perry
 
 #import "BluetoothViewController.h"
 #import "MainViewController.h"
 #import "FishDataModel.h"
 
-
+//controller for the trade screen
 @interface BluetoothViewController ()
 
 @end

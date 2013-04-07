@@ -5,6 +5,10 @@
 //  Created by Dazza on 2013-03-27.
 //  Copyright (c) 2013 Darren Perry. All rights reserved.
 //
+//
+//  Computer Science 4768
+//  Team Project: My Pet Fish!
+//  By: Adam Murphy and Darren Perry
 
 #import "MainViewController.h"
 #import "StatsViewController.h"
@@ -12,6 +16,7 @@
 #import "FishDataModel.h"
 #import "FishTimer.h"
 
+//controller for the start screen
 @interface MainViewController () {
     FishDataModel *fishModel;
     FishTimer *fishTimer;
